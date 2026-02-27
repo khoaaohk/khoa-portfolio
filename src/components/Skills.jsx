@@ -4,6 +4,7 @@ const tools = [
   'Figma', 'Sketch', 'InVision', 'Adobe XD',
   'Abstract', 'Zeplin', 'Principle', 'Overflow',
   'Miro', 'Adobe Creative Suite',
+  'Claude', 'Warp', 'GitHub', 'Vercel',
 ]
 
 const disciplines = [
