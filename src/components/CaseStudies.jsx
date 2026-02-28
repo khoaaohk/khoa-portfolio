@@ -4,6 +4,15 @@ import { useRef } from 'react'
 const projects = [
   {
     number: '01',
+    title: 'Ethos',
+    category: 'In Progress',
+    description: 'A new product experience currently in development — case study coming soon.',
+    tags: ['In Progress'],
+    color: '#e8ede8',
+    colorDark: '#1a241a',
+  },
+  {
+    number: '02',
     title: 'Thycotic',
     category: 'Privileged Access Management',
     description: 'Redesigned the core PAM experience to reduce friction for enterprise security teams managing sensitive credentials across large organizations.',
@@ -12,7 +21,7 @@ const projects = [
     colorDark: '#1a2a1a',
   },
   {
-    number: '02',
+    number: '03',
     title: 'Honest Paws',
     category: 'Ecommerce · Pet CBD',
     description: 'Improved conversion and trust signals for a DTC pet wellness brand — from product discovery through checkout and post-purchase.',
@@ -21,7 +30,7 @@ const projects = [
     colorDark: '#2a221a',
   },
   {
-    number: '03',
+    number: '04',
     title: 'Floracracy',
     category: 'Floral Arrangement Builder',
     description: 'Built an interactive floral configuration experience that lets customers express creativity while streamlining the ordering process.',
@@ -30,7 +39,7 @@ const projects = [
     colorDark: '#1a1c2a',
   },
   {
-    number: '04',
+    number: '05',
     title: 'Usana',
     category: 'Dashboard Redesign',
     description: 'Redesigned the distributor dashboard to surface key metrics and actions, improving daily engagement and reducing support requests.',
@@ -156,10 +165,10 @@ function ProjectCard({ project, index }) {
 
 export default function CaseStudies() {
   return (
-    <section id="work" style={styles.section}>
+    <section id="work" className="section-pad" style={styles.section}>
       <div style={styles.header}>
         <span style={styles.sectionLabel}>Selected Work</span>
-        <span style={styles.count}>4 projects</span>
+        <span style={styles.count}>4 projects + 1 in progress</span>
       </div>
       {projects.map((project, i) => (
         <ProjectCard key={project.title} project={project} index={i} />

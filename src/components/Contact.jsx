@@ -52,7 +52,7 @@ const styles = {
 
 export default function Contact() {
   return (
-    <section id="contact" style={styles.section}>
+    <section id="contact" className="section-pad" style={styles.section}>
       <div style={styles.header}>
         <span style={styles.sectionLabel}>Contact</span>
       </div>
@@ -63,11 +63,11 @@ export default function Contact() {
         transition={{ duration: 0.6 }}
       >
         <h2 style={styles.headline}>
-          Let's build something<br />meaningful together.
+          Available for senior<br />product design roles.
         </h2>
         <p style={styles.sub}>
-          I'm open to full-time roles, freelance projects, and design conversations.
-          Feel free to reach out — I'd love to connect.
+          Open to full-time opportunities with product teams who move fast and care about craft.
+          I bring 15 years of experience, an AI-native workflow, and a track record of shipping work that drives real results.
         </p>
         <div style={styles.links}>
           <a

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap');
 
 *, *::before, *::after {
   margin: 0;
@@ -46,4 +46,56 @@ a {
 img {
   max-width: 100%;
   display: block;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .flow-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .comparison-cols {
+    grid-template-columns: 1fr !important;
+  }
+  .gains-header,
+  .gains-row {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .gains-col-before {
+    display: none !important;
+  }
+  .nav-links-desktop {
+    display: none !important;
+  }
+  .process-section {
+    padding-top: 6rem !important;
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+  .section-pad {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+  .terminal-cmd {
+    word-break: break-all;
+    overflow-wrap: break-word;
+  }
+}
+
+@media (max-width: 480px) {
+  .flow-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .gains-header,
+  .gains-row {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .section-pad {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+  .process-section {
+    padding-top: 5rem !important;
+  }
 }

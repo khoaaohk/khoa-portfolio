@@ -1,19 +1,26 @@
 import { motion } from 'framer-motion'
+import { SiFigma, SiGithub, SiVercel, SiMiro, SiAdobe, SiSlack } from 'react-icons/si'
+import { BsTerminalFill } from 'react-icons/bs'
+import { RiRobot2Fill } from 'react-icons/ri'
 
 const tools = [
-  'Figma', 'Sketch', 'InVision', 'Adobe XD',
-  'Abstract', 'Zeplin', 'Principle', 'Overflow',
-  'Miro', 'Adobe Creative Suite',
-  'Claude', 'Warp', 'GitHub', 'Vercel',
+  { name: 'Claude', icon: <RiRobot2Fill size={13} /> },
+  { name: 'Warp', icon: <BsTerminalFill size={13} /> },
+  { name: 'GitHub', icon: <SiGithub size={13} /> },
+  { name: 'Vercel', icon: <SiVercel size={13} /> },
+  { name: 'Figma', icon: <SiFigma size={13} /> },
+  { name: 'Slack', icon: <SiSlack size={13} /> },
+  { name: 'Miro', icon: <SiMiro size={13} /> },
+  { name: 'Adobe Creative Suite', icon: <SiAdobe size={13} /> },
 ]
 
 const disciplines = [
-  { label: 'User Research', desc: 'Interviews, usability testing, synthesis' },
-  { label: 'Interaction Design', desc: 'Flows, prototypes, micro-interactions' },
-  { label: 'Visual Design', desc: 'Typography, color, layout systems' },
-  { label: 'Accessibility', desc: 'WCAG compliance, inclusive patterns' },
-  { label: 'Design Systems', desc: 'Component libraries, documentation' },
-  { label: 'Cross-functional', desc: 'Engineering, PM, and stakeholder collab' },
+  { label: 'User Research', desc: 'Talking to real users to understand what they actually need — not just what they say' },
+  { label: 'Interaction Design', desc: 'Designing how a product feels to use, from first click to task complete' },
+  { label: 'Visual Design', desc: 'Making products look polished, on-brand, and easy to understand at a glance' },
+  { label: 'Accessibility', desc: 'Building products that work for everyone — regardless of ability or device' },
+  { label: 'Design Systems', desc: 'Creating a shared visual language so teams build consistently at scale' },
+  { label: 'Cross-functional', desc: 'Working directly with engineering, product, and leadership to align on outcomes' },
 ]
 
 const styles = {
@@ -92,7 +99,7 @@ const styles = {
 
 export default function Skills() {
   return (
-    <section id="skills" style={styles.section}>
+    <section id="skills" className="section-pad" style={styles.section}>
       <div style={styles.header}>
         <span style={styles.sectionLabel}>Expertise</span>
         <motion.p
@@ -102,8 +109,8 @@ export default function Skills() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          An iterative, cross-functional designer focused on user research,
-          problem reframing, rapid prototyping, and close developer collaboration.
+          A senior product designer who moves fast, works closely with engineering,
+          and brings 15 years of experience shipping products that users love and businesses grow from.
         </motion.p>
       </div>
 
@@ -132,18 +139,19 @@ export default function Skills() {
         <div style={styles.toolsList}>
           {tools.map(tool => (
             <span
-              key={tool}
-              style={styles.tool}
+              key={tool.name}
+              style={{ ...styles.tool, display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}
               onMouseEnter={e => {
-                e.target.style.borderColor = 'var(--fg)'
-                e.target.style.color = 'var(--fg)'
+                e.currentTarget.style.borderColor = 'var(--fg)'
+                e.currentTarget.style.color = 'var(--fg)'
               }}
               onMouseLeave={e => {
-                e.target.style.borderColor = 'var(--border)'
-                e.target.style.color = 'var(--muted)'
+                e.currentTarget.style.borderColor = 'var(--border)'
+                e.currentTarget.style.color = 'var(--muted)'
               }}
             >
-              {tool}
+              {tool.icon}
+              {tool.name}
             </span>
           ))}
         </div>

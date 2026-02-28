@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
+import AIProcess from './components/AIProcess'
 import CaseStudies from './components/CaseStudies'
 import Skills from './components/Skills'
 import Contact from './components/Contact'
@@ -24,7 +24,7 @@ function App() {
     <>
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <main>
-        <Hero />
+        <AIProcess />
         <CaseStudies />
         <Skills />
         <Contact />

@@ -16,8 +16,10 @@ const styles = {
   },
   logo: {
     fontSize: '0.95rem',
+    fontFamily: "'Inter', sans-serif",
     fontWeight: 500,
     letterSpacing: '-0.02em',
+    color: 'var(--fg)',
   },
   links: {
     display: 'flex',
@@ -67,17 +69,17 @@ export default function Navbar({ theme, toggleTheme }) {
     }}>
       <div style={styles.logo}>Khoa Do</div>
       <div style={styles.links}>
-        <span style={styles.link} onClick={() => scrollTo('work')}
+        <span className="nav-links-desktop" style={styles.link} onClick={() => scrollTo('work')}
           onMouseEnter={e => e.target.style.color = 'var(--fg)'}
           onMouseLeave={e => e.target.style.color = 'var(--muted)'}>
           Work
         </span>
-        <span style={styles.link} onClick={() => scrollTo('skills')}
+        <span className="nav-links-desktop" style={styles.link} onClick={() => scrollTo('skills')}
           onMouseEnter={e => e.target.style.color = 'var(--fg)'}
           onMouseLeave={e => e.target.style.color = 'var(--muted)'}>
           Skills
         </span>
-        <span style={styles.link} onClick={() => scrollTo('contact')}
+        <span className="nav-links-desktop" style={styles.link} onClick={() => scrollTo('contact')}
           onMouseEnter={e => e.target.style.color = 'var(--fg)'}
           onMouseLeave={e => e.target.style.color = 'var(--muted)'}>
           Contact
