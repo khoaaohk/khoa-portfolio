@@ -3,8 +3,8 @@ import { useState, useEffect, useRef } from 'react'
 import WarpVisual from './WarpVisual'
 import ProcessComparison from './ProcessComparison'
 
-const words = ['Building', 'Prototyping', 'Shipping']
-const wordColors = ['#b85c20', '#2c5faa', '#1e8a45']
+const words = ['Prototyping', 'Fine Tuning', 'Building']
+const wordColors = ['#2c5faa', '#1e8a45', '#b85c20']
 const TYPING_SPEED = 110
 const ERASING_SPEED = 55
 const PAUSE = 1800
@@ -149,8 +149,8 @@ const styles = {
 }
 
 export default function AIProcess() {
-  const [displayedWord, setDisplayedWord] = useState(words[0])
-  const s = useRef({ phase: 'pause', wordIndex: 0, charIndex: words[0].length })
+  const [displayedWord, setDisplayedWord] = useState('Prototyping')
+  const s = useRef({ phase: 'pause', wordIndex: 0, charIndex: 'Prototyping'.length })
 
   useEffect(() => {
     let timeout

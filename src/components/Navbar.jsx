@@ -15,10 +15,11 @@ const styles = {
     transition: 'background-color 0.3s ease, border-color 0.3s ease',
   },
   logo: {
-    fontSize: '0.95rem',
-    fontFamily: "'Inter', sans-serif",
-    fontWeight: 500,
-    letterSpacing: '-0.02em',
+    fontSize: '1rem',
+    fontFamily: "'Playfair Display', serif",
+    fontWeight: 400,
+    fontStyle: 'normal',
+    letterSpacing: '0',
     color: 'var(--fg)',
   },
   links: {
@@ -67,7 +68,7 @@ export default function Navbar({ theme, toggleTheme }) {
       backgroundColor: scrolled ? 'var(--bg)' : 'transparent',
       borderBottom: scrolled ? '1px solid var(--border)' : '1px solid transparent',
     }}>
-      <div style={styles.logo}>Khoa Do</div>
+      <div style={{ ...styles.logo, cursor: 'pointer' }} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Khoa Do</div>
       <div style={styles.links}>
         <span className="nav-links-desktop" style={styles.link} onClick={() => scrollTo('work')}
           onMouseEnter={e => e.target.style.color = 'var(--fg)'}

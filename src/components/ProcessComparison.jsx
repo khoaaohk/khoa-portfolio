@@ -53,14 +53,14 @@ const styles = {
   column: (isNew) => ({
     borderRadius: '12px',
     overflow: 'hidden',
-    border: '1px solid var(--border)',
+    border: isNew ? '1px solid rgba(45,107,50,0.2)' : '1px solid rgba(139,74,30,0.2)',
     backgroundColor: isNew ? '#edf7ee' : '#fff4ec',
     display: 'flex',
     flexDirection: 'column',
   }),
   colHeader: (isNew) => ({
     padding: '1rem 1.25rem',
-    borderBottom: '1px solid var(--border)',
+    borderBottom: isNew ? '1px solid rgba(45,107,50,0.15)' : '1px solid rgba(139,74,30,0.15)',
     display: 'flex',
     alignItems: 'center',
     gap: '0.5rem',
@@ -89,7 +89,7 @@ const styles = {
     alignItems: 'flex-start',
     gap: '0.75rem',
     padding: '0.75rem 1.25rem',
-    borderBottom: '1px solid var(--border)',
+    borderBottom: isNew ? '1px solid rgba(45,107,50,0.12)' : '1px solid rgba(139,74,30,0.12)',
     backgroundColor: isNew ? '#edf7ee' : '#fff4ec',
   }),
   stepIcon: {
@@ -190,7 +190,7 @@ export default function ProcessComparison() {
           </div>
           <div style={styles.stepList}>
             {oldProcess.map((s, i) => (
-              <div key={s.step} style={{ ...styles.stepItem(false), borderBottom: i < oldProcess.length - 1 ? '1px solid var(--border)' : 'none' }}>
+              <div key={s.step} style={{ ...styles.stepItem(false), borderBottom: i < oldProcess.length - 1 ? '1px solid rgba(139,74,30,0.12)' : 'none' }}>
                 <span style={styles.stepNum}>{s.step}</span>
                 <span style={styles.stepIcon}>{s.icon}</span>
                 <div style={styles.stepContent}>
@@ -210,7 +210,7 @@ export default function ProcessComparison() {
           </div>
           <div style={styles.stepList}>
             {newProcess.map((s, i) => (
-              <div key={s.step} style={{ ...styles.stepItem(true), borderBottom: '1px solid var(--border)' }}>
+              <div key={s.step} style={{ ...styles.stepItem(true), borderBottom: '1px solid rgba(45,107,50,0.12)' }}>
                 <span style={styles.stepNum}>{s.step}</span>
                 <span style={styles.stepIcon}>{s.icon}</span>
                 <div style={styles.stepContent}>
