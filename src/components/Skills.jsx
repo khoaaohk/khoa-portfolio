@@ -110,7 +110,7 @@ export default function Skills() {
           transition={{ duration: 0.6 }}
         >
           A senior product designer who moves fast, works closely with engineering,
-          and brings 15 years of experience shipping products that users love and businesses grow from.
+          and brings +10 years of experience shipping products that users love and businesses grow from.
         </motion.p>
       </div>
 

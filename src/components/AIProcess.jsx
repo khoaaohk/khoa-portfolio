@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react'
 import WarpVisual from './WarpVisual'
 import ProcessComparison from './ProcessComparison'
 
-const words = ['Prototyping', 'Fine Tuning', 'Building']
+const words = ['Prototyping', 'Refining', 'Building']
 const wordColors = ['#2c5faa', '#1e8a45', '#b85c20']
 const TYPING_SPEED = 110
 const ERASING_SPEED = 55
@@ -209,7 +209,7 @@ export default function AIProcess() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <strong style={{ color: 'var(--fg)', fontWeight: 500 }}>15 years</strong> of turning complex problems into products people actually use —
+          <strong style={{ color: 'var(--fg)', fontWeight: 500 }}>+10 years</strong> of turning complex problems into products people actually use —
           now working with an AI-native workflow that ships real, working prototypes in hours instead of weeks.
         </motion.p>
         <motion.a

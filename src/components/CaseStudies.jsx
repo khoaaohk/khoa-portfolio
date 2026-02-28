@@ -79,6 +79,7 @@ const styles = {
     marginBottom: '1.5rem',
     cursor: 'pointer',
     transition: 'transform 0.2s ease',
+    backgroundColor: 'var(--card)',
   },
   cardTop: {
     display: 'flex',

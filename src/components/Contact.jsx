@@ -67,7 +67,7 @@ export default function Contact() {
         </h2>
         <p style={styles.sub}>
           Open to full-time opportunities with product teams who move fast and care about craft.
-          I bring 15 years of experience, an AI-native workflow, and a track record of shipping work that drives real results.
+          I bring +10 years of experience, an AI-native workflow, and a track record of shipping work that drives real results.
         </p>
         <div style={styles.links}>
           <a
