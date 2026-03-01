@@ -200,7 +200,9 @@ export default function AIProcess() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          <span style={{ color: wordColors[s.current.wordIndex] }}>{displayedWord}</span><span style={{ borderRight: `2px solid ${wordColors[s.current.wordIndex]}`, marginLeft: '1px', opacity: 0.7 }}>&thinsp;</span>{' '}
+          <span className="animated-word-line">
+            <span style={{ color: wordColors[s.current.wordIndex] }}>{displayedWord}</span><span style={{ borderRight: `2px solid ${wordColors[s.current.wordIndex]}`, marginLeft: '1px', opacity: 0.7 }}>&thinsp;</span>
+          </span>
           products with AI —<br /><span style={styles.italic}>faster, leaner,</span> and closer to engineering.
         </motion.h1>
         <motion.p

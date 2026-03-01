@@ -50,6 +50,10 @@ img {
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
+  .animated-word-line {
+    display: block;
+    min-height: 1.2em;
+  }
   .flow-grid {
     grid-template-columns: repeat(2, 1fr) !important;
   }
