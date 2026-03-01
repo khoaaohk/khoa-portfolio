@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useEffect } from 'react'
 
 const projects = [
-  { slug: 'ethos', number: '01', title: 'Ethos', category: 'In Progress', tags: ['In Progress'] },
+  { slug: 'ethos', number: '01', title: 'Ethos', category: 'New AI Workflow', tags: ['New AI Workflow'] },
   { slug: 'thycotic', number: '02', title: 'Thycotic', category: 'Privileged Access Management', tags: ['UX Research', 'Enterprise', 'Mobile', 'Security'] },
   { slug: 'honest-paws', number: '03', title: 'Honest Paws', category: 'Ecommerce · Pet CBD', tags: ['Ecommerce', 'Conversion', 'DTC'] },
   { slug: 'floracracy', number: '04', title: 'Floracracy', category: 'Floral Arrangement Builder', tags: ['Product Design', 'Interactive', 'Builder'] },
