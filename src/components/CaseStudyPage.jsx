@@ -592,6 +592,242 @@ function Floracracy() {
   )
 }
 
+function Usana() {
+  return (
+    <>
+      {/* Hero */}
+      <div style={{ marginBottom: '5rem' }}>
+        <p style={{ fontSize: '0.8rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>
+          05 — Dashboard Redesign
+        </p>
+        <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.1, color: 'var(--fg)', marginBottom: '1.5rem' }}>
+          One portal. Three types<br />of users. Zero confusion.
+        </h1>
+        <p style={{ fontSize: '1.1rem', color: 'var(--muted)', maxWidth: '580px', lineHeight: 1.8 }}>
+          Usana's associate portal — the Hub — was the command center for thousands of independent distributors managing their business. I led a full redesign to make it faster, clearer, and built around how people actually work.
+        </p>
+      </div>
+
+      {/* Hero Image */}
+      <div style={{ marginBottom: '5rem', borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--border)' }}>
+        <img
+          src="https://images.squarespace-cdn.com/content/v1/5c19a264e74940df765b8a67/1606679162692-7PCWLWD2JYPVX0J2698Z/Usana+image.png"
+          alt="Usana Hub portal overview"
+          style={{ width: '100%', display: 'block', objectFit: 'cover', mixBlendMode: 'multiply', backgroundColor: '#fff' }}
+        />
+      </div>
+
+      {/* Meta */}
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '1px', backgroundColor: 'var(--border)', border: '1px solid var(--border)', borderRadius: '12px', overflow: 'hidden', marginBottom: '5rem' }}>
+        {[
+          { label: 'Role', value: 'Lead Designer' },
+          { label: 'Duration', value: '2+ Years' },
+          { label: 'Platform', value: 'Web · Responsive' },
+          { label: 'Tools', value: 'Sketch, InVision, Jira' },
+        ].map(item => (
+          <div key={item.label} style={{ backgroundColor: 'var(--bg)', padding: '1.5rem' }}>
+            <p style={{ fontSize: '0.7rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '0.5rem' }}>{item.label}</p>
+            <p style={{ fontSize: '0.95rem', color: 'var(--fg)', fontWeight: 500 }}>{item.value}</p>
+          </div>
+        ))}
+      </div>
+
+      {/* The Challenge */}
+      <div style={{ marginBottom: '5rem' }}>
+        <p style={{ fontSize: '0.7rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>The Challenge</p>
+        <p style={{ fontSize: 'clamp(1.1rem, 2.5vw, 1.4rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.6, color: 'var(--fg)', maxWidth: '680px', marginBottom: '2rem' }}>
+          Associates were expected to manage auto-orders, track sales, monitor team growth, access news, and run their business — all from a portal that buried everything in nested navigation and data tables.
+        </p>
+        <p style={{ fontSize: '1rem', color: 'var(--muted)', maxWidth: '620px', lineHeight: 1.8 }}>
+          The Hub had grown organically over time — features bolted on, navigation bloated, mobile experience ignored. With the majority of traffic coming from mobile, we had a real usability problem on our hands. The challenge was to redesign from the inside out without disrupting an active user base.
+        </p>
+      </div>
+
+      <div style={{ borderTop: '1px solid var(--border)', marginBottom: '5rem' }} />
+
+      {/* Research */}
+      <div style={{ marginBottom: '5rem' }}>
+        <p style={{ fontSize: '0.7rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>Research & Discovery</p>
+        <p style={{ fontSize: '1rem', color: 'var(--muted)', maxWidth: '620px', lineHeight: 1.8, marginBottom: '2.5rem' }}>
+          Working with a dedicated design researcher, we ran user interviews, usability tests, and behavioral analysis. Traffic data revealed that associates weren't a monolith — three distinct usage patterns emerged, each with radically different needs.
+        </p>
+
+        {/* User test image */}
+        <div style={{ borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--border)', marginBottom: '2.5rem' }}>
+          <img
+            src="https://images.squarespace-cdn.com/content/v1/5c19a264e74940df765b8a67/1606240024765-PRB80ZY83EHO1LAV4EXO/UserTest1.jpg"
+            alt="User testing session"
+            style={{ width: '100%', display: 'block', objectFit: 'cover', mixBlendMode: 'multiply', backgroundColor: '#fff' }}
+          />
+        </div>
+
+        {/* 3 user segments */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginBottom: '2.5rem' }}>
+          {[
+            {
+              type: 'New Associates',
+              freq: 'First visit',
+              pain: 'No onboarding direction. Didn\'t know where to start or what to do next.',
+              fix: 'Contextual notification system guiding first steps; planned AppCues onboarding integration.',
+            },
+            {
+              type: 'Returning Associates',
+              freq: 'Weekly visitors',
+              pain: 'Came primarily for promotions and personal site management. Too many clicks to get there.',
+              fix: 'Quick links and a surfaced promotions widget on the home dashboard.',
+            },
+            {
+              type: 'Power Users',
+              freq: 'Daily visitors',
+              pain: 'Needed to track business growth and manage their team. Data was buried in complex tables.',
+              fix: 'At-a-glance dashboard widgets that reduced data access from 5+ clicks to one.',
+            },
+          ].map(seg => (
+            <div key={seg.type} style={{ padding: '1.5rem', border: '1px solid var(--border)', borderRadius: '12px', backgroundColor: 'var(--card)' }}>
+              <p style={{ fontSize: '0.7rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '0.5rem' }}>{seg.freq}</p>
+              <p style={{ fontSize: '0.95rem', fontWeight: 600, color: 'var(--fg)', marginBottom: '0.75rem' }}>{seg.type}</p>
+              <p style={{ fontSize: '0.8rem', color: 'var(--muted)', lineHeight: 1.7, marginBottom: '0.75rem' }}><strong style={{ color: 'var(--fg)', fontWeight: 500 }}>Pain:</strong> {seg.pain}</p>
+              <p style={{ fontSize: '0.8rem', color: 'var(--muted)', lineHeight: 1.7 }}><strong style={{ color: 'var(--fg)', fontWeight: 500 }}>Solution:</strong> {seg.fix}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Key insight */}
+        <div style={{ padding: '2rem', borderLeft: '3px solid var(--fg)', backgroundColor: 'var(--tag-bg)', borderRadius: '0 12px 12px 0' }}>
+          <p style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.15rem', fontStyle: 'italic', color: 'var(--fg)', lineHeight: 1.6, marginBottom: '0.75rem' }}>
+            "Designing for one average user was the wrong model. We needed to design for three distinct mindsets — and make each feel like the portal was built for them."
+          </p>
+          <p style={{ fontSize: '0.75rem', color: 'var(--muted)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>Insight from user research synthesis</p>
+        </div>
+      </div>
+
+      <div style={{ borderTop: '1px solid var(--border)', marginBottom: '5rem' }} />
+
+      {/* Design System */}
+      <div style={{ marginBottom: '5rem' }}>
+        <p style={{ fontSize: '0.7rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>Design System</p>
+        <p style={{ fontSize: 'clamp(1.1rem, 2.5vw, 1.3rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.6, color: 'var(--fg)', maxWidth: '680px', marginBottom: '1.5rem' }}>
+          A component strategy built to scale.
+        </p>
+        <p style={{ fontSize: '1rem', color: 'var(--muted)', maxWidth: '620px', lineHeight: 1.8, marginBottom: '2.5rem' }}>
+          As the team grew, so did inconsistency. We built a shared Sketch component library with documented usage guidelines — covering process optimization, component delivery, QA standards, and scalability. This cut design-to-dev handoff friction and gave engineers a single source of truth.
+        </p>
+
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+          {[
+            {
+              src: 'https://images.squarespace-cdn.com/content/v1/5c19a264e74940df765b8a67/1606678689181-7JUHET816KIW7QGIFMDV/image-asset.png',
+              alt: 'Usana design system components',
+            },
+            {
+              src: 'https://images.squarespace-cdn.com/content/v1/5c19a264e74940df765b8a67/1606678666218-8LW9J9L0T4VPGZE9YZ60/UsanaSystem2.png',
+              alt: 'Usana design system documentation',
+            },
+          ].map((img, i) => (
+            <div key={i} style={{ borderRadius: '10px', overflow: 'hidden', border: '1px solid var(--border)', backgroundColor: '#fff' }}>
+              <img src={img.src} alt={img.alt} style={{ width: '100%', display: 'block', objectFit: 'cover', mixBlendMode: 'multiply' }} />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div style={{ borderTop: '1px solid var(--border)', marginBottom: '5rem' }} />
+
+      {/* Design Decisions */}
+      <div style={{ marginBottom: '5rem' }}>
+        <p style={{ fontSize: '0.7rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>Design Decisions</p>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+          {[
+            {
+              n: '01',
+              title: 'Navigation overhaul',
+              desc: 'Collapsed a sprawling nav into clear, task-oriented groupings. Reduced visible nav items by 40% while making everything more findable — confirmed through card sorting sessions.',
+            },
+            {
+              n: '02',
+              title: 'Widgets over tables',
+              desc: 'Replaced complex data tables with at-a-glance dashboard widgets for sales volume, team activity, and performance trends. Power users went from 5+ clicks to surface key data to one.',
+            },
+            {
+              n: '03',
+              title: 'Contextual notifications',
+              desc: 'Built a smart notification layer that surfaced relevant next steps based on user type and account status — guiding new users, surfacing promotions for weekly visitors, and alerting power users to team activity.',
+            },
+            {
+              n: '04',
+              title: 'Mobile-first execution',
+              desc: 'With the majority of traffic on mobile, we designed responsive-first. Every widget, nav pattern, and data visualization was tested on small screens before desktop.',
+            },
+            {
+              n: '05',
+              title: '2-week sprint cadence',
+              desc: 'Worked in cross-functional sprints with daily scrums, bi-weekly sprint planning, and Jira-tracked delivery. Design handoff followed a structured QA checklist before any component went to engineering.',
+            },
+          ].map(item => (
+            <div key={item.n} style={{ display: 'grid', gridTemplateColumns: '3rem 1fr', gap: '1.5rem', alignItems: 'start' }}>
+              <span style={{ fontSize: '0.7rem', color: 'var(--muted)', fontVariantNumeric: 'tabular-nums', paddingTop: '0.15rem' }}>{item.n}</span>
+              <div>
+                <p style={{ fontSize: '1rem', fontWeight: 500, color: 'var(--fg)', marginBottom: '0.4rem' }}>{item.title}</p>
+                <p style={{ fontSize: '0.9rem', color: 'var(--muted)', lineHeight: 1.7 }}>{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div style={{ borderTop: '1px solid var(--border)', marginBottom: '5rem' }} />
+
+      {/* Final Screens */}
+      <div style={{ marginBottom: '5rem' }}>
+        <p style={{ fontSize: '0.7rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>Final Screens</p>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1rem' }}>
+          {[
+            {
+              src: 'https://images.squarespace-cdn.com/content/v1/5c19a264e74940df765b8a67/1606751385629-W6LZ0Q4226RCOJ5S3981/Data%2BWidgets.png',
+              alt: 'Usana data widgets dashboard',
+            },
+            {
+              src: 'https://images.squarespace-cdn.com/content/v1/5c19a264e74940df765b8a67/1606751514224-N59SDWID2JAEDTIHVBBG/Hub4WeekReport.jpg',
+              alt: 'Usana Hub 4-week report',
+            },
+          ].map((img, i) => (
+            <div key={i} style={{ borderRadius: '10px', overflow: 'hidden', border: '1px solid var(--border)', backgroundColor: '#fff' }}>
+              <img src={img.src} alt={img.alt} style={{ width: '100%', display: 'block', objectFit: 'cover', mixBlendMode: 'multiply' }} />
+            </div>
+          ))}
+        </div>
+        <div style={{ borderRadius: '10px', overflow: 'hidden', border: '1px solid var(--border)', backgroundColor: '#fff' }}>
+          <img
+            src="https://images.squarespace-cdn.com/content/v1/5c19a264e74940df765b8a67/1606751673778-MM5UNROWARC7DEPEPUBM/image-asset.jpeg"
+            alt="Usana Hub responsive design"
+            style={{ width: '100%', display: 'block', objectFit: 'cover', mixBlendMode: 'multiply' }}
+          />
+        </div>
+      </div>
+
+      {/* Outcome */}
+      <div style={{ padding: '3rem', backgroundColor: 'var(--tag-bg)', borderRadius: '16px' }}>
+        <p style={{ fontSize: '0.7rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '2rem' }}>Outcome</p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem', marginBottom: '2rem' }}>
+          {[
+            { stat: '2+ yrs', label: 'Leading design across sprints and a growing team' },
+            { stat: '3 types', label: 'Distinct user needs addressed in one unified portal' },
+            { stat: '↓ 40%', label: 'Reduction in visible nav items with improved findability' },
+          ].map(item => (
+            <div key={item.stat}>
+              <p style={{ fontSize: 'clamp(1.5rem, 4vw, 2.2rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, color: 'var(--fg)', marginBottom: '0.4rem' }}>{item.stat}</p>
+              <p style={{ fontSize: '0.8rem', color: 'var(--muted)', lineHeight: 1.6 }}>{item.label}</p>
+            </div>
+          ))}
+        </div>
+        <p style={{ fontSize: '0.95rem', color: 'var(--muted)', lineHeight: 1.8, maxWidth: '580px' }}>
+          The redesigned Hub gave Usana's associates a portal that worked for who they actually were — not a generic dashboard trying to serve everyone and serving no one well.
+        </p>
+      </div>
+    </>
+  )
+}
+
 function Placeholder({ project }) {
   return (
     <>
@@ -693,7 +929,7 @@ export default function CaseStudyPage() {
       {/* Content */}
       <main style={{ padding: '8rem 2rem', maxWidth: '900px', margin: '0 auto' }}>
         <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-          {slug === 'thycotic' ? <Thycotic /> : slug === 'honest-paws' ? <HonestPaws /> : slug === 'floracracy' ? <Floracracy /> : <Placeholder project={project} />}
+          {slug === 'thycotic' ? <Thycotic /> : slug === 'honest-paws' ? <HonestPaws /> : slug === 'floracracy' ? <Floracracy /> : slug === 'usana' ? <Usana /> : <Placeholder project={project} />}
 
           {/* Prev / Next */}
           <div style={{ borderTop: '1px solid var(--border)', paddingTop: '2rem', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>

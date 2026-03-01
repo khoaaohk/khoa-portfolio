@@ -75,6 +75,11 @@ export default function Navbar({ theme, toggleTheme }) {
           onMouseLeave={e => e.target.style.color = 'var(--muted)'}>
           Work
         </span>
+        <span style={styles.link} onClick={() => scrollTo('process')}
+          onMouseEnter={e => e.target.style.color = 'var(--fg)'}
+          onMouseLeave={e => e.target.style.color = 'var(--muted)'}>
+          Process
+        </span>
         <span style={styles.link} onClick={() => scrollTo('skills')}
           onMouseEnter={e => e.target.style.color = 'var(--fg)'}
           onMouseLeave={e => e.target.style.color = 'var(--muted)'}>
