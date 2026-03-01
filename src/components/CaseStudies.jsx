@@ -176,7 +176,7 @@ export default function CaseStudies() {
   return (
     <section className="section-pad" style={styles.section}>
       <div style={{ borderTop: '1px solid var(--border)' }} />
-      <div id="work" style={{ ...styles.header, borderTop: 'none', scrollMarginTop: '80px' }}>
+      <div id="work" style={{ ...styles.header, borderTop: 'none', scrollMarginTop: '48px' }}>
         <span style={styles.sectionLabel}>Selected Work</span>
         <span style={styles.count}>4 projects + 1 in progress</span>
       </div>

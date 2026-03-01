@@ -54,7 +54,7 @@ export default function Contact() {
   return (
     <section className="section-pad" style={styles.section}>
       <div style={{ borderTop: '1px solid var(--border)' }} />
-      <div id="contact" style={{ ...styles.header, borderTop: 'none', scrollMarginTop: '80px' }}>
+      <div id="contact" style={{ ...styles.header, borderTop: 'none', scrollMarginTop: '48px' }}>
         <span style={styles.sectionLabel}>Contact</span>
       </div>
       <motion.div

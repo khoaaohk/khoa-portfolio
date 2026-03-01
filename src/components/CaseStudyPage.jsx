@@ -1,5 +1,5 @@
 import { useParams, Link, useNavigate } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { useEffect } from 'react'
 
 const projects = [
@@ -896,24 +896,33 @@ export default function CaseStudyPage() {
         <Link to="/" style={{ fontSize: '1rem', fontFamily: "'Playfair Display', serif", fontWeight: 400, color: 'var(--fg)' }}>
           Khoa
         </Link>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
-          {prev && (
-            <Link to={`/work/${prev.slug}`} style={{ fontSize: '0.8rem', color: 'var(--muted)' }}
-              onMouseEnter={e => e.currentTarget.style.color = 'var(--fg)'}
-              onMouseLeave={e => e.currentTarget.style.color = 'var(--muted)'}
-            >
-              ← {prev.title}
-            </Link>
-          )}
-          {next && (
-            <Link to={`/work/${next.slug}`} style={{ fontSize: '0.8rem', color: 'var(--muted)' }}
-              onMouseEnter={e => e.currentTarget.style.color = 'var(--fg)'}
-              onMouseLeave={e => e.currentTarget.style.color = 'var(--muted)'}
-            >
-              {next.title} →
-            </Link>
-          )}
-        </div>
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={slug}
+            style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}
+            initial={{ opacity: 0, y: -6 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 6 }}
+            transition={{ duration: 0.25, ease: 'easeInOut' }}
+          >
+            {prev && (
+              <Link to={`/work/${prev.slug}`} style={{ fontSize: '0.8rem', color: 'var(--muted)' }}
+                onMouseEnter={e => e.currentTarget.style.color = 'var(--fg)'}
+                onMouseLeave={e => e.currentTarget.style.color = 'var(--muted)'}
+              >
+                ← {prev.title}
+              </Link>
+            )}
+            {next && (
+              <Link to={`/work/${next.slug}`} style={{ fontSize: '0.8rem', color: 'var(--muted)' }}
+                onMouseEnter={e => e.currentTarget.style.color = 'var(--fg)'}
+                onMouseLeave={e => e.currentTarget.style.color = 'var(--muted)'}
+              >
+                {next.title} →
+              </Link>
+            )}
+          </motion.div>
+        </AnimatePresence>
         <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
           <span
             onClick={goToWork}
