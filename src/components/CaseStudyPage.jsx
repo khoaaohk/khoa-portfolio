@@ -1,5 +1,6 @@
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { useEffect } from 'react'
 
 const projects = [
   { slug: 'ethos', number: '01', title: 'Ethos', category: 'In Progress', tags: ['In Progress'] },
@@ -618,6 +619,11 @@ function Placeholder({ project }) {
 export default function CaseStudyPage() {
   const { slug } = useParams()
   const navigate = useNavigate()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [slug])
+
   const project = projects.find(p => p.slug === slug)
   const currentIndex = projects.findIndex(p => p.slug === slug)
   const prev = projects[currentIndex - 1]
