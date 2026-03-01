@@ -937,7 +937,8 @@ export default function CaseStudyPage() {
 
       {/* Content */}
       <main style={{ padding: '8rem 2rem', maxWidth: '900px', margin: '0 auto' }}>
-        <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+        <AnimatePresence mode="wait">
+        <motion.div key={slug} initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -16 }} transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}>
           {slug === 'thycotic' ? <Thycotic /> : slug === 'honest-paws' ? <HonestPaws /> : slug === 'floracracy' ? <Floracracy /> : slug === 'usana' ? <Usana /> : <Placeholder project={project} />}
 
           {/* Prev / Next */}
@@ -956,6 +957,7 @@ export default function CaseStudyPage() {
             ) : <div />}
           </div>
         </motion.div>
+        </AnimatePresence>
       </main>
     </div>
   )
