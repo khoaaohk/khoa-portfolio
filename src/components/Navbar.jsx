@@ -70,7 +70,7 @@ export default function Navbar({ theme, toggleTheme }) {
     }}>
       <div style={{ ...styles.logo, cursor: 'pointer' }} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Khoa</div>
       <div className="nav-links" style={styles.links}>
-        <span style={styles.link} onClick={() => scrollTo('process')}
+        <span style={styles.link} onClick={() => scrollTo('ai-process')}
           onMouseEnter={e => e.target.style.color = 'var(--fg)'}
           onMouseLeave={e => e.target.style.color = 'var(--muted)'}>
           Process

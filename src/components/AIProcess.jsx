@@ -241,7 +241,7 @@ export default function AIProcess() {
         </motion.a>
       </div>
 
-      <div style={styles.header}>
+      <div id="ai-process" style={styles.header}>
         <span style={styles.sectionLabel}>AI Design Process</span>
       </div>
 
