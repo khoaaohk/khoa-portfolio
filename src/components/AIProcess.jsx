@@ -262,7 +262,7 @@ export default function AIProcess() {
               onMouseLeave={e => e.currentTarget.style.backgroundColor = 'var(--bg)'}
             >
               <span style={styles.stepNumber}>0{i + 1}</span>
-              <span style={styles.icon}>{step.icon}</span>
+              <span style={{ ...styles.icon, color: 'var(--fg)' }}>{step.icon}</span>
               <p style={styles.toolName}>{step.tool}</p>
               <p style={styles.toolDesc}>{step.desc}</p>
             </div>

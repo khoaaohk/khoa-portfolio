@@ -1,6 +1,29 @@
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { useEffect } from 'react'
+import { useEffect, useRef, useState } from 'react'
+
+const logoHoverStyles = [
+  { fontFamily: "'Playfair Display', serif", fontWeight: 700, fontStyle: 'italic', letterSpacing: '0.02em' },
+  { fontFamily: "'Courier New', monospace", fontWeight: 700, fontStyle: 'normal', letterSpacing: '-0.03em' },
+  { fontFamily: "Impact, 'Arial Narrow', sans-serif", fontWeight: 900, fontStyle: 'normal', letterSpacing: '0.12em', textTransform: 'uppercase' },
+  { fontFamily: "Georgia, serif", fontWeight: 400, fontStyle: 'italic', letterSpacing: '0.05em' },
+  { fontFamily: "'Comic Sans MS', 'Chalkboard SE', cursive", fontWeight: 400, fontStyle: 'normal', letterSpacing: '0.03em' },
+  { fontFamily: "'Arial Black', 'Arial Bold', sans-serif", fontWeight: 900, fontStyle: 'normal', letterSpacing: '-0.04em' },
+  { fontFamily: "'Inter', sans-serif", fontWeight: 100, fontStyle: 'normal', letterSpacing: '0.25em', textTransform: 'uppercase' },
+  { fontFamily: "'Times New Roman', serif", fontWeight: 700, fontStyle: 'italic', letterSpacing: '0.01em' },
+  { fontFamily: "'Trebuchet MS', sans-serif", fontWeight: 400, fontStyle: 'normal', letterSpacing: '0.08em' },
+  { fontFamily: "Palatino, 'Palatino Linotype', serif", fontWeight: 400, fontStyle: 'italic', letterSpacing: '0.04em' },
+  { fontFamily: "'Inter', sans-serif", fontWeight: 900, fontStyle: 'normal', letterSpacing: '-0.06em', textTransform: 'lowercase' },
+  { fontFamily: "'Courier New', monospace", fontWeight: 400, fontStyle: 'italic', letterSpacing: '0.06em' },
+  { fontFamily: "Georgia, serif", fontWeight: 700, fontStyle: 'normal', letterSpacing: '-0.01em' },
+  { fontFamily: "'Playfair Display', serif", fontWeight: 900, fontStyle: 'normal', letterSpacing: '-0.02em' },
+  { fontFamily: "'Inter', sans-serif", fontWeight: 200, fontStyle: 'normal', letterSpacing: '0.28em', textTransform: 'uppercase' },
+  { fontFamily: "Verdana, Geneva, sans-serif", fontWeight: 400, fontStyle: 'normal', letterSpacing: '-0.02em' },
+  { fontFamily: "Monaco, 'Lucida Console', monospace", fontWeight: 400, fontStyle: 'normal', letterSpacing: '0.05em' },
+  { fontFamily: "'Helvetica Neue', Helvetica, sans-serif", fontWeight: 300, fontStyle: 'italic', letterSpacing: '0.1em' },
+  { fontFamily: "Arial, sans-serif", fontWeight: 900, fontStyle: 'italic', letterSpacing: '-0.03em' },
+  { fontFamily: "'Inter', sans-serif", fontWeight: 500, fontStyle: 'normal', letterSpacing: '0.18em', textTransform: 'uppercase' },
+]
 
 const projects = [
   { slug: 'ethos', number: '01', title: 'Ethos', category: 'New AI Workflow', tags: ['New AI Workflow'] },
@@ -855,6 +878,22 @@ function Placeholder({ project }) {
 export default function CaseStudyPage() {
   const { slug } = useParams()
   const navigate = useNavigate()
+  const [logoStyleIndex, setLogoStyleIndex] = useState(-1)
+  const intervalRef = useRef(null)
+  const counterRef = useRef(0)
+
+  const startCycling = () => {
+    counterRef.current = 0
+    intervalRef.current = setInterval(() => {
+      setLogoStyleIndex(counterRef.current % logoHoverStyles.length)
+      counterRef.current++
+    }, 65)
+  }
+
+  const stopCycling = () => {
+    clearInterval(intervalRef.current)
+    setLogoStyleIndex(-1)
+  }
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -893,7 +932,10 @@ export default function CaseStudyPage() {
         backgroundColor: 'var(--bg)',
         borderBottom: '1px solid var(--border)',
       }}>
-        <Link to="/" style={{ fontSize: '1rem', fontFamily: "'Playfair Display', serif", fontWeight: 400, color: 'var(--fg)' }}>
+        <Link to="/" style={{ fontSize: '1rem', fontFamily: "'Playfair Display', serif", fontWeight: 400, fontStyle: 'normal', letterSpacing: '0', textTransform: 'none', color: 'var(--fg)', transition: 'none', userSelect: 'none', ...(logoStyleIndex >= 0 ? logoHoverStyles[logoStyleIndex] : {}) }}
+          onMouseEnter={startCycling}
+          onMouseLeave={stopCycling}
+        >
           Khoa
         </Link>
         <AnimatePresence mode="wait">
