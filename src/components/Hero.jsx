@@ -75,25 +75,13 @@ export default function Hero() {
           Product Designer · San Diego, CA
         </motion.p>
 
-        <motion.h1 style={styles.headline} variants={fadeUp} custom={1} initial="hidden" animate="visible">
-          I research and design software products to{' '}
-          <span style={styles.italic}>empower users</span>{' '}
-          and increase business growth.
-        </motion.h1>
-
-        <motion.p style={styles.bio} variants={fadeUp} custom={2} initial="hidden" animate="visible">
-          Passionate about solving technical problems through thoughtful design.
-          I bridge the gap between user needs and business goals — with a deep
-          interest in accessibility and delightful interactions.
-        </motion.p>
-
         <motion.a
           style={styles.cta}
           variants={fadeUp}
-          custom={3}
+          custom={1}
           initial="hidden"
           animate="visible"
-          onClick={() => document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })}
+          onClick={() => document.getElementById('process')?.scrollIntoView({ behavior: 'smooth' })}
           whileHover={{ opacity: 0.6 }}
         >
           View my work ↓

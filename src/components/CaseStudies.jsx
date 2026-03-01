@@ -1,10 +1,12 @@
 import { motion } from 'framer-motion'
 import { useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const projects = [
   {
     number: '01',
     title: 'Ethos',
+    slug: 'ethos',
     category: 'In Progress',
     description: 'A new product experience currently in development — case study coming soon.',
     tags: ['In Progress'],
@@ -14,6 +16,7 @@ const projects = [
   {
     number: '02',
     title: 'Thycotic',
+    slug: 'thycotic',
     category: 'Privileged Access Management',
     description: 'Redesigned the core PAM experience to reduce friction for enterprise security teams managing sensitive credentials across large organizations.',
     tags: ['UX Research', 'Enterprise', 'Security'],
@@ -23,6 +26,7 @@ const projects = [
   {
     number: '03',
     title: 'Honest Paws',
+    slug: 'honest-paws',
     category: 'Ecommerce · Pet CBD',
     description: 'Improved conversion and trust signals for a DTC pet wellness brand — from product discovery through checkout and post-purchase.',
     tags: ['Ecommerce', 'Conversion', 'DTC'],
@@ -32,6 +36,7 @@ const projects = [
   {
     number: '04',
     title: 'Floracracy',
+    slug: 'floracracy',
     category: 'Floral Arrangement Builder',
     description: 'Built an interactive floral configuration experience that lets customers express creativity while streamlining the ordering process.',
     tags: ['Product Design', 'Interactive', 'Builder'],
@@ -41,6 +46,7 @@ const projects = [
   {
     number: '05',
     title: 'Usana',
+    slug: 'usana',
     category: 'Dashboard Redesign',
     description: 'Redesigned the distributor dashboard to surface key metrics and actions, improving daily engagement and reducing support requests.',
     tags: ['Dashboard', 'Data Viz', 'B2B'],
@@ -131,6 +137,7 @@ const styles = {
 
 function ProjectCard({ project, index }) {
   const ref = useRef(null)
+  const navigate = useNavigate()
 
   return (
     <motion.div
@@ -141,6 +148,7 @@ function ProjectCard({ project, index }) {
       viewport={{ once: true, margin: '-80px' }}
       transition={{ duration: 0.6, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
       whileHover={{ scale: 1.01 }}
+      onClick={() => navigate(`/work/${project.slug}`)}
       onMouseEnter={e => {
         e.currentTarget.style.backgroundColor = `var(--card-hover, var(--tag-bg))`
       }}
