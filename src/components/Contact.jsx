@@ -38,6 +38,7 @@ const styles = {
     display: 'flex',
     gap: '1.5rem',
     flexWrap: 'wrap',
+    paddingBottom: '80px',
   },
   link: {
     fontSize: '0.875rem',

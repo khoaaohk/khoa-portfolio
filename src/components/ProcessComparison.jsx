@@ -50,52 +50,8 @@ const styles = {
     gap: '1.5rem',
     marginBottom: '2rem',
   },
-  column: (isNew) => ({
-    borderRadius: '12px',
-    overflow: 'hidden',
-    border: isNew ? '1px solid rgba(45,107,50,0.2)' : '1px solid rgba(139,74,30,0.2)',
-    backgroundColor: isNew ? '#edf7ee' : '#fff4ec',
-    display: 'flex',
-    flexDirection: 'column',
-  }),
-  colHeader: (isNew) => ({
-    padding: '1rem 1.25rem',
-    borderBottom: isNew ? '1px solid rgba(45,107,50,0.15)' : '1px solid rgba(139,74,30,0.15)',
-    display: 'flex',
-    alignItems: 'center',
-    gap: '0.5rem',
-    backgroundColor: isNew ? '#c8eaca' : '#fde0c8',
-  }),
-  colTitle: (isNew) => ({
-    fontSize: '0.8rem',
-    fontWeight: 600,
-    letterSpacing: '0.08em',
-    textTransform: 'uppercase',
-    color: isNew ? '#2d6b32' : '#8a4a1e',
-  }),
-  colBadge: (isNew) => ({
-    fontSize: '0.65rem',
-    padding: '2px 8px',
-    borderRadius: '100px',
-    backgroundColor: isNew ? 'rgba(255,255,255,0.5)' : 'rgba(255,255,255,0.5)',
-    color: isNew ? '#2d6b32' : '#8a4a1e',
-    marginLeft: 'auto',
-  }),
   stepList: {
     padding: 0,
-  },
-  stepItem: (isNew) => ({
-    display: 'flex',
-    alignItems: 'flex-start',
-    gap: '0.75rem',
-    padding: '0.75rem 1.25rem',
-    borderBottom: isNew ? '1px solid rgba(45,107,50,0.12)' : '1px solid rgba(139,74,30,0.12)',
-    backgroundColor: isNew ? '#edf7ee' : '#fff4ec',
-  }),
-  stepIcon: {
-    fontSize: '1rem',
-    minWidth: '1.5rem',
-    marginTop: '1px',
   },
   stepContent: {
     flex: 1,
@@ -116,6 +72,12 @@ const styles = {
     color: 'var(--muted)',
     minWidth: '1.5rem',
     marginTop: '3px',
+  },
+  stepIcon: {
+    fontSize: '1rem',
+    minWidth: '1.5rem',
+    marginTop: '1px',
+    color: 'var(--fg)',
   },
   gainsTable: {
     border: '1px solid var(--border)',
@@ -166,6 +128,106 @@ const styles = {
   },
 }
 
+function ProcessColumn({ isNew, steps }) {
+  const accentColor = isNew ? '#1e8a45' : '#b85c20'
+  const borderColor = isNew ? 'rgba(30,138,69,0.25)' : 'rgba(184,92,32,0.25)'
+  const headerBg = isNew ? 'rgba(30,138,69,0.08)' : 'rgba(184,92,32,0.08)'
+
+  return (
+    <div style={{
+      borderRadius: '12px',
+      overflow: 'hidden',
+      border: `1px solid ${borderColor}`,
+      backgroundColor: 'var(--card)',
+      display: 'flex',
+      flexDirection: 'column',
+    }}>
+      <div style={{
+        padding: '0.875rem 1.25rem',
+        borderBottom: `1px solid ${borderColor}`,
+        display: 'flex',
+        alignItems: 'center',
+        gap: '0.5rem',
+        backgroundColor: headerBg,
+      }}>
+        <span style={{
+          fontSize: '0.8rem',
+          fontWeight: 600,
+          letterSpacing: '0.08em',
+          textTransform: 'uppercase',
+          color: accentColor,
+        }}>
+          {isNew ? 'AI-Native Process' : 'Old Process'}
+        </span>
+        <span style={{
+          fontSize: '0.65rem',
+          padding: '2px 8px',
+          borderRadius: '100px',
+          backgroundColor: 'var(--tag-bg)',
+          color: 'var(--muted)',
+          marginLeft: 'auto',
+        }}>
+          {isNew ? 'Hours → Days' : 'Weeks → Months'}
+        </span>
+      </div>
+
+      <div style={styles.stepList}>
+        {steps.map((s, i) => (
+          <div key={s.step} style={{
+            display: 'flex',
+            alignItems: 'flex-start',
+            gap: '0.75rem',
+            padding: '0.75rem 1.25rem',
+            borderBottom: i < steps.length - 1 ? '1px solid var(--border)' : 'none',
+            backgroundColor: 'var(--card)',
+          }}>
+            <span style={styles.stepNum}>{s.step}</span>
+            <span style={styles.stepIcon}>{s.icon}</span>
+            <div style={styles.stepContent}>
+              <p style={styles.stepLabel}>{s.label}</p>
+              <p style={styles.stepDesc}>{s.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {isNew && (
+        <div style={{
+          flex: 1,
+          backgroundColor: 'var(--tag-bg)',
+          padding: '1.5rem 1.25rem',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-between',
+          gap: '1.25rem',
+          borderTop: '1px solid var(--border)',
+        }}>
+          <p style={{
+            fontFamily: "'Playfair Display', serif",
+            fontSize: '0.95rem',
+            fontStyle: 'italic',
+            color: 'var(--muted)',
+            lineHeight: 1.6,
+          }}>
+            "We are living through the biggest shift in how products are designed and built since the internet."
+          </p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+            {[
+              { stat: '10×', label: 'faster from idea to live product' },
+              { stat: '0', label: 'handoff gaps between design & code' },
+            ].map(item => (
+              <div key={item.stat} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                <span style={{ fontSize: '1.1rem', fontWeight: 600, color: '#1e8a45', minWidth: '2rem' }}>{item.stat}</span>
+                <span style={{ fontSize: '0.75rem', color: 'var(--muted)', lineHeight: 1.4 }}>{item.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}
+
 export default function ProcessComparison() {
   return (
     <motion.div
@@ -182,87 +244,8 @@ export default function ProcessComparison() {
       </p>
 
       <div className="comparison-cols" style={styles.columns}>
-        {/* Old Process */}
-        <div style={styles.column(false)}>
-          <div style={styles.colHeader(false)}>
-            <span style={styles.colTitle(false)}>Old Process</span>
-            <span style={styles.colBadge(false)}>Weeks → Months</span>
-          </div>
-          <div style={styles.stepList}>
-            {oldProcess.map((s, i) => (
-              <div key={s.step} style={{ ...styles.stepItem(false), borderBottom: i < oldProcess.length - 1 ? '1px solid rgba(139,74,30,0.12)' : 'none' }}>
-                <span style={styles.stepNum}>{s.step}</span>
-                <span style={styles.stepIcon}>{s.icon}</span>
-                <div style={styles.stepContent}>
-                  <p style={styles.stepLabel}>{s.label}</p>
-                  <p style={styles.stepDesc}>{s.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* New Process */}
-        <div style={styles.column(true)}>
-          <div style={styles.colHeader(true)}>
-            <span style={styles.colTitle(true)}>AI-Native Process</span>
-            <span style={styles.colBadge(true)}>Hours → Days</span>
-          </div>
-          <div style={styles.stepList}>
-            {newProcess.map((s, i) => (
-              <div key={s.step} style={{ ...styles.stepItem(true), borderBottom: '1px solid rgba(45,107,50,0.12)' }}>
-                <span style={styles.stepNum}>{s.step}</span>
-                <span style={styles.stepIcon}>{s.icon}</span>
-                <div style={styles.stepContent}>
-                  <p style={styles.stepLabel}>{s.label}</p>
-                  <p style={styles.stepDesc}>{s.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* AI World Visual */}
-          <div style={{
-            flex: 1,
-            backgroundColor: '#edf7ee',
-            padding: '1.5rem 1.25rem',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-between',
-            gap: '1.25rem',
-          }}>
-            <p style={{
-              fontFamily: "'Playfair Display', serif",
-              fontSize: '1rem',
-              fontStyle: 'italic',
-              color: '#2d6b32',
-              lineHeight: 1.5,
-            }}>
-              "We are living through the biggest shift in how products are designed and built since the internet."
-            </p>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-              {[
-                { stat: '10×', label: 'faster from idea to live product' },
-                { stat: '0', label: 'handoff gaps between design & code' },
-              ].map(item => (
-                <div key={item.stat} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                  <span style={{
-                    fontSize: '1.1rem',
-                    fontWeight: 600,
-                    color: '#2d6b32',
-                    minWidth: '2rem',
-                  }}>{item.stat}</span>
-                  <span style={{
-                    fontSize: '0.75rem',
-                    color: '#2d6b32',
-                    opacity: 0.7,
-                    lineHeight: 1.4,
-                  }}>{item.label}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+        <ProcessColumn isNew={false} steps={oldProcess} />
+        <ProcessColumn isNew={true} steps={newProcess} />
       </div>
 
       {/* Gains Table */}
