@@ -9,9 +9,9 @@ const styles = {
     zIndex: 100,
     padding: '0 2rem',
     height: '64px',
-    display: 'flex',
+    display: 'grid',
+    gridTemplateColumns: '1fr auto 1fr',
     alignItems: 'center',
-    justifyContent: 'space-between',
     transition: 'background-color 0.3s ease, border-color 0.3s ease',
   },
   logo: {
@@ -63,28 +63,30 @@ export default function Navbar({ theme, toggleTheme }) {
   }
 
   return (
-    <nav style={{
+    <nav className="nav-bar" style={{
       ...styles.nav,
       backgroundColor: scrolled ? 'var(--bg)' : 'transparent',
       borderBottom: scrolled ? '1px solid var(--border)' : '1px solid transparent',
     }}>
-      <div style={{ ...styles.logo, cursor: 'pointer' }} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Khoa Do</div>
-      <div style={styles.links}>
-        <span className="nav-links-desktop" style={styles.link} onClick={() => scrollTo('work')}
+      <div style={{ ...styles.logo, cursor: 'pointer' }} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Khoa</div>
+      <div className="nav-links" style={styles.links}>
+        <span style={styles.link} onClick={() => scrollTo('work')}
           onMouseEnter={e => e.target.style.color = 'var(--fg)'}
           onMouseLeave={e => e.target.style.color = 'var(--muted)'}>
           Work
         </span>
-        <span className="nav-links-desktop" style={styles.link} onClick={() => scrollTo('skills')}
+        <span style={styles.link} onClick={() => scrollTo('skills')}
           onMouseEnter={e => e.target.style.color = 'var(--fg)'}
           onMouseLeave={e => e.target.style.color = 'var(--muted)'}>
           Skills
         </span>
-        <span className="nav-links-desktop" style={styles.link} onClick={() => scrollTo('contact')}
+        <span style={styles.link} onClick={() => scrollTo('contact')}
           onMouseEnter={e => e.target.style.color = 'var(--fg)'}
           onMouseLeave={e => e.target.style.color = 'var(--muted)'}>
           Contact
         </span>
+      </div>
+      <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
         <button style={styles.themeBtn} onClick={toggleTheme} aria-label="Toggle theme">
           {theme === 'light' ? '🌙' : '☀️'}
         </button>

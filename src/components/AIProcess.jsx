@@ -151,11 +151,27 @@ const styles = {
 export default function AIProcess() {
   const [displayedWord, setDisplayedWord] = useState('Prototyping')
   const s = useRef({ phase: 'pause', wordIndex: 0, charIndex: 'Prototyping'.length })
+  const isVisible = useRef(true)
+  const headlineRef = useRef(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => { isVisible.current = entry.isIntersecting },
+      { threshold: 0 }
+    )
+    if (headlineRef.current) observer.observe(headlineRef.current)
+    return () => observer.disconnect()
+  }, [])
 
   useEffect(() => {
     let timeout
 
     const tick = () => {
+      if (!isVisible.current) {
+        timeout = setTimeout(tick, 300)
+        return
+      }
+
       const state = s.current
 
       if (state.phase === 'pause') {
@@ -195,15 +211,14 @@ export default function AIProcess() {
           Product Designer · San Diego, CA
         </motion.p>
         <motion.h1
+          ref={headlineRef}
           style={styles.mainHeadline}
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          <span className="animated-word-line">
-            <span style={{ color: wordColors[s.current.wordIndex] }}>{displayedWord}</span><span style={{ borderRight: `2px solid ${wordColors[s.current.wordIndex]}`, marginLeft: '1px', opacity: 0.7 }}>&thinsp;</span>
-          </span>
-          products with AI —<br /><span style={styles.italic}>faster, leaner,</span> and closer to engineering.
+          <span style={{ color: wordColors[s.current.wordIndex] }}>{displayedWord}</span><span className="type-cursor" style={{ display: 'inline-block', width: '2px', height: '0.85em', backgroundColor: wordColors[s.current.wordIndex], verticalAlign: 'middle', marginLeft: '2px' }} />{' '}
+          products with AI —<br className="desktop-br" /><span style={styles.italic}>faster, leaner,</span> and closer to engineering.
         </motion.h1>
         <motion.p
           style={{ ...styles.bio, marginBottom: '1.25rem' }}

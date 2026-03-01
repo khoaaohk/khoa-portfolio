@@ -48,11 +48,29 @@ img {
   display: block;
 }
 
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.type-cursor {
+  animation: blink 0.8s step-end infinite;
+}
+
 /* ── Responsive ── */
 @media (max-width: 768px) {
-  .animated-word-line {
-    display: block;
-    min-height: 1.2em;
+  .desktop-br {
+    display: none;
+  }
+  .nav-bar {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+    display: flex !important;
+    justify-content: space-between !important;
+  }
+  .nav-links {
+    gap: 1rem !important;
+    font-size: 0.8rem !important;
   }
   .flow-grid {
     grid-template-columns: repeat(2, 1fr) !important;
