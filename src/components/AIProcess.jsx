@@ -203,7 +203,7 @@ export default function AIProcess() {
     <section id="process" className="process-section" style={{ ...styles.section, paddingTop: '10rem' }}>
       <div style={styles.intro}>
         <motion.p
-          style={{ fontSize: '0.8rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '2rem' }}
+          style={{ fontSize: '0.8rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '3.5rem' }}
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -221,7 +221,7 @@ export default function AIProcess() {
           products with AI —<br className="desktop-br" /><span style={styles.italic}>faster, leaner,</span> and closer to engineering.
         </motion.h1>
         <motion.p
-          style={{ ...styles.bio, marginBottom: '1.25rem' }}
+          style={{ ...styles.bio, marginBottom: '2.5rem' }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
