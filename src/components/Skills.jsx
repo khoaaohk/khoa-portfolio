@@ -99,8 +99,9 @@ const styles = {
 
 export default function Skills() {
   return (
-    <section id="skills" className="section-pad" style={styles.section}>
-      <div style={styles.header}>
+    <section className="section-pad" style={styles.section}>
+      <div style={{ borderTop: '1px solid var(--border)' }} />
+      <div id="skills" style={{ ...styles.header, borderTop: 'none', scrollMarginTop: '80px' }}>
         <span style={styles.sectionLabel}>Expertise</span>
         <motion.p
           style={styles.intro}

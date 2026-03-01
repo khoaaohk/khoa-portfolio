@@ -241,7 +241,8 @@ export default function AIProcess() {
         </motion.a>
       </div>
 
-      <div id="ai-process" style={{ ...styles.header, scrollMarginTop: '80px' }}>
+      <div style={{ borderTop: '1px solid var(--border)' }} />
+      <div id="ai-process" style={{ ...styles.header, borderTop: 'none', scrollMarginTop: '80px' }}>
         <span style={styles.sectionLabel}>AI Design Process</span>
       </div>
 

@@ -613,7 +613,7 @@ function Usana() {
         <img
           src="https://images.squarespace-cdn.com/content/v1/5c19a264e74940df765b8a67/1606679162692-7PCWLWD2JYPVX0J2698Z/Usana+image.png"
           alt="Usana Hub portal overview"
-          style={{ width: '100%', display: 'block', objectFit: 'cover', mixBlendMode: 'multiply', backgroundColor: '#fff' }}
+          style={{ width: '100%', display: 'block', objectFit: 'cover' }}
         />
       </div>
 
@@ -657,7 +657,7 @@ function Usana() {
           <img
             src="https://images.squarespace-cdn.com/content/v1/5c19a264e74940df765b8a67/1606240024765-PRB80ZY83EHO1LAV4EXO/UserTest1.jpg"
             alt="User testing session"
-            style={{ width: '100%', display: 'block', objectFit: 'cover', mixBlendMode: 'multiply', backgroundColor: '#fff' }}
+            style={{ width: '100%', display: 'block', objectFit: 'cover' }}
           />
         </div>
 
