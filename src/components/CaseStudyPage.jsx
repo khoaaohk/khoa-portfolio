@@ -26,11 +26,12 @@ const logoHoverStyles = [
 ]
 
 const projects = [
-  { slug: 'ethos', number: '01', title: 'Ethos', category: 'New AI Workflow', tags: ['New AI Workflow'] },
-  { slug: 'thycotic', number: '02', title: 'Thycotic', category: 'Privileged Access Management', tags: ['UX Research', 'Enterprise', 'Mobile', 'Security'] },
-  { slug: 'honest-paws', number: '03', title: 'Honest Paws', category: 'Ecommerce · Pet CBD', tags: ['Ecommerce', 'Conversion', 'DTC'] },
-  { slug: 'floracracy', number: '04', title: 'Floracracy', category: 'Floral Arrangement Builder', tags: ['Product Design', 'Interactive', 'Builder'] },
-  { slug: 'usana', number: '05', title: 'Usana', category: 'Dashboard Redesign', tags: ['Dashboard', 'Data Viz', 'B2B'] },
+  { slug: 'ethos', number: '01', title: 'Ethos', category: 'Learning Management Platform', tags: ['Platform Redesign', 'LMS', 'Design System', 'AI Workflow'] },
+  { slug: 'splash', number: '02', title: 'Splash', category: 'Event Management · VEP Preview', tags: ['Product Design', 'UX Research', 'Enterprise', 'SaaS'] },
+  { slug: 'thycotic', number: '03', title: 'Thycotic', category: 'Privileged Access Management', tags: ['UX Research', 'Enterprise', 'Mobile', 'Security'] },
+  { slug: 'honest-paws', number: '04', title: 'Honest Paws', category: 'Ecommerce · Pet CBD', tags: ['Ecommerce', 'Conversion', 'DTC'] },
+  { slug: 'floracracy', number: '05', title: 'Floracracy', category: 'Floral Arrangement Builder', tags: ['Product Design', 'Interactive', 'Builder'] },
+  { slug: 'usana', number: '06', title: 'Usana', category: 'Dashboard Redesign', tags: ['Dashboard', 'Data Viz', 'B2B'] },
 ]
 
 function Thycotic() {
@@ -39,7 +40,7 @@ function Thycotic() {
       {/* Hero */}
       <div style={{ marginBottom: '5rem' }}>
         <p style={{ fontSize: '0.8rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>
-          02 — Privileged Access Management
+          03 — Privileged Access Management
         </p>
         <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.1, color: 'var(--fg)', marginBottom: '1.5rem' }}>
           Redesigning enterprise<br />security for the mobile era.
@@ -241,7 +242,7 @@ function HonestPaws() {
       {/* Hero */}
       <div style={{ marginBottom: '5rem' }}>
         <p style={{ fontSize: '0.8rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>
-          03 — Ecommerce · Pet CBD
+          04 — Ecommerce · Pet CBD
         </p>
         <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.1, color: 'var(--fg)', marginBottom: '1.5rem' }}>
           Turning high-traffic pages<br />into high-converting ones.
@@ -434,7 +435,7 @@ function Floracracy() {
       {/* Hero */}
       <div style={{ marginBottom: '5rem' }}>
         <p style={{ fontSize: '0.8rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>
-          04 — Floral Arrangement Builder
+          05 — Floral Arrangement Builder
         </p>
         <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.1, color: 'var(--fg)', marginBottom: '1.5rem' }}>
           Redesigning a floral studio<br />for creativity, not confusion.
@@ -621,7 +622,7 @@ function Usana() {
       {/* Hero */}
       <div style={{ marginBottom: '5rem' }}>
         <p style={{ fontSize: '0.8rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>
-          05 — Dashboard Redesign
+          06 — Dashboard Redesign
         </p>
         <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.1, color: 'var(--fg)', marginBottom: '1.5rem' }}>
           One portal. Three types<br />of users. Zero confusion.
@@ -851,6 +852,575 @@ function Usana() {
   )
 }
 
+function Splash() {
+  return (
+    <>
+      {/* Hero */}
+      <div style={{ marginBottom: '5rem' }}>
+        <p style={{ fontSize: '0.8rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>
+          02 — Event Management · VEP Preview
+        </p>
+        <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.1, color: 'var(--fg)', marginBottom: '1.5rem' }}>
+          Giving event hosts confidence<br />with a live preview experience.
+        </h1>
+        <p style={{ fontSize: '1.1rem', color: 'var(--muted)', maxWidth: '580px', lineHeight: 1.8 }}>
+          Splash is an event management platform used by enterprise teams worldwide. I designed the VEP Preview feature — a timeline-based preview that lets hosts see exactly what their attendees will experience at every stage of a virtual event.
+        </p>
+      </div>
+
+      {/* Hero Image */}
+      <div style={{ marginBottom: '5rem', borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--border)' }}>
+        <img
+          src="/assets/splash/goals.png"
+          alt="Splash VEP Preview — timeline mechanism showing event states"
+          style={{ width: '100%', display: 'block', objectFit: 'cover' }}
+        />
+      </div>
+
+      {/* Meta Grid */}
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '1px', backgroundColor: 'var(--border)', border: '1px solid var(--border)', borderRadius: '12px', overflow: 'hidden', marginBottom: '5rem' }}>
+        {[
+          { label: 'Role', value: 'Sr. Product Designer' },
+          { label: 'Team', value: 'Hybrid Strategy' },
+          { label: 'Products', value: 'Studios, Sessions, VF' },
+          { label: 'Collaboration', value: '2 PMs, Devs (US, Spain, CA)' },
+        ].map(item => (
+          <div key={item.label} style={{ backgroundColor: 'var(--bg)', padding: '1.5rem' }}>
+            <p style={{ fontSize: '0.7rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '0.5rem' }}>{item.label}</p>
+            <p style={{ fontSize: '0.95rem', color: 'var(--fg)', fontWeight: 500 }}>{item.value}</p>
+          </div>
+        ))}
+      </div>
+
+      {/* Philosophy */}
+      <div style={{ marginBottom: '5rem' }}>
+        <div style={{ padding: '2rem', borderLeft: '3px solid var(--fg)', backgroundColor: 'var(--tag-bg)', borderRadius: '0 12px 12px 0', marginBottom: '2rem' }}>
+          <p style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.15rem', fontStyle: 'italic', color: 'var(--fg)', lineHeight: 1.6, marginBottom: '0.75rem' }}>
+            "Design with purpose; solve for the user and the business."
+          </p>
+          <p style={{ fontSize: '0.8rem', color: 'var(--muted)' }}>Design philosophy</p>
+        </div>
+        <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+          {['Thought Partner', 'Build Fast Prototypes', 'Data Driven', 'MVP & Test', 'Accessibility', 'Inclusive Design', 'Simplify'].map(tag => (
+            <span key={tag} style={{ fontSize: '0.75rem', padding: '0.3rem 0.85rem', borderRadius: '100px', backgroundColor: 'var(--tag-bg)', color: 'var(--muted)' }}>{tag}</span>
+          ))}
+        </div>
+      </div>
+
+      {/* Divider */}
+      <div style={{ borderTop: '1px solid var(--border)', marginBottom: '5rem' }} />
+
+      {/* The Problem */}
+      <div style={{ marginBottom: '5rem' }}>
+        <p style={{ fontSize: '0.7rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>The Problem</p>
+        <p style={{ fontSize: 'clamp(1.1rem, 2.5vw, 1.4rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.6, color: 'var(--fg)', maxWidth: '680px', marginBottom: '2rem' }}>
+          Users couldn't see what their attendees would see. They were building events blind — and they were scared of breaking things.
+        </p>
+        <p style={{ fontSize: '1rem', color: 'var(--muted)', maxWidth: '620px', lineHeight: 1.8, marginBottom: '2.5rem' }}>
+          The event creation flow — Log In, Create Event, Select Touch Points, Virtual Event Page — had no preview capability. Users described feeling anxious they'd mess something up during creation, especially anything related to design or content. They wanted the ability to see what attendees would experience before going live.
+        </p>
+
+        {/* Problem visual */}
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '2.5rem' }}>
+          <div style={{ borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--border)' }}>
+            <img src="/assets/splash/problem-statement-2.png" alt="No preview in the creation flow" style={{ width: '100%', display: 'block', objectFit: 'cover' }} />
+          </div>
+          <div style={{ borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--border)' }}>
+            <img src="/assets/splash/problem-statement-3.png" alt="Research findings — users afraid to break things" style={{ width: '100%', display: 'block', objectFit: 'cover' }} />
+          </div>
+        </div>
+
+        {/* OKR-driven problem statements */}
+        <p style={{ fontSize: '0.7rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>Company OKRs Driving the Work</p>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1px', backgroundColor: 'var(--border)', border: '1px solid var(--border)', borderRadius: '12px', overflow: 'hidden' }}>
+          {[
+            { num: '01', title: 'Remove friction that creates challenges for growth', desc: 'The lack of preview was a key friction point in the VEP adoption funnel. Users couldn\'t confidently build events without seeing the output.' },
+            { num: '02', title: 'Re-establish confidence in Splash\'s in-person solutions', desc: 'As events shifted back to in-person and hybrid, users needed trust in the platform\'s ability to deliver polished attendee experiences.' },
+            { num: '03', title: 'Solidify the enterprise segment', desc: 'Enterprise customers expected a professional-grade tool. A missing preview feature eroded trust with high-value accounts.' },
+          ].map(item => (
+            <div key={item.num} style={{ display: 'flex', gap: '1.5rem', padding: '1.5rem', backgroundColor: 'var(--bg)', alignItems: 'flex-start' }}>
+              <span style={{ fontSize: '0.7rem', color: 'var(--muted)', minWidth: '1.5rem', paddingTop: '2px' }}>{item.num}</span>
+              <div>
+                <p style={{ fontSize: '0.9rem', fontWeight: 500, color: 'var(--fg)', marginBottom: '0.35rem' }}>{item.title}</p>
+                <p style={{ fontSize: '0.82rem', color: 'var(--muted)', lineHeight: 1.7 }}>{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Divider */}
+      <div style={{ borderTop: '1px solid var(--border)', marginBottom: '5rem' }} />
+
+      {/* The Solution */}
+      <div style={{ marginBottom: '5rem' }}>
+        <p style={{ fontSize: '0.7rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>The Solution</p>
+        <p style={{ fontSize: 'clamp(1.1rem, 2.5vw, 1.4rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.6, color: 'var(--fg)', maxWidth: '680px', marginBottom: '2rem' }}>
+          A timeline-based preview experience that shows every state of the attendee journey — from countdown to check-in to live stream.
+        </p>
+        <p style={{ fontSize: '1rem', color: 'var(--muted)', maxWidth: '620px', lineHeight: 1.8, marginBottom: '2.5rem' }}>
+          The preview gives hosts the ability to step through what their attendees will experience at each phase: Before Event, Day of Event (30 mins before), and Day of Event (Event Starts). Each state shows the corresponding touchpoint — Check In (Countdown), Check In (Open), and Studio Live Stream — so hosts can verify every detail before going live.
+        </p>
+
+        {/* Goal image */}
+        <div style={{ borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--border)', marginBottom: '2.5rem' }}>
+          <img src="/assets/splash/goals.png" alt="VEP Preview timeline with event states" style={{ width: '100%', display: 'block', objectFit: 'cover' }} />
+        </div>
+
+        {/* User flow */}
+        <div style={{ borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--border)' }}>
+          <img src="/assets/splash/flows.png" alt="User flow for VEP design editing and preview" style={{ width: '100%', display: 'block', objectFit: 'cover' }} />
+        </div>
+      </div>
+
+      {/* Divider */}
+      <div style={{ borderTop: '1px solid var(--border)', marginBottom: '5rem' }} />
+
+      {/* Research & Testing */}
+      <div style={{ marginBottom: '5rem' }}>
+        <p style={{ fontSize: '0.7rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>Research & Testing</p>
+        <p style={{ fontSize: 'clamp(1.1rem, 2.5vw, 1.4rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.6, color: 'var(--fg)', maxWidth: '680px', marginBottom: '2.5rem' }}>
+          Leveraged the self-serve research framework to validate the design with real users — both internal and external.
+        </p>
+
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '2.5rem' }}>
+          {[
+            { title: 'Level 3 Design Testing', desc: 'Used the internal Self-Serve Research Framework to test high-fidelity designs. Level 3 required both external and internal validation.' },
+            { title: '5 External Interviews', desc: 'Spoke directly with event hosts and enterprise customers to validate the preview concept and timeline mechanism.' },
+            { title: '5 Internal Interviews', desc: 'Gathered feedback from Sales Engineers, Support, and GTM teams who hear user pain points firsthand.' },
+            { title: 'Validated Hypothesis', desc: 'Minor UI requests, but overall users validated the VEP Preview and timeline mechanism. The core concept resonated strongly.' },
+          ].map(item => (
+            <div key={item.title} style={{ padding: '1.5rem', border: '1px solid var(--border)', borderRadius: '12px', backgroundColor: 'var(--card)' }}>
+              <p style={{ fontSize: '0.875rem', fontWeight: 500, color: 'var(--fg)', marginBottom: '0.5rem' }}>{item.title}</p>
+              <p style={{ fontSize: '0.8rem', color: 'var(--muted)', lineHeight: 1.7 }}>{item.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Testing image */}
+        <div style={{ borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--border)' }}>
+          <img src="/assets/splash/testing.png" alt="Testing methodology and results" style={{ width: '100%', display: 'block', objectFit: 'cover' }} />
+        </div>
+      </div>
+
+      {/* Divider */}
+      <div style={{ borderTop: '1px solid var(--border)', marginBottom: '5rem' }} />
+
+      {/* Development & Execution */}
+      <div style={{ marginBottom: '5rem' }}>
+        <p style={{ fontSize: '0.7rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>Development & Execution</p>
+        <p style={{ fontSize: 'clamp(1.1rem, 2.5vw, 1.4rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.6, color: 'var(--fg)', maxWidth: '680px', marginBottom: '2.5rem' }}>
+          Scoped the work into epics and Jira stories, coordinated with a cross-functional team across three countries.
+        </p>
+
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '2.5rem' }}>
+          {[
+            { title: 'Epic breakdown', desc: 'Translated design into actionable Jira tickets with clear scope: Preview eye button, timeline screen, card components, preview states, multi-session support, device breakpoints.' },
+            { title: 'GTM & documentation', desc: 'Worked with Go-To-Market and technical writing teams to document changes for educational materials and the help center.' },
+            { title: 'Feature flags', desc: 'Identified and planned feature flag rollout strategy for incremental release and safe testing in production.' },
+            { title: 'Data tracking', desc: 'Defined how preview usage would be tracked to measure success against KPIs after launch.' },
+          ].map(item => (
+            <div key={item.title} style={{ padding: '1.5rem', border: '1px solid var(--border)', borderRadius: '12px', backgroundColor: 'var(--card)' }}>
+              <p style={{ fontSize: '0.875rem', fontWeight: 500, color: 'var(--fg)', marginBottom: '0.5rem' }}>{item.title}</p>
+              <p style={{ fontSize: '0.8rem', color: 'var(--muted)', lineHeight: 1.7 }}>{item.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Dev plan image */}
+        <div style={{ borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--border)' }}>
+          <img src="/assets/splash/development-plan.png" alt="Development plan with Jira epics and scope" style={{ width: '100%', display: 'block', objectFit: 'cover' }} />
+        </div>
+      </div>
+
+      {/* Divider */}
+      <div style={{ borderTop: '1px solid var(--border)', marginBottom: '5rem' }} />
+
+      {/* Business Impact */}
+      <div style={{ marginBottom: '5rem' }}>
+        <p style={{ fontSize: '0.7rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>Business Impact</p>
+        <p style={{ fontSize: 'clamp(1.1rem, 2.5vw, 1.4rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.6, color: 'var(--fg)', maxWidth: '680px', marginBottom: '2.5rem' }}>
+          A feature designed to remove friction — with measurable outcomes tied directly to company OKRs.
+        </p>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1px', backgroundColor: 'var(--border)', border: '1px solid var(--border)', borderRadius: '12px', overflow: 'hidden', marginBottom: '2.5rem' }}>
+          {[
+            { stat: '75%', label: 'LOE reduction', sub: '45 hrs → 11.25 hrs content production' },
+            { stat: '25%', label: 'Support reduction', sub: 'target decrease in monthly hours' },
+            { stat: '$974K', label: 'Annual education cost', sub: 'spend being optimized' },
+          ].map(item => (
+            <div key={item.stat} style={{ backgroundColor: 'var(--bg)', padding: '2rem 1.5rem' }}>
+              <p style={{ fontSize: '2rem', fontFamily: "'Playfair Display', serif", fontWeight: 400, color: 'var(--fg)', marginBottom: '0.25rem' }}>{item.stat}</p>
+              <p style={{ fontSize: '0.8rem', color: 'var(--fg)', fontWeight: 500, marginBottom: '0.2rem' }}>{item.label}</p>
+              <p style={{ fontSize: '0.75rem', color: 'var(--muted)' }}>{item.sub}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* KPIs */}
+        <p style={{ fontSize: '0.7rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>Success Metrics</p>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1px', backgroundColor: 'var(--border)', border: '1px solid var(--border)', borderRadius: '12px', overflow: 'hidden' }}>
+          {[
+            { num: '01', title: 'Preview launch frequency', desc: 'Number of times Preview is launched during an editing session. More launches means the feature is providing value.' },
+            { num: '02', title: 'VEP completion rate', desc: 'Number of users with real events on the VEP that go through all VEP states — indicating increased confidence.' },
+            { num: '03', title: 'Ticket reduction', desc: 'Reduce number of support tickets relating to VEP issues — a direct measure of friction removed.' },
+          ].map(item => (
+            <div key={item.num} style={{ display: 'flex', gap: '1.5rem', padding: '1.5rem', backgroundColor: 'var(--bg)', alignItems: 'flex-start' }}>
+              <span style={{ fontSize: '0.7rem', color: 'var(--muted)', minWidth: '1.5rem', paddingTop: '2px' }}>{item.num}</span>
+              <div>
+                <p style={{ fontSize: '0.9rem', fontWeight: 500, color: 'var(--fg)', marginBottom: '0.35rem' }}>{item.title}</p>
+                <p style={{ fontSize: '0.82rem', color: 'var(--muted)', lineHeight: 1.7 }}>{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Divider */}
+      <div style={{ borderTop: '1px solid var(--border)', marginBottom: '5rem' }} />
+
+      {/* What's Next */}
+      <div style={{ marginBottom: '5rem' }}>
+        <p style={{ fontSize: '0.7rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>What's Next</p>
+        <p style={{ fontSize: 'clamp(1.1rem, 2.5vw, 1.4rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.6, color: 'var(--fg)', maxWidth: '680px', marginBottom: '2.5rem' }}>
+          Ship, measure, iterate — the preview is just the beginning of building user confidence into every touchpoint.
+        </p>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+          {[
+            { title: 'Monitor KPIs', desc: 'Track preview launch frequency, VEP completion rates, and support ticket volume. Target 25% increase in usage across the board.' },
+            { title: 'Breakpoint support', desc: 'Continue improving the MVP by adding responsive breakpoint previews — letting hosts see how events render across devices.' },
+          ].map(item => (
+            <div key={item.title} style={{ padding: '1.5rem', border: '1px solid var(--border)', borderRadius: '12px', backgroundColor: 'var(--card)' }}>
+              <p style={{ fontSize: '0.875rem', fontWeight: 500, color: 'var(--fg)', marginBottom: '0.5rem' }}>{item.title}</p>
+              <p style={{ fontSize: '0.8rem', color: 'var(--muted)', lineHeight: 1.7 }}>{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
+  )
+}
+
+function Ethos() {
+  const [activeOldImg, setActiveOldImg] = useState(0)
+  const oldScreens = [
+    { src: '/assets/ethos/old/frame-3.png', label: 'Course Management' },
+    { src: '/assets/ethos/old/frame-10.png', label: 'Media Library' },
+    { src: '/assets/ethos/old/analytics-_-quiz-results.png', label: 'Quiz Analytics' },
+    { src: '/assets/ethos/old/frame-5.png', label: 'User Management' },
+    { src: '/assets/ethos/old/grading-frame-7.png', label: 'Grading' },
+    { src: '/assets/ethos/old/profile-main.png', label: 'User Profile' },
+  ]
+  return (
+    <>
+      {/* Hero */}
+      <div style={{ marginBottom: '5rem' }}>
+        <p style={{ fontSize: '0.8rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>
+          01 — Learning Management Platform
+        </p>
+        <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.1, color: 'var(--fg)', marginBottom: '1.5rem' }}>
+          Redesigning an LMS from<br />admin tool to learning ecosystem.
+        </h1>
+        <p style={{ fontSize: '1.1rem', color: 'var(--muted)', maxWidth: '580px', lineHeight: 1.8, marginBottom: '2rem' }}>
+          Ethos is a learning management platform built for organizations that train at scale. I led the complete redesign — transforming a traditional admin dashboard into a modern, dual-experience platform that serves both instructors and learners.
+        </p>
+        <a
+          href="https://ethos-dashboard-master.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: 'inline-flex', alignItems: 'center', gap: '0.6rem',
+            fontSize: '0.875rem', fontWeight: 500, color: 'var(--bg)',
+            backgroundColor: 'var(--fg)', padding: '0.75rem 1.5rem',
+            borderRadius: '8px', textDecoration: 'none', transition: 'opacity 0.2s',
+          }}
+          onMouseEnter={e => e.currentTarget.style.opacity = '0.8'}
+          onMouseLeave={e => e.currentTarget.style.opacity = '1'}
+        >
+          <span style={{ fontSize: '1rem' }}>&#9889;</span>
+          Explore the live prototype
+          <span style={{ fontSize: '0.75rem', opacity: 0.7 }}>&rarr;</span>
+        </a>
+      </div>
+
+      {/* Hero Image — old vs new side by side */}
+      <div style={{ marginBottom: '5rem', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+        <div style={{ borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--border)', position: 'relative' }}>
+          <div style={{ position: 'absolute', top: '1rem', left: '1rem', fontSize: '0.65rem', letterSpacing: '0.1em', textTransform: 'uppercase', padding: '0.25rem 0.75rem', borderRadius: '100px', backgroundColor: 'var(--tag-bg)', color: 'var(--muted)', zIndex: 1 }}>Before</div>
+          <img src="/assets/ethos/old/frame-3.png" alt="Old Ethos platform" style={{ width: '100%', display: 'block', objectFit: 'cover', aspectRatio: '4/3' }} />
+        </div>
+        <div style={{ borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--border)', position: 'relative' }}>
+          <div style={{ position: 'absolute', top: '1rem', left: '1rem', fontSize: '0.65rem', letterSpacing: '0.1em', textTransform: 'uppercase', padding: '0.25rem 0.75rem', borderRadius: '100px', backgroundColor: 'rgba(83,119,114,0.2)', color: '#537772', zIndex: 1 }}>After</div>
+          <img src="/assets/ethos/ethos-after.png" alt="New Ethos platform" style={{ width: '100%', display: 'block', objectFit: 'cover', aspectRatio: '4/3' }} />
+        </div>
+      </div>
+
+      {/* Meta Grid */}
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '1px', backgroundColor: 'var(--border)', border: '1px solid var(--border)', borderRadius: '12px', overflow: 'hidden', marginBottom: '5rem' }}>
+        {[
+          { label: 'Role', value: 'Lead Designer & Developer' },
+          { label: 'Platform', value: 'Web (React SPA)' },
+          { label: 'Duration', value: 'Ongoing' },
+          { label: 'Tools', value: 'React, Tailwind, Vite, Claude' },
+        ].map(item => (
+          <div key={item.label} style={{ backgroundColor: 'var(--bg)', padding: '1.5rem' }}>
+            <p style={{ fontSize: '0.7rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '0.5rem' }}>{item.label}</p>
+            <p style={{ fontSize: '0.95rem', color: 'var(--fg)', fontWeight: 500 }}>{item.value}</p>
+          </div>
+        ))}
+      </div>
+
+      {/* The Challenge */}
+      <div style={{ marginBottom: '5rem' }}>
+        <p style={{ fontSize: '0.7rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>The Challenge</p>
+        <p style={{ fontSize: 'clamp(1.1rem, 2.5vw, 1.4rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.6, color: 'var(--fg)', maxWidth: '680px', marginBottom: '2rem' }}>
+          The existing platform worked — but it felt like an admin tool, not a learning experience. The redesign had to serve two fundamentally different users without compromising either.
+        </p>
+        <p style={{ fontSize: '1rem', color: 'var(--muted)', maxWidth: '620px', lineHeight: 1.8 }}>
+          Instructors needed powerful content management, analytics, and grading tools. Learners needed an engaging, distraction-free experience that motivated progress. The old platform treated everyone as an admin — tables, sidebars, and data-dense screens that prioritized function over experience.
+        </p>
+      </div>
+
+      {/* Divider */}
+      <div style={{ borderTop: '1px solid var(--border)', marginBottom: '5rem' }} />
+
+      {/* Old Platform Deep Dive */}
+      <div style={{ marginBottom: '5rem' }}>
+        <p style={{ fontSize: '0.7rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>The Old Platform</p>
+        <p style={{ fontSize: 'clamp(1.1rem, 2.5vw, 1.4rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.6, color: 'var(--fg)', maxWidth: '680px', marginBottom: '2.5rem' }}>
+          Functional, but one-dimensional. Every user got the same admin-centric experience regardless of their role.
+        </p>
+
+        {/* Interactive gallery */}
+        <div style={{ marginBottom: '1.5rem', borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--border)' }}>
+          <img
+            src={oldScreens[activeOldImg].src}
+            alt={oldScreens[activeOldImg].label}
+            style={{ width: '100%', display: 'block', objectFit: 'cover' }}
+          />
+        </div>
+        <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '2.5rem' }}>
+          {oldScreens.map((s, i) => (
+            <button
+              key={s.label}
+              onClick={() => setActiveOldImg(i)}
+              style={{
+                fontSize: '0.75rem', padding: '0.35rem 0.85rem', borderRadius: '100px', border: '1px solid var(--border)', cursor: 'pointer', transition: 'all 0.2s',
+                backgroundColor: i === activeOldImg ? 'var(--fg)' : 'var(--bg)',
+                color: i === activeOldImg ? 'var(--bg)' : 'var(--muted)',
+              }}
+            >
+              {s.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Pain points */}
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+          {[
+            { title: 'Single user paradigm', desc: 'No distinction between admin and learner experiences. Students navigated the same data-heavy interface as instructors.' },
+            { title: 'Table-driven UI', desc: 'Course management, analytics, and grading all defaulted to dense table layouts with limited visual hierarchy.' },
+            { title: 'Static content delivery', desc: 'Lessons were text-and-image only. No interactive card types, quizzes, or multimedia engagement.' },
+            { title: 'No design system', desc: 'Inconsistent spacing, typography, and component patterns across pages. Dark mode was nonexistent.' },
+          ].map(item => (
+            <div key={item.title} style={{ padding: '1.5rem', border: '1px solid var(--border)', borderRadius: '12px', backgroundColor: 'var(--card)' }}>
+              <p style={{ fontSize: '0.875rem', fontWeight: 500, color: 'var(--fg)', marginBottom: '0.5rem' }}>{item.title}</p>
+              <p style={{ fontSize: '0.8rem', color: 'var(--muted)', lineHeight: 1.7 }}>{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Divider */}
+      <div style={{ borderTop: '1px solid var(--border)', marginBottom: '5rem' }} />
+
+      {/* Design Decisions */}
+      <div style={{ marginBottom: '5rem' }}>
+        <p style={{ fontSize: '0.7rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>Design Decisions</p>
+        <p style={{ fontSize: 'clamp(1.1rem, 2.5vw, 1.4rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.6, color: 'var(--fg)', maxWidth: '680px', marginBottom: '3rem' }}>
+          Every decision was guided by one question: does this make the learning experience better?
+        </p>
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1px', backgroundColor: 'var(--border)', border: '1px solid var(--border)', borderRadius: '12px', overflow: 'hidden', marginBottom: '2.5rem' }}>
+          {[
+            { num: '01', title: 'Dual-mode architecture', desc: 'Separate admin and learner experiences that share a design system but optimize for completely different goals. Instructors get powerful management tools; learners get a focused, distraction-free interface.' },
+            { num: '02', title: 'Card-based content system', desc: '12 interactive card types — from text and media to multiple choice, drawing responses, and expandable lists. Content creation became visual and modular instead of template-bound.' },
+            { num: '03', title: 'Board + List dual views', desc: 'Replaced the single table layout with a Kanban board view for visual organization and a list view for quick operations. Instructors choose how they think.' },
+            { num: '04', title: 'Zero-radius design language', desc: 'Sharp corners throughout — a deliberate choice for a clean, modern aesthetic. The minimalist design system uses Space Grotesk, Roboto, and a sage green accent (#537772).' },
+            { num: '05', title: 'Gamified learner journey', desc: 'Five-milestone achievement system, progress visualization, "Up Next" recommendations, and onboarding tours. Learning became something to track and celebrate, not just complete.' },
+            { num: '06', title: 'AI-assisted workflow', desc: 'Integrated Claude as a design and development partner — from component architecture to interaction design. The entire platform was built using an AI-first workflow.' },
+          ].map(item => (
+            <div key={item.num} style={{ display: 'flex', gap: '1.5rem', padding: '1.5rem', backgroundColor: 'var(--bg)', alignItems: 'flex-start' }}>
+              <span style={{ fontSize: '0.7rem', color: 'var(--muted)', minWidth: '1.5rem', paddingTop: '2px' }}>{item.num}</span>
+              <div>
+                <p style={{ fontSize: '0.9rem', fontWeight: 500, color: 'var(--fg)', marginBottom: '0.35rem' }}>{item.title}</p>
+                <p style={{ fontSize: '0.82rem', color: 'var(--muted)', lineHeight: 1.7 }}>{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Divider */}
+      <div style={{ borderTop: '1px solid var(--border)', marginBottom: '5rem' }} />
+
+      {/* The New Platform */}
+      <div style={{ marginBottom: '5rem' }}>
+        <p style={{ fontSize: '0.7rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>The New Platform</p>
+        <p style={{ fontSize: 'clamp(1.1rem, 2.5vw, 1.4rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.6, color: 'var(--fg)', maxWidth: '680px', marginBottom: '2.5rem' }}>
+          A complete reimagining — not just a reskin. Every page, interaction, and data flow was rethought from the ground up.
+        </p>
+
+        {/* Design system showcase */}
+        <div style={{ padding: '2.5rem', border: '1px solid var(--border)', borderRadius: '12px', backgroundColor: '#111827', marginBottom: '2rem' }}>
+          <p style={{ fontSize: '0.65rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#537772', marginBottom: '2rem' }}>Design System</p>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '1.5rem' }}>
+            {/* Typography */}
+            <div>
+              <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '1.4rem', fontWeight: 500, color: '#f9fafb', marginBottom: '0.5rem' }}>Space Grotesk</p>
+              <p style={{ fontFamily: "'Roboto', sans-serif", fontSize: '0.85rem', color: '#9ca3af' }}>Roboto for body text</p>
+              <p style={{ fontFamily: "'Space Mono', monospace", fontSize: '0.75rem', color: '#6b7280', marginTop: '0.25rem' }}>Space Mono — mono</p>
+            </div>
+            {/* Colors */}
+            <div>
+              <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '0.75rem' }}>
+                {['#111827', '#537772', '#DCFFF6', '#f9fafb'].map(c => (
+                  <div key={c} style={{ width: '28px', height: '28px', backgroundColor: c, border: '1px solid #374151' }} />
+                ))}
+              </div>
+              <p style={{ fontSize: '0.75rem', color: '#9ca3af' }}>Primary, Accent, Mint, Light</p>
+            </div>
+            {/* Radius */}
+            <div>
+              <div style={{ width: '48px', height: '48px', border: '2px solid #537772', marginBottom: '0.5rem' }} />
+              <p style={{ fontSize: '0.75rem', color: '#9ca3af' }}>0px radius — sharp,<br />minimal, intentional</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Feature highlights */}
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '2rem' }}>
+          {[
+            { title: 'Admin Dashboard', desc: 'At-risk learners, overdue training, completion rates, and quiz scores — all at a glance. Actionable insights, not just data.', color: '#537772' },
+            { title: 'Learner Explore', desc: 'Personalized onboarding, progress cards, "Up Next" recommendations, and category-based course discovery.', color: '#537772' },
+            { title: 'Card Editor', desc: '12 interactive card types with visual builder. Drag, arrange, preview — content creation that feels like design.', color: '#537772' },
+            { title: 'Analytics Suite', desc: 'Progress, performance, retention, and compliance reporting. Interactive charts, export tools, and deep-dive modals.', color: '#537772' },
+          ].map(item => (
+            <div key={item.title} style={{ padding: '1.5rem', border: '1px solid var(--border)', borderRadius: '12px', backgroundColor: 'var(--card)' }}>
+              <div style={{ width: '6px', height: '6px', backgroundColor: item.color, marginBottom: '1rem' }} />
+              <p style={{ fontSize: '0.875rem', fontWeight: 500, color: 'var(--fg)', marginBottom: '0.5rem' }}>{item.title}</p>
+              <p style={{ fontSize: '0.8rem', color: 'var(--muted)', lineHeight: 1.7 }}>{item.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Key insight callout */}
+        <div style={{ padding: '2rem', borderLeft: '3px solid var(--fg)', backgroundColor: 'var(--tag-bg)', borderRadius: '0 12px 12px 0' }}>
+          <p style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.15rem', fontStyle: 'italic', color: 'var(--fg)', lineHeight: 1.6, marginBottom: '0.75rem' }}>
+            "The biggest shift wasn't visual — it was conceptual. The old platform asked: how do we manage learners? The new one asks: how do we help people learn?"
+          </p>
+          <p style={{ fontSize: '0.8rem', color: 'var(--muted)' }}>Design philosophy that guided the entire redesign</p>
+        </div>
+      </div>
+
+      {/* Divider */}
+      <div style={{ borderTop: '1px solid var(--border)', marginBottom: '5rem' }} />
+
+      {/* Before & After Comparison */}
+      <div style={{ marginBottom: '5rem' }}>
+        <p style={{ fontSize: '0.7rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>Before & After</p>
+        <p style={{ fontSize: 'clamp(1.1rem, 2.5vw, 1.4rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.6, color: 'var(--fg)', maxWidth: '680px', marginBottom: '3rem' }}>
+          Side-by-side: the same platform, two different philosophies.
+        </p>
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1px', backgroundColor: 'var(--border)', border: '1px solid var(--border)', borderRadius: '12px', overflow: 'hidden' }}>
+          {[
+            { area: 'Navigation', before: 'Icon sidebar with text labels, always expanded. Single hierarchy for all users.', after: 'Collapsible icon sidebar with hover tooltips. Separate admin/learner nav with dropdown grouping.' },
+            { area: 'Content Management', before: 'Flat table list with folder sidebar. No visual preview of content.', after: 'Kanban board + list dual view. Drag-and-drop organization with folder system.' },
+            { area: 'Course Builder', before: 'Basic text/image lessons. Limited question types.', after: '12 card types including drawing, expandable lists, slideshows. Visual card editor with live preview.' },
+            { area: 'Analytics', before: 'Single quiz results table with pagination. Basic export.', after: 'Multi-tab analytics dashboard with charts, scatter plots, compliance reporting, and fullscreen analysis.' },
+            { area: 'Learner Experience', before: 'Same admin interface. No personalization or progress tracking.', after: 'Dedicated explore page, onboarding milestones, progress visualization, and achievement badges.' },
+            { area: 'Design System', before: 'No formal system. Inconsistent spacing, rounded corners, basic palette.', after: 'Full token system: 90+ CSS variables, sharp corners, Space Grotesk/Roboto, dark mode, 50+ animations.' },
+          ].map(item => (
+            <div key={item.area} style={{ display: 'grid', gridTemplateColumns: '140px 1fr 1fr', backgroundColor: 'var(--bg)', alignItems: 'flex-start' }}>
+              <div style={{ padding: '1.25rem', borderRight: '1px solid var(--border)' }}>
+                <p style={{ fontSize: '0.8rem', fontWeight: 500, color: 'var(--fg)' }}>{item.area}</p>
+              </div>
+              <div style={{ padding: '1.25rem', borderRight: '1px solid var(--border)' }}>
+                <p style={{ fontSize: '0.65rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '0.35rem' }}>Before</p>
+                <p style={{ fontSize: '0.8rem', color: 'var(--muted)', lineHeight: 1.6 }}>{item.before}</p>
+              </div>
+              <div style={{ padding: '1.25rem' }}>
+                <p style={{ fontSize: '0.65rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#537772', marginBottom: '0.35rem' }}>After</p>
+                <p style={{ fontSize: '0.8rem', color: 'var(--fg)', lineHeight: 1.6 }}>{item.after}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Divider */}
+      <div style={{ borderTop: '1px solid var(--border)', marginBottom: '5rem' }} />
+
+      {/* How I Worked */}
+      <div style={{ marginBottom: '5rem' }}>
+        <p style={{ fontSize: '0.7rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>How I Worked</p>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+          {[
+            { title: 'AI-first design process', desc: 'Used Claude as a design partner throughout — from initial architecture decisions to component implementation. Not just code generation, but collaborative problem-solving.' },
+            { title: 'Design-to-code pipeline', desc: 'Designed directly in code. No Figma handoff, no translation loss. Every design decision was immediately testable in the browser.' },
+            { title: 'Component-driven architecture', desc: 'Built a comprehensive design system with 90+ CSS variables, then composed pages from reusable patterns. Consistency by construction, not convention.' },
+            { title: 'Iterative refinement', desc: 'Shipped working features fast, then refined. The card editor went through 4 major iterations. Each one informed by actually using it to create content.' },
+          ].map(item => (
+            <div key={item.title} style={{ padding: '1.5rem', border: '1px solid var(--border)', borderRadius: '12px', backgroundColor: 'var(--card)' }}>
+              <p style={{ fontSize: '0.875rem', fontWeight: 500, color: 'var(--fg)', marginBottom: '0.5rem' }}>{item.title}</p>
+              <p style={{ fontSize: '0.8rem', color: 'var(--muted)', lineHeight: 1.7 }}>{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Divider */}
+      <div style={{ borderTop: '1px solid var(--border)', marginBottom: '5rem' }} />
+
+      {/* Outcome */}
+      <div style={{ marginBottom: '5rem' }}>
+        <p style={{ fontSize: '0.7rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>Outcome</p>
+        <p style={{ fontSize: 'clamp(1.1rem, 2.5vw, 1.4rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.6, color: 'var(--fg)', maxWidth: '680px', marginBottom: '2.5rem' }}>
+          From admin tool to learning ecosystem — a platform that finally serves the people using it.
+        </p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1px', backgroundColor: 'var(--border)', border: '1px solid var(--border)', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+          {[
+            { stat: '12', label: 'Card types', sub: 'interactive content blocks' },
+            { stat: '90+', label: 'Design tokens', sub: 'CSS variables for consistency' },
+            { stat: '2', label: 'Experiences', sub: 'admin + learner modes' },
+          ].map(item => (
+            <div key={item.stat} style={{ backgroundColor: 'var(--bg)', padding: '2rem 1.5rem' }}>
+              <p style={{ fontSize: '2rem', fontFamily: "'Playfair Display', serif", fontWeight: 400, color: 'var(--fg)', marginBottom: '0.25rem' }}>{item.stat}</p>
+              <p style={{ fontSize: '0.8rem', color: 'var(--fg)', fontWeight: 500, marginBottom: '0.2rem' }}>{item.label}</p>
+              <p style={{ fontSize: '0.75rem', color: 'var(--muted)' }}>{item.sub}</p>
+            </div>
+          ))}
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1px', backgroundColor: 'var(--border)', border: '1px solid var(--border)', borderRadius: '12px', overflow: 'hidden' }}>
+          {[
+            { stat: '50+', label: 'Animations', sub: 'keyframes & transitions' },
+            { stat: '20K+', label: 'Lines of code', sub: 'single cohesive component' },
+            { stat: '1', label: 'AI partner', sub: 'Claude-assisted workflow' },
+          ].map(item => (
+            <div key={item.stat} style={{ backgroundColor: 'var(--bg)', padding: '2rem 1.5rem' }}>
+              <p style={{ fontSize: '2rem', fontFamily: "'Playfair Display', serif", fontWeight: 400, color: 'var(--fg)', marginBottom: '0.25rem' }}>{item.stat}</p>
+              <p style={{ fontSize: '0.8rem', color: 'var(--fg)', fontWeight: 500, marginBottom: '0.2rem' }}>{item.label}</p>
+              <p style={{ fontSize: '0.75rem', color: 'var(--muted)' }}>{item.sub}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
+  )
+}
+
 function Placeholder({ project }) {
   return (
     <>
@@ -981,7 +1551,7 @@ export default function CaseStudyPage() {
       <main style={{ padding: '8rem 2rem', maxWidth: '900px', margin: '0 auto' }}>
         <AnimatePresence mode="wait">
         <motion.div key={slug} initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -16 }} transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}>
-          {slug === 'thycotic' ? <Thycotic /> : slug === 'honest-paws' ? <HonestPaws /> : slug === 'floracracy' ? <Floracracy /> : slug === 'usana' ? <Usana /> : <Placeholder project={project} />}
+          {slug === 'ethos' ? <Ethos /> : slug === 'splash' ? <Splash /> : slug === 'thycotic' ? <Thycotic /> : slug === 'honest-paws' ? <HonestPaws /> : slug === 'floracracy' ? <Floracracy /> : slug === 'usana' ? <Usana /> : <Placeholder project={project} />}
 
           {/* Prev / Next */}
           <div style={{ borderTop: '1px solid var(--border)', paddingTop: '2rem', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
