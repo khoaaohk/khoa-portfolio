@@ -26,8 +26,8 @@ const logoHoverStyles = [
 ]
 
 const projects = [
-  { slug: 'ethos', number: '01', title: 'Ethos', category: 'Learning Management Platform', tags: ['Platform Redesign', 'LMS', 'Design System', 'AI Workflow'] },
-  { slug: 'checkplay', number: '02', title: 'CheckPlay', category: 'SaaS Product · Built with AI', tags: ['SaaS', 'AI-Assisted Dev', 'Full-Stack', 'Product Design', 'Ongoing'] },
+  { slug: 'checkplay', number: '01', title: 'CheckPlay', category: 'SaaS Product · Built with AI', tags: ['SaaS', 'AI-Assisted Dev', 'Full-Stack', 'Product Design', 'Ongoing'] },
+  { slug: 'ethos', number: '02', title: 'Ethos', category: 'Learning Management Platform', tags: ['Platform Redesign', 'LMS', 'Design System', 'AI Workflow'] },
   { slug: 'splash', number: '03', title: 'Splash', category: 'Event Management · VEP Preview', tags: ['Product Design', 'UX Research', 'Enterprise', 'SaaS'] },
   { slug: 'thycotic', number: '04', title: 'Thycotic', category: 'Privileged Access Management', tags: ['UX Research', 'Enterprise', 'Mobile', 'Security'] },
   { slug: 'honest-paws', number: '05', title: 'Honest Paws', category: 'Ecommerce · Pet CBD', tags: ['Ecommerce', 'Conversion', 'DTC'] },
@@ -1117,7 +1117,7 @@ function Ethos() {
       {/* Hero */}
       <div style={{ marginBottom: '5rem' }}>
         <p style={{ fontSize: '0.8rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>
-          01 — Learning Management Platform
+          02 — Learning Management Platform
         </p>
         <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.1, color: 'var(--fg)', marginBottom: '1.5rem' }}>
           Redesigning an LMS from<br />admin tool to learning ecosystem.
@@ -1490,19 +1490,61 @@ function CheckPlay() {
       {/* Hero */}
       <div style={{ marginBottom: '5rem' }}>
         <p style={{ fontSize: '0.8rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>
-          02 — SaaS Product · Built with AI
+          01 — SaaS Product · Built with AI
         </p>
         <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.1, color: 'var(--fg)', marginBottom: '1.5rem' }}>
-          One designer. Zero engineers.<br />A full SaaS product.
+          One designer. Zero engineers. A full SaaS product.
         </h1>
         <p style={{ fontSize: '1.1rem', color: 'var(--muted)', maxWidth: '580px', lineHeight: 1.8 }}>
-          CheckPlay is a data collection and grant funding platform for nonprofits. I designed and built every pixel and every line of code — using Warp as my terminal and Claude as my engineering partner. From idea to live product with a paying user in weeks.
+          CheckPlay is a data collection and grant funding platform for nonprofits. I designed and built every pixel and every line of code — using Warp as my terminal and Claude as my engineering partner. From idea to live product with real users in weeks.
         </p>
-        <div style={{ marginTop: '2rem' }}>
-          <a href="https://checkplay.io" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.9rem', color: 'var(--fg)', borderBottom: '1px solid var(--fg)', paddingBottom: '0.25rem' }}>
-            Visit checkplay.io <span style={{ fontSize: '1rem' }}>↗</span>
+        <div style={{ position: 'relative', marginTop: '2.5rem' }}>
+          <style>{`
+            @keyframes cpSparkle1 { 0%,100% { opacity:0; transform:scale(0) rotate(0deg); } 50% { opacity:1; transform:scale(1.4) rotate(180deg); } }
+            @keyframes cpSparkle2 { 0%,100% { opacity:0; transform:scale(0) rotate(0deg); } 50% { opacity:1; transform:scale(1.4) rotate(-180deg); } }
+            @keyframes cpSparkle3 { 0%,100% { opacity:0; transform:scale(0); } 50% { opacity:1; transform:scale(1.4); } }
+            @keyframes cpBtnGlow { 0%,100% { box-shadow: 0 0 8px 2px rgba(255,255,255,0.1); } 50% { box-shadow: 0 0 40px 12px rgba(255,255,255,0.25); } }
+            @keyframes cpBtnGlowLight { 0%,100% { box-shadow: 0 0 8px 2px rgba(0,0,0,0.05); } 50% { box-shadow: 0 0 40px 12px rgba(0,0,0,0.18); } }
+            [data-theme="dark"] .cp-proto-btn { animation: cpBtnGlow 3s ease-in-out infinite; box-shadow: 0 0 8px 2px rgba(255,255,255,0.1); }
+            [data-theme="light"] .cp-proto-btn { animation: cpBtnGlowLight 3s ease-in-out infinite; box-shadow: 0 0 8px 2px rgba(0,0,0,0.05); }
+            [data-theme="dark"] .cp-proto-btn:hover { animation: none; box-shadow: 0 0 50px 16px rgba(255,255,255,0.35); transform: scale(1.02); }
+            [data-theme="light"] .cp-proto-btn:hover { animation: none; box-shadow: 0 0 50px 16px rgba(0,0,0,0.22); transform: scale(1.02); }
+            .cp-proto-btn { transition: box-shadow 0.4s ease, transform 0.3s ease; }
+            .cp-sp { position:absolute; pointer-events:none; z-index:1; }
+            [data-theme="dark"] .cp-sp::before { content:'✦'; position:absolute; color:#FFD700; text-shadow: 0 0 12px #FFD700, 0 0 24px rgba(255,215,0,0.5); }
+            [data-theme="light"] .cp-sp::before { content:'✦'; position:absolute; color:#B8860B; text-shadow: 0 0 10px rgba(184,134,11,0.6), 0 0 20px rgba(184,134,11,0.3); }
+            .cp-sp1 { top:-16px; right:40px; font-size:22px; } .cp-sp1::before { animation: cpSparkle1 2.4s ease-in-out infinite; }
+            .cp-sp2 { top:50%; left:4px; font-size:18px; } .cp-sp2::before { animation: cpSparkle2 3.1s ease-in-out 0.8s infinite; }
+            .cp-sp3 { bottom:-14px; right:30%; font-size:20px; } .cp-sp3::before { animation: cpSparkle3 2.8s ease-in-out 0.4s infinite; }
+            .cp-sp4 { top:-12px; left:20%; font-size:16px; } .cp-sp4::before { animation: cpSparkle1 3.5s ease-in-out 1.2s infinite; }
+            .cp-sp5 { bottom:-12px; left:60px; font-size:19px; } .cp-sp5::before { animation: cpSparkle2 2.6s ease-in-out 0.6s infinite; }
+            .cp-sp6 { top:40%; right:16px; font-size:17px; } .cp-sp6::before { animation: cpSparkle3 3.3s ease-in-out 1.5s infinite; }
+          `}</style>
+          <span className="cp-sp cp-sp1" /><span className="cp-sp cp-sp2" /><span className="cp-sp cp-sp3" />
+          <span className="cp-sp cp-sp4" /><span className="cp-sp cp-sp5" /><span className="cp-sp cp-sp6" />
+          <a
+            className="cp-proto-btn"
+            href="https://checkplay.io"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem',
+              fontSize: '1.05rem', fontWeight: 500, color: 'var(--bg)',
+              backgroundColor: 'var(--fg)', padding: '1.1rem 2.25rem',
+              borderRadius: '10px', textDecoration: 'none', transition: 'all 0.3s ease',
+              width: '100%',
+            }}
+          >
+            <span style={{ fontSize: '1.2rem' }}>&#9889;</span>
+            Explore the live prototype
+            <span style={{ fontSize: '0.85rem', opacity: 0.7 }}>&rarr;</span>
           </a>
         </div>
+      </div>
+
+      {/* Hero Image — Dashboard */}
+      <div style={{ marginBottom: '5rem', borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--border)' }}>
+        <img src="/assets/checkplay/dashboard.png" alt="CheckPlay dashboard with attendance metrics and demographic breakdowns" style={{ width: '100%', display: 'block', objectFit: 'cover' }} />
       </div>
 
       {/* Meta */}
@@ -1529,6 +1571,11 @@ function CheckPlay() {
         <p style={{ fontSize: '0.95rem', color: 'var(--muted)', lineHeight: 1.8, maxWidth: '680px' }}>
           I wanted to test a thesis: that a designer who understands product deeply enough can use AI-assisted development tools to build, ship, and scale a real SaaS product — without hiring a single engineer. Not a prototype. Not a demo. A production application with authentication, payments, multi-tenancy, and real users.
         </p>
+      </div>
+
+      {/* Screenshot — Reports */}
+      <div style={{ marginBottom: '5rem', borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--border)' }}>
+        <img src="/assets/checkplay/reports.png" alt="Grant-ready reports with participant metrics and demographic charts" style={{ width: '100%', display: 'block', objectFit: 'cover' }} />
       </div>
 
       <div style={{ borderTop: '1px solid var(--border)', marginBottom: '5rem' }} />
@@ -1587,6 +1634,11 @@ function CheckPlay() {
         </div>
       </div>
 
+      {/* Screenshot — Grant Discovery */}
+      <div style={{ marginBottom: '5rem', borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--border)' }}>
+        <img src="/assets/checkplay/grants.png" alt="AI-powered grant discovery matching nonprofits with 974 funding opportunities" style={{ width: '100%', display: 'block', objectFit: 'cover' }} />
+      </div>
+
       <div style={{ borderTop: '1px solid var(--border)', marginBottom: '5rem' }} />
 
       {/* Design Decisions */}
@@ -1614,6 +1666,11 @@ function CheckPlay() {
         </div>
       </div>
 
+      {/* Screenshot — Proposals */}
+      <div style={{ marginBottom: '5rem', borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--border)' }}>
+        <img src="/assets/checkplay/proposals.png" alt="Auto-generated grant proposal with 10 sections and AI suggestions" style={{ width: '100%', display: 'block', objectFit: 'cover' }} />
+      </div>
+
       <div style={{ borderTop: '1px solid var(--border)', marginBottom: '5rem' }} />
 
       {/* What AI Can't Do */}
@@ -1628,6 +1685,11 @@ function CheckPlay() {
         <p style={{ fontSize: '0.95rem', color: 'var(--muted)', lineHeight: 1.8, maxWidth: '680px' }}>
           That's the designer's job. AI is the most powerful tool I've ever used — but it's still a tool. The product decisions, the taste, the empathy for the user — that's what makes this work.
         </p>
+      </div>
+
+      {/* Screenshot — Compliance */}
+      <div style={{ marginBottom: '5rem', borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--border)' }}>
+        <img src="/assets/checkplay/compliance.png" alt="Grant compliance tracking with progress bars and auto-tracked requirements" style={{ width: '100%', display: 'block', objectFit: 'cover' }} />
       </div>
 
       <div style={{ borderTop: '1px solid var(--border)', marginBottom: '5rem' }} />

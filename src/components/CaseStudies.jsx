@@ -5,6 +5,16 @@ import { useNavigate } from 'react-router-dom'
 const projects = [
   {
     number: '01',
+    title: 'CheckPlay',
+    slug: 'checkplay',
+    category: 'SaaS Product · Built with AI',
+    description: 'Designed, built, and launched a full-stack SaaS platform from scratch using Warp and Claude as my engineering team — from idea to live product with real users in weeks, not months.',
+    tags: ['SaaS', 'AI-Assisted Dev', 'Full-Stack', 'Product Design', 'Ongoing'],
+    color: '#f0e8ea',
+    colorDark: '#2a1a1e',
+  },
+  {
+    number: '02',
     title: 'Ethos',
     slug: 'ethos',
     category: 'Learning Management Platform',
@@ -12,16 +22,6 @@ const projects = [
     tags: ['Platform Redesign', 'LMS', 'Design System'],
     color: '#e8ede8',
     colorDark: '#1a241a',
-  },
-  {
-    number: '02',
-    title: 'CheckPlay',
-    slug: 'checkplay',
-    category: 'SaaS Product · Built with AI',
-    description: 'Designed, built, and launched a full-stack SaaS platform from scratch using Warp and Claude as my engineering team — from idea to live product with paying users in weeks, not months.',
-    tags: ['SaaS', 'AI-Assisted Dev', 'Full-Stack', 'Product Design', 'Ongoing'],
-    color: '#f0e8ea',
-    colorDark: '#2a1a1e',
   },
   {
     number: '03',
