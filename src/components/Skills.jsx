@@ -52,7 +52,7 @@ const styles = {
   },
   grid: {
     display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))',
     gap: '1px',
     backgroundColor: 'var(--border)',
     marginBottom: '4rem',
@@ -111,7 +111,7 @@ export default function Skills() {
           transition={{ duration: 0.6 }}
         >
           A senior product designer who moves fast, works closely with engineering,
-          and brings +10 years of experience shipping products that users love and businesses grow from.
+          and brings +12 years of experience shipping products that users love and businesses grow from.
         </motion.p>
       </div>
 

@@ -69,16 +69,16 @@ export default function Contact() {
         </h2>
         <p style={styles.sub}>
           Open to full-time opportunities with product teams who move fast and care about craft.
-          I bring +10 years of experience, an AI-native workflow, and a track record of shipping work that drives real results.
+          I bring +12 years of experience, an AI-native workflow, and a track record of shipping work that drives real results.
         </p>
         <div style={styles.links}>
           <a
-            href="mailto:khoa@khoas.work"
+            href="mailto:khoa0aohk@gmail.com"
             style={styles.link}
             onMouseEnter={e => e.target.style.opacity = '0.5'}
             onMouseLeave={e => e.target.style.opacity = '1'}
           >
-            khoa@khoas.work ↗
+            khoa0aohk@gmail.com ↗
           </a>
           <a
             href="https://linkedin.com/in/khoado"
@@ -91,14 +91,14 @@ export default function Contact() {
             LinkedIn ↗
           </a>
           <a
-            href="https://read.cv/khoa"
+            href="/khoa_do_resume.html"
             target="_blank"
             rel="noopener noreferrer"
             style={styles.link}
             onMouseEnter={e => e.target.style.opacity = '0.5'}
             onMouseLeave={e => e.target.style.opacity = '1'}
           >
-            Read.cv ↗
+            Resume ↗
           </a>
         </div>
       </motion.div>

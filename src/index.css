@@ -36,6 +36,8 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 a {
@@ -70,7 +72,7 @@ img {
   }
   .nav-links {
     gap: 1rem !important;
-    font-size: 0.8rem !important;
+    font-size: 0.75rem !important;
   }
   .flow-grid {
     grid-template-columns: repeat(2, 1fr) !important;
@@ -101,9 +103,39 @@ img {
     word-break: break-all;
     overflow-wrap: break-word;
   }
+  .card-pad {
+    padding: 1.5rem !important;
+  }
+  .cs-nav {
+    padding: 0 1.25rem !important;
+  }
+  .cs-nav-links {
+    gap: 1rem !important;
+  }
+  .cs-main {
+    padding: 7rem 1.25rem !important;
+  }
 }
 
 @media (max-width: 480px) {
+  .nav-links {
+    display: none !important;
+  }
+  .nav-bar {
+    display: flex !important;
+    justify-content: space-between !important;
+  }
+  .cs-nav {
+    padding: 0 1rem !important;
+    display: flex !important;
+    justify-content: space-between !important;
+  }
+  .cs-nav-links {
+    display: none !important;
+  }
+  .cs-main {
+    padding: 6rem 1rem !important;
+  }
   .flow-grid {
     grid-template-columns: 1fr !important;
   }
@@ -114,10 +146,15 @@ img {
   .section-pad {
     padding-top: 5rem !important;
     padding-bottom: 5rem !important;
-    padding-left: 1.25rem !important;
-    padding-right: 1.25rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
   }
   .process-section {
     padding-top: 5rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  .card-pad {
+    padding: 1.25rem !important;
   }
 }

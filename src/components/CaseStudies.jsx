@@ -7,14 +7,34 @@ const projects = [
     number: '01',
     title: 'Ethos',
     slug: 'ethos',
-    category: 'New AI Workflow',
-    description: 'A new product experience currently in development — case study coming soon.',
-    tags: ['New AI Workflow'],
+    category: 'Learning Management Platform',
+    description: 'Led the complete redesign of an LMS — transforming a traditional admin dashboard into a modern, dual-experience platform serving both instructors and learners.',
+    tags: ['Platform Redesign', 'LMS', 'Design System'],
     color: '#e8ede8',
     colorDark: '#1a241a',
   },
   {
     number: '02',
+    title: 'CheckPlay',
+    slug: 'checkplay',
+    category: 'SaaS Product · Built with AI',
+    description: 'Designed, built, and launched a full-stack SaaS platform from scratch using Warp and Claude as my engineering team — from idea to live product with paying users in weeks, not months.',
+    tags: ['SaaS', 'AI-Assisted Dev', 'Full-Stack', 'Product Design', 'Ongoing'],
+    color: '#f0e8ea',
+    colorDark: '#2a1a1e',
+  },
+  {
+    number: '03',
+    title: 'Splash',
+    slug: 'splash',
+    category: 'Event Management · VEP Preview',
+    description: 'Designed a timeline-based preview feature for Splash\'s Virtual Event Page — giving event hosts confidence by letting them see exactly what attendees will experience.',
+    tags: ['Product Design', 'UX Research', 'Enterprise'],
+    color: '#e8e8f0',
+    colorDark: '#1a1a2a',
+  },
+  {
+    number: '04',
     title: 'Thycotic',
     slug: 'thycotic',
     category: 'Privileged Access Management',
@@ -24,7 +44,7 @@ const projects = [
     colorDark: '#1a2a1a',
   },
   {
-    number: '03',
+    number: '05',
     title: 'Honest Paws',
     slug: 'honest-paws',
     category: 'Ecommerce · Pet CBD',
@@ -34,17 +54,7 @@ const projects = [
     colorDark: '#2a221a',
   },
   {
-    number: '04',
-    title: 'Floracracy',
-    slug: 'floracracy',
-    category: 'Floral Arrangement Builder',
-    description: 'Built an interactive floral configuration experience that lets customers express creativity while streamlining the ordering process.',
-    tags: ['Product Design', 'Interactive', 'Builder'],
-    color: '#e8eaf0',
-    colorDark: '#1a1c2a',
-  },
-  {
-    number: '05',
+    number: '06',
     title: 'Usana',
     slug: 'usana',
     category: 'Dashboard Redesign',
@@ -52,6 +62,16 @@ const projects = [
     tags: ['Dashboard', 'Data Viz', 'B2B'],
     color: '#f0e8f0',
     colorDark: '#2a1a2a',
+  },
+  {
+    number: '07',
+    title: 'Floracracy',
+    slug: 'floracracy',
+    category: 'Floral Arrangement Builder',
+    description: 'Built an interactive floral configuration experience that lets customers express creativity while streamlining the ordering process.',
+    tags: ['Product Design', 'Interactive', 'Builder'],
+    color: '#e8eaf0',
+    colorDark: '#1a1c2a',
   },
 ]
 
@@ -142,6 +162,7 @@ function ProjectCard({ project, index }) {
   return (
     <motion.div
       ref={ref}
+      className="card-pad"
       style={styles.card}
       initial={{ opacity: 0, y: 32 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -178,9 +199,9 @@ export default function CaseStudies() {
       <div style={{ borderTop: '1px solid var(--border)' }} />
       <div id="work" style={{ ...styles.header, borderTop: 'none', scrollMarginTop: '48px' }}>
         <span style={styles.sectionLabel}>Selected Work</span>
-        <span style={styles.count}>4 projects + 1 in progress</span>
+        <span style={styles.count}>{projects.filter(p => !p.hidden).length} projects</span>
       </div>
-      {projects.map((project, i) => (
+      {projects.filter(p => !p.hidden).map((project, i) => (
         <ProjectCard key={project.title} project={project} index={i} />
       ))}
     </section>

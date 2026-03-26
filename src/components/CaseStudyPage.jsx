@@ -27,11 +27,12 @@ const logoHoverStyles = [
 
 const projects = [
   { slug: 'ethos', number: '01', title: 'Ethos', category: 'Learning Management Platform', tags: ['Platform Redesign', 'LMS', 'Design System', 'AI Workflow'] },
-  { slug: 'splash', number: '02', title: 'Splash', category: 'Event Management · VEP Preview', tags: ['Product Design', 'UX Research', 'Enterprise', 'SaaS'] },
-  { slug: 'thycotic', number: '03', title: 'Thycotic', category: 'Privileged Access Management', tags: ['UX Research', 'Enterprise', 'Mobile', 'Security'] },
-  { slug: 'honest-paws', number: '04', title: 'Honest Paws', category: 'Ecommerce · Pet CBD', tags: ['Ecommerce', 'Conversion', 'DTC'] },
-  { slug: 'floracracy', number: '05', title: 'Floracracy', category: 'Floral Arrangement Builder', tags: ['Product Design', 'Interactive', 'Builder'] },
-  { slug: 'usana', number: '06', title: 'Usana', category: 'Dashboard Redesign', tags: ['Dashboard', 'Data Viz', 'B2B'] },
+  { slug: 'checkplay', number: '02', title: 'CheckPlay', category: 'SaaS Product · Built with AI', tags: ['SaaS', 'AI-Assisted Dev', 'Full-Stack', 'Product Design', 'Ongoing'] },
+  { slug: 'splash', number: '03', title: 'Splash', category: 'Event Management · VEP Preview', tags: ['Product Design', 'UX Research', 'Enterprise', 'SaaS'] },
+  { slug: 'thycotic', number: '04', title: 'Thycotic', category: 'Privileged Access Management', tags: ['UX Research', 'Enterprise', 'Mobile', 'Security'] },
+  { slug: 'honest-paws', number: '05', title: 'Honest Paws', category: 'Ecommerce · Pet CBD', tags: ['Ecommerce', 'Conversion', 'DTC'] },
+  { slug: 'floracracy', number: '06', title: 'Floracracy', category: 'Floral Arrangement Builder', tags: ['Product Design', 'Interactive', 'Builder'] },
+  { slug: 'usana', number: '07', title: 'Usana', category: 'Dashboard Redesign', tags: ['Dashboard', 'Data Viz', 'B2B'] },
 ]
 
 function Thycotic() {
@@ -60,7 +61,7 @@ function Thycotic() {
       </div>
 
       {/* Meta */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '1px', backgroundColor: 'var(--border)', border: '1px solid var(--border)', borderRadius: '12px', overflow: 'hidden', marginBottom: '5rem' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(160px, 100%), 1fr))', gap: '1px', backgroundColor: 'var(--border)', border: '1px solid var(--border)', borderRadius: '12px', overflow: 'hidden', marginBottom: '5rem' }}>
         {[
           { label: 'Role', value: 'Lead Mobile Designer' },
           { label: 'Platform', value: 'iOS & Android' },
@@ -258,7 +259,7 @@ function HonestPaws() {
       </div>
 
       {/* Meta */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '1px', backgroundColor: 'var(--border)', border: '1px solid var(--border)', borderRadius: '12px', overflow: 'hidden', marginBottom: '5rem' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(160px, 100%), 1fr))', gap: '1px', backgroundColor: 'var(--border)', border: '1px solid var(--border)', borderRadius: '12px', overflow: 'hidden', marginBottom: '5rem' }}>
         {[
           { label: 'Role', value: 'Lead Designer' },
           { label: 'Platform', value: 'Web · Mobile-first' },
@@ -451,7 +452,7 @@ function Floracracy() {
       </div>
 
       {/* Meta */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '1px', backgroundColor: 'var(--border)', border: '1px solid var(--border)', borderRadius: '12px', overflow: 'hidden', marginBottom: '5rem' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(160px, 100%), 1fr))', gap: '1px', backgroundColor: 'var(--border)', border: '1px solid var(--border)', borderRadius: '12px', overflow: 'hidden', marginBottom: '5rem' }}>
         {[
           { label: 'Role', value: 'Lead Designer' },
           { label: 'Scope', value: 'Marketing site + Creation tool' },
@@ -642,7 +643,7 @@ function Usana() {
       </div>
 
       {/* Meta */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '1px', backgroundColor: 'var(--border)', border: '1px solid var(--border)', borderRadius: '12px', overflow: 'hidden', marginBottom: '5rem' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(160px, 100%), 1fr))', gap: '1px', backgroundColor: 'var(--border)', border: '1px solid var(--border)', borderRadius: '12px', overflow: 'hidden', marginBottom: '5rem' }}>
         {[
           { label: 'Role', value: 'Lead Designer' },
           { label: 'Duration', value: '2+ Years' },
@@ -878,7 +879,7 @@ function Splash() {
       </div>
 
       {/* Meta Grid */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '1px', backgroundColor: 'var(--border)', border: '1px solid var(--border)', borderRadius: '12px', overflow: 'hidden', marginBottom: '5rem' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(160px, 100%), 1fr))', gap: '1px', backgroundColor: 'var(--border)', border: '1px solid var(--border)', borderRadius: '12px', overflow: 'hidden', marginBottom: '5rem' }}>
         {[
           { label: 'Role', value: 'Sr. Product Designer' },
           { label: 'Team', value: 'Hybrid Strategy' },
@@ -1124,23 +1125,48 @@ function Ethos() {
         <p style={{ fontSize: '1.1rem', color: 'var(--muted)', maxWidth: '580px', lineHeight: 1.8, marginBottom: '2rem' }}>
           Ethos is a learning management platform built for organizations that train at scale. I led the complete redesign — transforming a traditional admin dashboard into a modern, dual-experience platform that serves both instructors and learners.
         </p>
-        <a
-          href="https://ethos-dashboard-master.vercel.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            display: 'inline-flex', alignItems: 'center', gap: '0.6rem',
-            fontSize: '0.875rem', fontWeight: 500, color: 'var(--bg)',
-            backgroundColor: 'var(--fg)', padding: '0.75rem 1.5rem',
-            borderRadius: '8px', textDecoration: 'none', transition: 'opacity 0.2s',
-          }}
-          onMouseEnter={e => e.currentTarget.style.opacity = '0.8'}
-          onMouseLeave={e => e.currentTarget.style.opacity = '1'}
-        >
-          <span style={{ fontSize: '1rem' }}>&#9889;</span>
-          Explore the live prototype
-          <span style={{ fontSize: '0.75rem', opacity: 0.7 }}>&rarr;</span>
-        </a>
+        <div style={{ position: 'relative' }}>
+          <style>{`
+            @keyframes sparkle1 { 0%,100% { opacity:0; transform:scale(0) rotate(0deg); } 50% { opacity:1; transform:scale(1.4) rotate(180deg); } }
+            @keyframes sparkle2 { 0%,100% { opacity:0; transform:scale(0) rotate(0deg); } 50% { opacity:1; transform:scale(1.4) rotate(-180deg); } }
+            @keyframes sparkle3 { 0%,100% { opacity:0; transform:scale(0); } 50% { opacity:1; transform:scale(1.4); } }
+            @keyframes btnGlow { 0%,100% { box-shadow: 0 0 8px 2px rgba(255,255,255,0.1); } 50% { box-shadow: 0 0 40px 12px rgba(255,255,255,0.25); } }
+            @keyframes btnGlowLight { 0%,100% { box-shadow: 0 0 8px 2px rgba(0,0,0,0.05); } 50% { box-shadow: 0 0 40px 12px rgba(0,0,0,0.18); } }
+            [data-theme="dark"] .live-proto-btn { animation: btnGlow 3s ease-in-out infinite; box-shadow: 0 0 8px 2px rgba(255,255,255,0.1); }
+            [data-theme="light"] .live-proto-btn { animation: btnGlowLight 3s ease-in-out infinite; box-shadow: 0 0 8px 2px rgba(0,0,0,0.05); }
+            [data-theme="dark"] .live-proto-btn:hover { animation: none; box-shadow: 0 0 50px 16px rgba(255,255,255,0.35); transform: scale(1.02); }
+            [data-theme="light"] .live-proto-btn:hover { animation: none; box-shadow: 0 0 50px 16px rgba(0,0,0,0.22); transform: scale(1.02); }
+            .live-proto-btn { transition: box-shadow 0.4s ease, transform 0.3s ease; }
+            .sparkle { position:absolute; pointer-events:none; z-index:1; }
+            [data-theme="dark"] .sparkle::before { content:'✦'; position:absolute; color:#FFD700; text-shadow: 0 0 12px #FFD700, 0 0 24px rgba(255,215,0,0.5); }
+            [data-theme="light"] .sparkle::before { content:'✦'; position:absolute; color:#B8860B; text-shadow: 0 0 10px rgba(184,134,11,0.6), 0 0 20px rgba(184,134,11,0.3); }
+            .sp1 { top:-16px; right:40px; font-size:22px; } .sp1::before { animation: sparkle1 2.4s ease-in-out infinite; }
+            .sp2 { top:50%; left:4px; font-size:18px; } .sp2::before { animation: sparkle2 3.1s ease-in-out 0.8s infinite; }
+            .sp3 { bottom:-14px; right:30%; font-size:20px; } .sp3::before { animation: sparkle3 2.8s ease-in-out 0.4s infinite; }
+            .sp4 { top:-12px; left:20%; font-size:16px; } .sp4::before { animation: sparkle1 3.5s ease-in-out 1.2s infinite; }
+            .sp5 { bottom:-12px; left:60px; font-size:19px; } .sp5::before { animation: sparkle2 2.6s ease-in-out 0.6s infinite; }
+            .sp6 { top:40%; right:16px; font-size:17px; } .sp6::before { animation: sparkle3 3.3s ease-in-out 1.5s infinite; }
+          `}</style>
+          <span className="sparkle sp1" /><span className="sparkle sp2" /><span className="sparkle sp3" />
+          <span className="sparkle sp4" /><span className="sparkle sp5" /><span className="sparkle sp6" />
+          <a
+            className="live-proto-btn"
+            href="https://ethos-dashboard-master.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem',
+              fontSize: '1.05rem', fontWeight: 500, color: 'var(--bg)',
+              backgroundColor: 'var(--fg)', padding: '1.1rem 2.25rem',
+              borderRadius: '10px', textDecoration: 'none', transition: 'all 0.3s ease',
+              width: '100%',
+            }}
+          >
+            <span style={{ fontSize: '1.2rem' }}>&#9889;</span>
+            Explore the live prototype
+            <span style={{ fontSize: '0.85rem', opacity: 0.7 }}>&rarr;</span>
+          </a>
+        </div>
       </div>
 
       {/* Hero Image — old vs new side by side */}
@@ -1156,9 +1182,9 @@ function Ethos() {
       </div>
 
       {/* Meta Grid */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '1px', backgroundColor: 'var(--border)', border: '1px solid var(--border)', borderRadius: '12px', overflow: 'hidden', marginBottom: '5rem' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(160px, 100%), 1fr))', gap: '1px', backgroundColor: 'var(--border)', border: '1px solid var(--border)', borderRadius: '12px', overflow: 'hidden', marginBottom: '5rem' }}>
         {[
-          { label: 'Role', value: 'Lead Designer & Developer' },
+          { label: 'Role', value: 'Lead Designer' },
           { label: 'Platform', value: 'Web (React SPA)' },
           { label: 'Duration', value: 'Ongoing' },
           { label: 'Tools', value: 'React, Tailwind, Vite, Claude' },
@@ -1174,10 +1200,10 @@ function Ethos() {
       <div style={{ marginBottom: '5rem' }}>
         <p style={{ fontSize: '0.7rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>The Challenge</p>
         <p style={{ fontSize: 'clamp(1.1rem, 2.5vw, 1.4rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.6, color: 'var(--fg)', maxWidth: '680px', marginBottom: '2rem' }}>
-          The existing platform worked — but it felt like an admin tool, not a learning experience. The redesign had to serve two fundamentally different users without compromising either.
+          The existing platform worked — but it needed to give admins clearer direction on what to do next. The shift was from administrative tasks to understanding data and taking action.
         </p>
         <p style={{ fontSize: '1rem', color: 'var(--muted)', maxWidth: '620px', lineHeight: 1.8 }}>
-          Instructors needed powerful content management, analytics, and grading tools. Learners needed an engaging, distraction-free experience that motivated progress. The old platform treated everyone as an admin — tables, sidebars, and data-dense screens that prioritized function over experience.
+          Admins would log in and face a wall of tables and navigation — no guidance on what needed attention. There was no notification system, no search, and no way to quickly surface urgent items like ungraded quizzes or overdue learners. The platform needed to proactively tell admins what to do, not just show them data.
         </p>
       </div>
 
@@ -1218,10 +1244,10 @@ function Ethos() {
         {/* Pain points */}
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
           {[
-            { title: 'Single user paradigm', desc: 'No distinction between admin and learner experiences. Students navigated the same data-heavy interface as instructors.' },
-            { title: 'Table-driven UI', desc: 'Course management, analytics, and grading all defaulted to dense table layouts with limited visual hierarchy.' },
-            { title: 'Static content delivery', desc: 'Lessons were text-and-image only. No interactive card types, quizzes, or multimedia engagement.' },
-            { title: 'No design system', desc: 'Inconsistent spacing, typography, and component patterns across pages. Dark mode was nonexistent.' },
+            { title: 'No clear next step', desc: 'Admins logged in to a static dashboard with no guidance. No way to know what needed attention — ungraded quizzes, overdue learners, or pending approvals were buried in separate pages.' },
+            { title: 'No notification system', desc: 'Critical items like quiz submissions, overdue assignments, and pending user approvals had no surfacing mechanism. Admins had to manually check each section.' },
+            { title: 'No search capability', desc: 'Finding a specific course, user, or piece of content required navigating through multiple pages. There was no universal search — a painful experience at scale.' },
+            { title: 'Admin-centric, not action-centric', desc: 'The platform showed data but didn\'t help admins understand it or act on it. The shift needed to go from displaying information to driving decisions.' },
           ].map(item => (
             <div key={item.title} style={{ padding: '1.5rem', border: '1px solid var(--border)', borderRadius: '12px', backgroundColor: 'var(--card)' }}>
               <p style={{ fontSize: '0.875rem', fontWeight: 500, color: 'var(--fg)', marginBottom: '0.5rem' }}>{item.title}</p>
@@ -1238,17 +1264,16 @@ function Ethos() {
       <div style={{ marginBottom: '5rem' }}>
         <p style={{ fontSize: '0.7rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>Design Decisions</p>
         <p style={{ fontSize: 'clamp(1.1rem, 2.5vw, 1.4rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.6, color: 'var(--fg)', maxWidth: '680px', marginBottom: '3rem' }}>
-          Every decision was guided by one question: does this make the learning experience better?
+          Every decision was guided by one question: does this make the admin experience better?
         </p>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1px', backgroundColor: 'var(--border)', border: '1px solid var(--border)', borderRadius: '12px', overflow: 'hidden', marginBottom: '2.5rem' }}>
           {[
-            { num: '01', title: 'Dual-mode architecture', desc: 'Separate admin and learner experiences that share a design system but optimize for completely different goals. Instructors get powerful management tools; learners get a focused, distraction-free interface.' },
-            { num: '02', title: 'Card-based content system', desc: '12 interactive card types — from text and media to multiple choice, drawing responses, and expandable lists. Content creation became visual and modular instead of template-bound.' },
-            { num: '03', title: 'Board + List dual views', desc: 'Replaced the single table layout with a Kanban board view for visual organization and a list view for quick operations. Instructors choose how they think.' },
-            { num: '04', title: 'Zero-radius design language', desc: 'Sharp corners throughout — a deliberate choice for a clean, modern aesthetic. The minimalist design system uses Space Grotesk, Roboto, and a sage green accent (#537772).' },
-            { num: '05', title: 'Gamified learner journey', desc: 'Five-milestone achievement system, progress visualization, "Up Next" recommendations, and onboarding tours. Learning became something to track and celebrate, not just complete.' },
-            { num: '06', title: 'AI-assisted workflow', desc: 'Integrated Claude as a design and development partner — from component architecture to interaction design. The entire platform was built using an AI-first workflow.' },
+            { num: '01', title: 'Action-oriented dashboard', desc: 'Replace the static landing page with a dashboard that tells admins what needs attention right now — readiness scores, To Do items, quick actions, and live analytics.' },
+            { num: '02', title: 'Persistent notification system', desc: 'Surface urgent items app-wide so admins never miss ungraded quizzes, overdue learners, or pending approvals — no matter where they are in the platform.' },
+            { num: '03', title: 'Universal search', desc: 'Let admins find anything instantly — courses, users, media, attributes — from a single search bar. The legacy app had no search at all.' },
+            { num: '04', title: 'Dual-mode architecture', desc: 'Separate admin and learner experiences that share a design system but optimize for completely different goals.' },
+            { num: '05', title: 'AI-assisted workflow', desc: 'Integrated Claude as a design and development partner — from component architecture to interaction design. The entire platform was built using an AI-first workflow.' },
           ].map(item => (
             <div key={item.num} style={{ display: 'flex', gap: '1.5rem', padding: '1.5rem', backgroundColor: 'var(--bg)', alignItems: 'flex-start' }}>
               <span style={{ fontSize: '0.7rem', color: 'var(--muted)', minWidth: '1.5rem', paddingTop: '2px' }}>{item.num}</span>
@@ -1298,13 +1323,14 @@ function Ethos() {
           </div>
         </div>
 
-        {/* Feature highlights */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '2rem' }}>
+        {/* Dashboard sections */}
+        <p style={{ fontSize: '0.7rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>What Admins See Now</p>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '2.5rem' }}>
           {[
-            { title: 'Admin Dashboard', desc: 'At-risk learners, overdue training, completion rates, and quiz scores — all at a glance. Actionable insights, not just data.', color: '#537772' },
-            { title: 'Learner Explore', desc: 'Personalized onboarding, progress cards, "Up Next" recommendations, and category-based course discovery.', color: '#537772' },
-            { title: 'Card Editor', desc: '12 interactive card types with visual builder. Drag, arrange, preview — content creation that feels like design.', color: '#537772' },
-            { title: 'Analytics Suite', desc: 'Progress, performance, retention, and compliance reporting. Interactive charts, export tools, and deep-dive modals.', color: '#537772' },
+            { title: 'Dashboard Overview', desc: 'Track readiness scores, completion rates, and key metrics at a glance. The first thing admins see is a clear picture of where things stand.', color: '#537772' },
+            { title: 'To Do', desc: 'To Do items surface automatically — quiz submissions to grade, overdue learners, and approvals that need attention. No more hunting through pages.', color: '#537772' },
+            { title: 'Quick Actions', desc: 'Jump into common tasks like creating content, setting up attributes, managing your team, and exploring tutorial videos — all from the dashboard.', color: '#537772' },
+            { title: 'Analytics & Reports', desc: 'Monitor group progress and quiz performance. Charts populate as learners engage with content, giving admins real-time visibility.', color: '#537772' },
           ].map(item => (
             <div key={item.title} style={{ padding: '1.5rem', border: '1px solid var(--border)', borderRadius: '12px', backgroundColor: 'var(--card)' }}>
               <div style={{ width: '6px', height: '6px', backgroundColor: item.color, marginBottom: '1rem' }} />
@@ -1314,12 +1340,49 @@ function Ethos() {
           ))}
         </div>
 
+        {/* Notification system */}
+        <p style={{ fontSize: '0.7rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>Notification System</p>
+        <p style={{ fontSize: '0.95rem', color: 'var(--muted)', maxWidth: '620px', lineHeight: 1.8, marginBottom: '1.5rem' }}>
+          A persistent notification system that follows admins throughout the app, surfacing updated items that need action:
+        </p>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1px', backgroundColor: 'var(--border)', border: '1px solid var(--border)', borderRadius: '12px', overflow: 'hidden', marginBottom: '2.5rem' }}>
+          {[
+            { label: '5 quizzes need manual grading', detail: 'Analytics Quiz — 3 submissions, CSS Grid Quiz — 2 submissions' },
+            { label: '8 users have due dates in the next 48 hours', detail: 'John Smith, Sarah Johnson, and 6 others have incomplete lessons' },
+            { label: '3 users have no activity on overdue assignments', detail: 'Mike Davis (5 days), Lisa Anderson (3 days), David Wilson (4 days)' },
+            { label: '2 essay submissions awaiting review', detail: 'Technical Writing course — final project submissions' },
+            { label: '12 new users pending approval', detail: 'Engineering (5), Marketing (4), Sales (3) — awaiting admin review' },
+          ].map(item => (
+            <div key={item.label} style={{ padding: '1.25rem 1.5rem', backgroundColor: 'var(--bg)', display: 'flex', gap: '1rem', alignItems: 'baseline' }}>
+              <div style={{ width: '6px', height: '6px', borderRadius: '100px', backgroundColor: '#537772', flexShrink: 0, marginTop: '6px' }} />
+              <div>
+                <p style={{ fontSize: '0.875rem', fontWeight: 500, color: 'var(--fg)', marginBottom: '0.25rem' }}>{item.label}</p>
+                <p style={{ fontSize: '0.8rem', color: 'var(--muted)', lineHeight: 1.6 }}>{item.detail}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Universal Search */}
+        <p style={{ fontSize: '0.7rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>Universal Search</p>
+        <div style={{ padding: '2rem', border: '1px solid var(--border)', borderRadius: '12px', backgroundColor: 'var(--card)', marginBottom: '2rem' }}>
+          <p style={{ fontSize: '0.95rem', color: 'var(--fg)', fontWeight: 500, marginBottom: '0.75rem' }}>Search everything, from anywhere</p>
+          <p style={{ fontSize: '0.85rem', color: 'var(--muted)', lineHeight: 1.7, marginBottom: '1.25rem' }}>
+            Search through courses (lessons, quizzes), groups, users, cards, media, and attributes — all from a single universal nav. This lets users quickly find and move through the application. The legacy app had no search solution at all, making navigation at scale a painful experience.
+          </p>
+          <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+            {['Courses', 'Lessons', 'Quizzes', 'Groups', 'Users', 'Cards', 'Media', 'Attributes'].map(t => (
+              <span key={t} style={{ fontSize: '0.7rem', padding: '0.25rem 0.65rem', borderRadius: '100px', backgroundColor: 'var(--tag-bg)', color: 'var(--muted)' }}>{t}</span>
+            ))}
+          </div>
+        </div>
+
         {/* Key insight callout */}
         <div style={{ padding: '2rem', borderLeft: '3px solid var(--fg)', backgroundColor: 'var(--tag-bg)', borderRadius: '0 12px 12px 0' }}>
           <p style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.15rem', fontStyle: 'italic', color: 'var(--fg)', lineHeight: 1.6, marginBottom: '0.75rem' }}>
-            "The biggest shift wasn't visual — it was conceptual. The old platform asked: how do we manage learners? The new one asks: how do we help people learn?"
+            "The shift was from doing administrative tasks to helping admins understand the data and what to do next."
           </p>
-          <p style={{ fontSize: '0.8rem', color: 'var(--muted)' }}>Design philosophy that guided the entire redesign</p>
+          <p style={{ fontSize: '0.8rem', color: 'var(--muted)' }}>The core philosophy behind the redesign</p>
         </div>
       </div>
 
@@ -1335,11 +1398,11 @@ function Ethos() {
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1px', backgroundColor: 'var(--border)', border: '1px solid var(--border)', borderRadius: '12px', overflow: 'hidden' }}>
           {[
-            { area: 'Navigation', before: 'Icon sidebar with text labels, always expanded. Single hierarchy for all users.', after: 'Collapsible icon sidebar with hover tooltips. Separate admin/learner nav with dropdown grouping.' },
-            { area: 'Content Management', before: 'Flat table list with folder sidebar. No visual preview of content.', after: 'Kanban board + list dual view. Drag-and-drop organization with folder system.' },
-            { area: 'Course Builder', before: 'Basic text/image lessons. Limited question types.', after: '12 card types including drawing, expandable lists, slideshows. Visual card editor with live preview.' },
-            { area: 'Analytics', before: 'Single quiz results table with pagination. Basic export.', after: 'Multi-tab analytics dashboard with charts, scatter plots, compliance reporting, and fullscreen analysis.' },
-            { area: 'Learner Experience', before: 'Same admin interface. No personalization or progress tracking.', after: 'Dedicated explore page, onboarding milestones, progress visualization, and achievement badges.' },
+            { area: 'Dashboard', before: 'Static landing page. No guidance on what needs attention or what to do next.', after: 'Action-oriented overview with readiness scores, To Do list, quick actions, and live analytics charts.' },
+            { area: 'Notifications', before: 'None. Admins had to manually check each section for updates.', after: 'Persistent system surfacing ungraded quizzes, overdue learners, pending approvals, and essay reviews app-wide.' },
+            { area: 'Search', before: 'No search capability. Finding anything required navigating through multiple pages.', after: 'Universal search across courses, lessons, quizzes, groups, users, cards, media, and attributes from anywhere.' },
+            { area: 'Content', before: 'Flat table list. Basic text/image lessons. Limited question types.', after: '12 card types with visual builder. Kanban board + list dual views. Drag-and-drop organization.' },
+            { area: 'Analytics', before: 'Single quiz results table with pagination. Basic export.', after: 'Multi-tab dashboard with charts, scatter plots, compliance reporting, and fullscreen analysis.' },
             { area: 'Design System', before: 'No formal system. Inconsistent spacing, rounded corners, basic palette.', after: 'Full token system: 90+ CSS variables, sharp corners, Space Grotesk/Roboto, dark mode, 50+ animations.' },
           ].map(item => (
             <div key={item.area} style={{ display: 'grid', gridTemplateColumns: '140px 1fr 1fr', backgroundColor: 'var(--bg)', alignItems: 'flex-start' }}>
@@ -1421,6 +1484,178 @@ function Ethos() {
   )
 }
 
+function CheckPlay() {
+  return (
+    <>
+      {/* Hero */}
+      <div style={{ marginBottom: '5rem' }}>
+        <p style={{ fontSize: '0.8rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>
+          02 — SaaS Product · Built with AI
+        </p>
+        <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.1, color: 'var(--fg)', marginBottom: '1.5rem' }}>
+          One designer. Zero engineers.<br />A full SaaS product.
+        </h1>
+        <p style={{ fontSize: '1.1rem', color: 'var(--muted)', maxWidth: '580px', lineHeight: 1.8 }}>
+          CheckPlay is a data collection and grant funding platform for nonprofits. I designed and built every pixel and every line of code — using Warp as my terminal and Claude as my engineering partner. From idea to live product with a paying user in weeks.
+        </p>
+        <div style={{ marginTop: '2rem' }}>
+          <a href="https://checkplay.io" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.9rem', color: 'var(--fg)', borderBottom: '1px solid var(--fg)', paddingBottom: '0.25rem' }}>
+            Visit checkplay.io <span style={{ fontSize: '1rem' }}>↗</span>
+          </a>
+        </div>
+      </div>
+
+      {/* Meta */}
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(160px, 100%), 1fr))', gap: '1px', backgroundColor: 'var(--border)', border: '1px solid var(--border)', borderRadius: '12px', overflow: 'hidden', marginBottom: '5rem' }}>
+        {[
+          { label: 'Role', value: 'Solo Founder · Design & Dev' },
+          { label: 'Platform', value: 'Web (Responsive)' },
+          { label: 'Stack', value: 'Next.js 15, Supabase, Tailwind' },
+          { label: 'AI Tools', value: 'Warp Terminal, Claude Code' },
+        ].map(item => (
+          <div key={item.label} style={{ backgroundColor: 'var(--bg)', padding: '1.5rem' }}>
+            <p style={{ fontSize: '0.7rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '0.5rem' }}>{item.label}</p>
+            <p style={{ fontSize: '0.95rem', color: 'var(--fg)', fontWeight: 500 }}>{item.value}</p>
+          </div>
+        ))}
+      </div>
+
+      {/* The Premise */}
+      <div style={{ marginBottom: '5rem' }}>
+        <p style={{ fontSize: '0.7rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>The Premise</p>
+        <p style={{ fontSize: 'clamp(1.1rem, 2.5vw, 1.4rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.6, color: 'var(--fg)', maxWidth: '680px', marginBottom: '2rem' }}>
+          What happens when a designer treats AI not as a novelty, but as a real engineering team?
+        </p>
+        <p style={{ fontSize: '0.95rem', color: 'var(--muted)', lineHeight: 1.8, maxWidth: '680px' }}>
+          I wanted to test a thesis: that a designer who understands product deeply enough can use AI-assisted development tools to build, ship, and scale a real SaaS product — without hiring a single engineer. Not a prototype. Not a demo. A production application with authentication, payments, multi-tenancy, and real users.
+        </p>
+      </div>
+
+      <div style={{ borderTop: '1px solid var(--border)', marginBottom: '5rem' }} />
+
+      {/* The Workflow */}
+      <div style={{ marginBottom: '5rem' }}>
+        <p style={{ fontSize: '0.7rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>The Workflow</p>
+        <h2 style={{ fontSize: 'clamp(1.4rem, 3vw, 2rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.3, color: 'var(--fg)', marginBottom: '2rem' }}>
+          Warp + Claude: a new kind of engineering team.
+        </h2>
+        <p style={{ fontSize: '0.95rem', color: 'var(--muted)', lineHeight: 1.8, maxWidth: '680px', marginBottom: '2.5rem' }}>
+          My development workflow looks nothing like a traditional designer-developer handoff. I work directly in Warp terminal, using Claude Code as an inline engineering partner. I describe what I want to build in plain language — the architecture, the edge cases, the user experience — and Claude writes production-ready code while I direct, review, and refine.
+        </p>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+          {[
+            { num: '01', title: 'I design the experience', desc: 'Every feature starts with the user experience. I define the flows, the edge cases, and the interaction details before any code is written. The product thinking is mine.' },
+            { num: '02', title: 'I describe the architecture to Claude', desc: 'Using Warp terminal with Claude Code, I communicate intent in natural language — database schemas, API patterns, component structures. Claude generates the implementation.' },
+            { num: '03', title: 'I review, refine, and ship', desc: 'Every line of code goes through me. I catch design inconsistencies, UX gaps, and architectural shortcuts that AI misses. The quality bar is human. The velocity is AI.' },
+          ].map(item => (
+            <div key={item.num} style={{ display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>
+              <span style={{ fontSize: '0.75rem', color: 'var(--muted)', fontVariantNumeric: 'tabular-nums', flexShrink: 0, paddingTop: '0.25rem' }}>{item.num}</span>
+              <div>
+                <p style={{ fontSize: '1rem', color: 'var(--fg)', fontWeight: 500, marginBottom: '0.5rem' }}>{item.title}</p>
+                <p style={{ fontSize: '0.9rem', color: 'var(--muted)', lineHeight: 1.7 }}>{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div style={{ borderTop: '1px solid var(--border)', marginBottom: '5rem' }} />
+
+      {/* What I Built */}
+      <div style={{ marginBottom: '5rem' }}>
+        <p style={{ fontSize: '0.7rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>What I Built</p>
+        <h2 style={{ fontSize: 'clamp(1.4rem, 3vw, 2rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.3, color: 'var(--fg)', marginBottom: '3rem' }}>
+          A production SaaS with real complexity — not a weekend project.
+        </h2>
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+          {[
+            { num: '01', title: 'QR Code & AI-Powered Check-In', desc: 'Participants scan a QR code with their phone camera — no app download. Returning users auto-check-in in 3 seconds. For paper sign-in sheets, Claude Vision (AI) extracts handwritten names and fuzzy-matches them to existing participants.' },
+            { num: '02', title: 'Grant Discovery & Proposal Generation', desc: 'AI-powered matching with 200+ funders based on real attendance data, demographics, and service area. Auto-generates grant proposals pre-filled with the organization\'s actual impact numbers, IRS 990 data, and community need indicators.' },
+            { num: '03', title: 'Multi-Tenant Architecture', desc: 'Full organizational isolation with Row Level Security, role-based access (player, admin, superadmin), Stripe billing with tiered plans, and a superadmin dashboard for platform-wide management.' },
+            { num: '04', title: 'Volunteer Hours & Compliance', desc: 'QR-based volunteer check-in/out with auto-calculated hours, role assignment, admin verification workflow, and in-kind value computation at $33/hr — all exportable for grant compliance.' },
+            { num: '05', title: 'Custom Form Builder', desc: 'Dynamic check-in forms with conditional logic, multiple pages, emoji celebration animations, and per-organization customization — letting each nonprofit tailor the check-in experience to their program.' },
+          ].map(item => (
+            <div key={item.num} style={{ display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>
+              <span style={{ fontSize: '0.75rem', color: 'var(--muted)', fontVariantNumeric: 'tabular-nums', flexShrink: 0, paddingTop: '0.25rem' }}>{item.num}</span>
+              <div>
+                <p style={{ fontSize: '1rem', color: 'var(--fg)', fontWeight: 500, marginBottom: '0.5rem' }}>{item.title}</p>
+                <p style={{ fontSize: '0.9rem', color: 'var(--muted)', lineHeight: 1.7 }}>{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div style={{ borderTop: '1px solid var(--border)', marginBottom: '5rem' }} />
+
+      {/* Design Decisions */}
+      <div style={{ marginBottom: '5rem' }}>
+        <p style={{ fontSize: '0.7rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>Design Decisions</p>
+        <h2 style={{ fontSize: 'clamp(1.4rem, 3vw, 2rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.3, color: 'var(--fg)', marginBottom: '3rem' }}>
+          The designer's advantage in AI-assisted development.
+        </h2>
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+          {[
+            { num: '01', title: 'UX-driven architecture', desc: 'Database schemas and API design were shaped by user flows, not the other way around. Because I own both design and code, there\'s zero translation loss between intent and implementation.' },
+            { num: '02', title: 'Desktop OS marketing page', desc: 'The landing page features a fully interactive Windows 95-inspired desktop environment — draggable windows, a working file manager, and blog posts that open in a word processor. It\'s a statement: this product was built with taste.' },
+            { num: '03', title: 'Speed as a feature', desc: 'Check-in takes 3 seconds for returning users. Grant reports export in one click. Every interaction was designed to respect the time of overworked nonprofit staff who are already doing too much.' },
+            { num: '04', title: 'Progressive complexity', desc: 'New organizations start with a simple QR check-in. As they grow, they unlock grant matching, proposal generation, custom forms, and volunteer tracking — without the product ever feeling overwhelming.' },
+          ].map(item => (
+            <div key={item.num} style={{ display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>
+              <span style={{ fontSize: '0.75rem', color: 'var(--muted)', fontVariantNumeric: 'tabular-nums', flexShrink: 0, paddingTop: '0.25rem' }}>{item.num}</span>
+              <div>
+                <p style={{ fontSize: '1rem', color: 'var(--fg)', fontWeight: 500, marginBottom: '0.5rem' }}>{item.title}</p>
+                <p style={{ fontSize: '0.9rem', color: 'var(--muted)', lineHeight: 1.7 }}>{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div style={{ borderTop: '1px solid var(--border)', marginBottom: '5rem' }} />
+
+      {/* What AI Can't Do */}
+      <div style={{ marginBottom: '5rem' }}>
+        <p style={{ fontSize: '0.7rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>What AI Can't Do</p>
+        <h2 style={{ fontSize: 'clamp(1.4rem, 3vw, 2rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.3, color: 'var(--fg)', marginBottom: '2rem' }}>
+          AI writes the code. The designer decides what's worth building.
+        </h2>
+        <p style={{ fontSize: '0.95rem', color: 'var(--muted)', lineHeight: 1.8, maxWidth: '680px', marginBottom: '2rem' }}>
+          Claude is exceptional at generating correct, production-quality code from clear instructions. But it doesn't know which feature matters most to a nonprofit director at 11pm before a grant deadline. It doesn't feel the friction of an extra click in a check-in flow when there are 40 kids waiting in line. It doesn't understand why a volunteer tracking system needs to be both rigorous enough for auditors and fast enough for a Sunday morning coach.
+        </p>
+        <p style={{ fontSize: '0.95rem', color: 'var(--muted)', lineHeight: 1.8, maxWidth: '680px' }}>
+          That's the designer's job. AI is the most powerful tool I've ever used — but it's still a tool. The product decisions, the taste, the empathy for the user — that's what makes this work.
+        </p>
+      </div>
+
+      <div style={{ borderTop: '1px solid var(--border)', marginBottom: '5rem' }} />
+
+      {/* Outcome */}
+      <div style={{ marginBottom: '5rem' }}>
+        <p style={{ fontSize: '0.7rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>Outcome</p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(200px, 100%), 1fr))', gap: '1px', backgroundColor: 'var(--border)', border: '1px solid var(--border)', borderRadius: '12px', overflow: 'hidden', marginBottom: '3rem' }}>
+          {[
+            { stat: '1 Person', label: 'Solo designer + AI' },
+            { stat: 'Live Users', label: 'Real nonprofit, real data' },
+            { stat: '309 Tests', label: 'Production-grade codebase' },
+            { stat: 'Weeks', label: 'From zero to launched product' },
+          ].map(item => (
+            <div key={item.label} style={{ backgroundColor: 'var(--bg)', padding: '2rem', textAlign: 'center' }}>
+              <p style={{ fontSize: '1.5rem', fontFamily: "'Playfair Display', serif", color: 'var(--fg)', fontWeight: 400, marginBottom: '0.5rem' }}>{item.stat}</p>
+              <p style={{ fontSize: '0.8rem', color: 'var(--muted)' }}>{item.label}</p>
+            </div>
+          ))}
+        </div>
+        <p style={{ fontSize: '0.95rem', color: 'var(--muted)', lineHeight: 1.8, maxWidth: '680px' }}>
+          CheckPlay is live at <a href="https://checkplay.io" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--fg)', borderBottom: '1px solid var(--border)' }}>checkplay.io</a>, actively used by Street Soccer USA, and growing. The codebase includes 309 passing tests, comprehensive security with Row Level Security on every table, and a full CI/CD pipeline. This isn't a side project — it's a product.
+        </p>
+      </div>
+    </>
+  )
+}
+
 function Placeholder({ project }) {
   return (
     <>
@@ -1494,7 +1729,7 @@ export default function CaseStudyPage() {
   return (
     <div style={{ minHeight: '100vh', backgroundColor: 'var(--bg)' }}>
       {/* Nav */}
-      <nav style={{
+      <nav className="cs-nav" style={{
         position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
         padding: '0 2rem', height: '64px',
         display: 'grid', gridTemplateColumns: '1fr auto 1fr',
@@ -1510,6 +1745,7 @@ export default function CaseStudyPage() {
         </Link>
         <AnimatePresence mode="wait">
           <motion.div
+            className="cs-nav-links"
             key={slug}
             style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}
             initial={{ opacity: 0, y: -6 }}
@@ -1518,7 +1754,7 @@ export default function CaseStudyPage() {
             transition={{ duration: 0.25, ease: 'easeInOut' }}
           >
             {prev && (
-              <Link to={`/work/${prev.slug}`} style={{ fontSize: '0.8rem', color: 'var(--muted)' }}
+              <Link to={`/work/${prev.slug}`} style={{ fontSize: '0.8rem', color: 'var(--muted)', whiteSpace: 'nowrap' }}
                 onMouseEnter={e => e.currentTarget.style.color = 'var(--fg)'}
                 onMouseLeave={e => e.currentTarget.style.color = 'var(--muted)'}
               >
@@ -1526,7 +1762,7 @@ export default function CaseStudyPage() {
               </Link>
             )}
             {next && (
-              <Link to={`/work/${next.slug}`} style={{ fontSize: '0.8rem', color: 'var(--muted)' }}
+              <Link to={`/work/${next.slug}`} style={{ fontSize: '0.8rem', color: 'var(--muted)', whiteSpace: 'nowrap' }}
                 onMouseEnter={e => e.currentTarget.style.color = 'var(--fg)'}
                 onMouseLeave={e => e.currentTarget.style.color = 'var(--muted)'}
               >
@@ -1548,10 +1784,10 @@ export default function CaseStudyPage() {
       </nav>
 
       {/* Content */}
-      <main style={{ padding: '8rem 2rem', maxWidth: '900px', margin: '0 auto' }}>
+      <main className="cs-main" style={{ padding: '8rem 2rem', maxWidth: '900px', margin: '0 auto' }}>
         <AnimatePresence mode="wait">
         <motion.div key={slug} initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -16 }} transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}>
-          {slug === 'ethos' ? <Ethos /> : slug === 'splash' ? <Splash /> : slug === 'thycotic' ? <Thycotic /> : slug === 'honest-paws' ? <HonestPaws /> : slug === 'floracracy' ? <Floracracy /> : slug === 'usana' ? <Usana /> : <Placeholder project={project} />}
+          {slug === 'ethos' ? <Ethos /> : slug === 'splash' ? <Splash /> : slug === 'thycotic' ? <Thycotic /> : slug === 'honest-paws' ? <HonestPaws /> : slug === 'floracracy' ? <Floracracy /> : slug === 'usana' ? <Usana /> : slug === 'checkplay' ? <CheckPlay /> : <Placeholder project={project} />}
 
           {/* Prev / Next */}
           <div style={{ borderTop: '1px solid var(--border)', paddingTop: '2rem', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>

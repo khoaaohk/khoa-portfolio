@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khoa Do — Resume</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    @page {
+      size: letter;
+      margin: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      color: #1a1a1a;
+      background: #e5e5e5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      width: 8.5in;
+      min-height: 11in;
+      margin: 0 auto;
+      background: #f9f9f7;
+      display: grid;
+      grid-template-columns: 2.5in 1fr;
+    }
+
+    @media print {
+      body { background: #f9f9f7; }
+      .page {
+        margin: 0;
+        box-shadow: none;
+        min-height: 100vh;
+      }
+    }
+
+    @media screen {
+      .page {
+        box-shadow: 0 1px 24px rgba(0,0,0,0.06);
+        margin: 40px auto;
+      }
+    }
+
+    /* ── Left Sidebar ── */
+    .sidebar {
+      background: #1a1a1a;
+      color: #f0f0ee;
+      padding: 48px 24px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .name {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      color: #f0f0ee;
+    }
+
+    .name span {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #888888;
+      margin-top: 10px;
+    }
+
+    .sidebar-section h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #888888;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #2a2a2a;
+    }
+
+    .contact-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .contact-list li {
+      font-size: 10.5px;
+      color: #f0f0ee;
+      line-height: 1.5;
+      word-break: break-all;
+    }
+
+    .contact-list a {
+      color: #f0f0ee;
+      text-decoration: none;
+      border-bottom: 1px solid #2a2a2a;
+      padding-bottom: 1px;
+    }
+
+    .contact-list a:hover {
+      color: #fff;
+      border-color: #fff;
+    }
+
+    .skill-category {
+      margin-bottom: 14px;
+    }
+
+    .skill-category:last-child {
+      margin-bottom: 0;
+    }
+
+    .skill-label {
+      font-size: 9px;
+      font-weight: 500;
+      color: #888888;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 8px;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .skill-tag {
+      font-size: 9.5px;
+      color: #f0f0ee;
+      background: #222222;
+      padding: 3px 10px;
+      border-radius: 100px;
+      line-height: 1.5;
+    }
+
+    .education-entry h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 13px;
+      font-weight: 400;
+      color: #f0f0ee;
+      line-height: 1.3;
+    }
+
+    .education-degree {
+      font-size: 10.5px;
+      color: #f0f0ee;
+      margin-top: 3px;
+    }
+
+    .education-entry .date {
+      font-size: 9.5px;
+      color: #888888;
+      margin-top: 2px;
+    }
+
+    .education-entry .note {
+      font-size: 9.5px;
+      color: #6b6b6b;
+      margin-top: 8px;
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    /* ── Main Content ── */
+    .main {
+      padding: 48px 36px 40px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .summary {
+      font-size: 12px;
+      line-height: 1.7;
+      color: #6b6b6b;
+      border-left: 2px solid #1a1a1a;
+      padding-left: 16px;
+    }
+
+    .section-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #1a1a1a;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e5e5e5;
+      margin-bottom: 6px;
+    }
+
+    .job {
+      margin-bottom: 20px;
+    }
+
+    .job:last-child {
+      margin-bottom: 0;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1px;
+    }
+
+    .job-company {
+      font-family: 'Playfair Display', serif;
+      font-size: 15px;
+      font-weight: 400;
+      color: #1a1a1a;
+    }
+
+    .job-title {
+      font-size: 11px;
+      color: #6b6b6b;
+      font-weight: 400;
+    }
+
+    .job-meta {
+      font-size: 9.5px;
+      color: #888888;
+      margin-bottom: 8px;
+      letter-spacing: 0.02em;
+    }
+
+    .job ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .job li {
+      font-size: 10.5px;
+      line-height: 1.65;
+      color: #6b6b6b;
+      padding-left: 10px;
+      position: relative;
+    }
+
+    .job li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 3px;
+      height: 3px;
+      background: #1a1a1a;
+      border-radius: 100px;
+    }
+
+    .metric {
+      font-weight: 500;
+      color: #1a1a1a;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- ── Sidebar ── -->
+    <aside class="sidebar">
+      <div class="name">
+        Khoa<br>Do
+        <span>Product Designer</span>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Contact</h3>
+        <ul class="contact-list">
+          <li><a href="https://khoa-portfolio-psi.vercel.app">khoa-portfolio-psi.vercel.app</a></li>
+          <li><a href="mailto:khoa0aohk@gmail.com">khoa0aohk@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Skills</h3>
+        <div class="skill-category">
+          <div class="skill-label">Design</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Prototyping</span>
+            <span class="skill-tag">Wireframing</span>
+            <span class="skill-tag">Interaction Design</span>
+            <span class="skill-tag">Visual Design</span>
+            <span class="skill-tag">Design Systems</span>
+            <span class="skill-tag">Responsive Design</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-label">Research</div>
+          <div class="skill-tags">
+            <span class="skill-tag">User Interviews</span>
+            <span class="skill-tag">Journey Mapping</span>
+            <span class="skill-tag">Usability Testing</span>
+            <span class="skill-tag">A/B Testing</span>
+            <span class="skill-tag">Surveys</span>
+            <span class="skill-tag">Competitive Analysis</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-label">Tools</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Claude</span>
+            <span class="skill-tag">Warp</span>
+            <span class="skill-tag">GitHub</span>
+            <span class="skill-tag">Vercel</span>
+            <span class="skill-tag">Figma</span>
+            <span class="skill-tag">Miro</span>
+            <span class="skill-tag">Slack</span>
+            <span class="skill-tag">Adobe Suite</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Education</h3>
+        <div class="education-entry">
+          <h4>University of Utah</h4>
+          <div class="education-degree">BS Urban Planning</div>
+          <div class="date">2003 – 2007 | Salt Lake City, UT</div>
+          <div class="note">Foundation in systems thinking and human-centered planning that informs a user-first approach to design.</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ── Main ── -->
+    <main class="main">
+      <p class="summary">
+        Senior Product Designer with 12+ years of experience leading end-to-end design for enterprise SaaS, EdTech, and event management platforms. Now working with an AI-native workflow that ships real, working prototypes in hours instead of weeks. Skilled in user research, interaction design, design systems, and cross-functional collaboration to deliver accessible, data-driven solutions at scale.
+      </p>
+
+      <div>
+        <div class="section-title">Experience</div>
+
+        <div class="job">
+          <div class="job-header">
+            <span class="job-company">Ethos</span>
+            <span class="job-title">Senior Product Designer</span>
+          </div>
+          <div class="job-meta">Feb 2023 – Mar 2026 | San Francisco, CA</div>
+          <ul>
+            <li>Led the complete redesign of a learning management platform, transforming an admin-centric dashboard into a dual-experience platform serving both instructors and learners</li>
+            <li>Designed <span class="metric">12 interactive card types</span> and a component-based design system with <span class="metric">90+ design tokens</span>, enabling consistent UI across admin and learner experiences</li>
+            <li>Built a gamified learner journey with milestone achievements, progress visualization, and personalized recommendations to drive engagement</li>
+            <li>Established a design-to-code prototyping pipeline using AI-assisted workflows, publishing interactive prototypes to GitHub for developer collaboration and handoff</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <span class="job-company">Splash</span>
+            <span class="job-title">Senior Product Designer</span>
+          </div>
+          <div class="job-meta">Nov 2021 – Dec 2022 | New York, NY</div>
+          <ul>
+            <li>Designed a timeline-based VEP Preview feature for Splash's enterprise event platform, enabling hosts to see exactly what attendees experience at every stage of a virtual event</li>
+            <li>Conducted <span class="metric">10 user interviews</span> (5 external, 5 internal) to validate the preview concept, achieving strong resonance with event hosts and enterprise customers</li>
+            <li>Reduced content production effort by <span class="metric">75%</span> (45 hrs to 11.25 hrs) and targeted a <span class="metric">25% reduction</span> in monthly support hours</li>
+            <li>Collaborated with a distributed team (2 PMs, engineers across US, Spain, and Canada) to define epic breakdown, feature flags, and data tracking for incremental rollout</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <span class="job-company">Thycotic <span style="font-family: 'Inter', sans-serif; font-weight: 400; font-size: 10px; color: #888888;">(now Delinea)</span></span>
+            <span class="job-title">Senior Product Designer</span>
+          </div>
+          <div class="job-meta">Mar 2019 – Oct 2021 | Washington, DC</div>
+          <ul>
+            <li>Drove end-to-end design for the Privileged Access Management (PAM) Mobile App across <span class="metric">5+ enterprise products</span>, delivering user research, competitive analysis, user flows, wireframes, and high-fidelity prototypes</li>
+            <li>Led accessibility initiative across the full product suite, bringing all products to <span class="metric">WCAG AA compliance</span> and improving usability for <span class="metric">10K+ enterprise users</span></li>
+            <li>Designed new features for Account Lifecycle Manager, partnering with front-end and back-end engineers to streamline design handoff and reduce implementation cycles</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <span class="job-company">USANA Health Sciences</span>
+            <span class="job-title">Senior UI/UX Designer</span>
+          </div>
+          <div class="job-meta">Jul 2017 – Mar 2019 | Salt Lake City, UT</div>
+          <ul>
+            <li>Led responsive dashboard redesign for <span class="metric">500K+ associates</span> to track business performance, incorporating user research, wireframing, prototyping, and usability testing</li>
+            <li>Unified design patterns across all product lines by collaborating with marketing, development, and product teams, improving consistency across the user experience</li>
+          </ul>
+        </div>
+
+      </div>
+    </main>
+  </div>
+</body>
+</html>

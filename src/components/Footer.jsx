@@ -5,6 +5,8 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
+    flexWrap: 'wrap',
+    gap: '0.5rem',
     maxWidth: '900px',
     margin: '0 auto',
   },

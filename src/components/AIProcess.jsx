@@ -88,6 +88,7 @@ const styles = {
     border: '1px solid var(--border)',
     borderRadius: '12px',
     overflow: 'hidden',
+    width: '100%',
   },
   step: {
     backgroundColor: 'var(--bg)',
@@ -226,7 +227,7 @@ export default function AIProcess() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <strong style={{ color: 'var(--fg)', fontWeight: 500 }}>+10 years</strong> of turning complex problems into products people actually use —
+          <strong style={{ color: 'var(--fg)', fontWeight: 500 }}>+12 years</strong> of turning complex problems into products people actually use —
           now working with an AI-native workflow that ships real, working prototypes in hours instead of weeks.
         </motion.p>
         <motion.a

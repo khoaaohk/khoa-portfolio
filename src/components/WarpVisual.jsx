@@ -55,6 +55,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     gap: '0.4rem',
+    overflow: 'hidden',
   },
   line: {
     display: 'flex',
