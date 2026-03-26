@@ -1536,7 +1536,7 @@ function CheckPlay() {
             }}
           >
             <span style={{ fontSize: '1.2rem' }}>&#9889;</span>
-            Explore the live prototype
+            Visit CheckPlay.io
             <span style={{ fontSize: '0.85rem', opacity: 0.7 }}>&rarr;</span>
           </a>
         </div>
