@@ -125,9 +125,9 @@
 }
 /* story screenshots: one even rounded frame, the image itself has no second border/radius */
 .mcp .sf { border: 2px solid var(--ink) !important; border-radius: 12px !important; overflow: hidden; background: #fff; }
-.mcp .sf img { border: 0 !important; border-radius: 0 !important; }
+.mcp .sf img, .mcp .sf video { border: 0 !important; border-radius: 0 !important; }
 /* every screenshot frame on every case page shares the same even corner; stray bare images match it */
 .mcp div[style*="overflow: hidden"]:has(> img) { border: 2px solid var(--ink) !important; border-radius: 12px !important; }
 .mcp div[style*="overflow: hidden"] > img { border: 0 !important; border-radius: 0 !important; }
 .mcp img { border-radius: 12px !important; }
-.mcp .sf img { border-radius: 0 !important; }
+.mcp .sf img, .mcp .sf video { border-radius: 0 !important; }

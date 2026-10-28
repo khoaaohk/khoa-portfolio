@@ -1745,6 +1745,7 @@ const STORIES = {
       ['Make it yours', 'The Kit Shop lets players draw on their ball, shuffle a random starter look, and ride bikes, scooters and mopeds that come with their own emotes.'],
       ['Understand the players', 'An admin dashboard opens on Today and offers a day view, a single-player view, an island heat map, and fishing, emote and friends sections.'],
     ],
+    video: { src: '/assets/futbol-island/gameplay.mp4', poster: '/assets/futbol-island/gameplay-poster.jpg', caption: 'Gameplay, about two minutes: the town, mini-games, swimming and fishing.' },
     gallery: [
       ['01-town', 'The town square: shop, road, walking characters and the full HUD.'],
       ['03-pass-puzzle', 'Pass Puzzles: pick the open teammate and the kind of pass.'],
@@ -1829,7 +1830,11 @@ function StoryPage({ slug }) {
         <p style={{ ...body, fontSize: '1.1rem' }}>{s.lead}</p>
         <a href={s.link.href} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem', marginTop: '2rem', fontSize: '1rem', fontWeight: 500, color: 'var(--bg)', backgroundColor: 'var(--fg)', padding: '0.9rem 1.8rem', borderRadius: '10px', textDecoration: 'none' }}>{s.link.label} <span style={{ opacity: 0.7 }}>&rarr;</span></a>
       </div>
-      <div className="sf" style={{ ...frame, marginBottom: '3rem' }}><img src={s.hero.src} alt={s.hero.alt} style={{ width: '100%', display: 'block' }} /></div>
+      <div className="sf" style={{ ...frame, marginBottom: '3rem' }}>
+        {s.video
+          ? <video src={s.video.src} poster={s.video.poster} controls playsInline preload="metadata" aria-label={s.video.caption} style={{ width: '100%', display: 'block' }} />
+          : <img src={s.hero.src} alt={s.hero.alt} style={{ width: '100%', display: 'block' }} />}
+      </div>
       <div style={{ ...grid(160), marginBottom: '5rem' }}>
         {s.meta.map(([k, v]) => (
           <div key={k} style={{ backgroundColor: 'var(--bg)', padding: '1.25rem 1.5rem' }}>
