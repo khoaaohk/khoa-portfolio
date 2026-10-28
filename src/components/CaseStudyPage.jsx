@@ -1,3 +1,8 @@
+import './casepage.css'
+import AppIcon, { APPS } from '../figures/AppIcon'
+import { play } from '../figures/sound'
+import DiskIcon from '../figures/DiskIcon'
+import { figures } from '../figures/objects'
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
@@ -25,15 +30,19 @@ const logoHoverStyles = [
   { fontFamily: "'Inter', sans-serif", fontWeight: 500, fontStyle: 'normal', letterSpacing: '0.18em', textTransform: 'uppercase' },
 ]
 
-const projects = [
-  { slug: 'checkplay', number: '01', title: 'CheckPlay', category: 'SaaS Product · Built with AI', tags: ['SaaS', 'AI-Assisted Dev', 'Full-Stack', 'Product Design', 'Ongoing'] },
-  { slug: 'ethos', number: '02', title: 'Ethos', category: 'Learning Management Platform', tags: ['Platform Redesign', 'LMS', 'Design System', 'AI Workflow'] },
-  { slug: 'splash', number: '03', title: 'Splash', category: 'Event Management · VEP Preview', tags: ['Product Design', 'UX Research', 'Enterprise', 'SaaS'] },
-  { slug: 'thycotic', number: '04', title: 'Thycotic', category: 'Privileged Access Management', tags: ['UX Research', 'Enterprise', 'Mobile', 'Security'] },
-  { slug: 'honest-paws', number: '05', title: 'Honest Paws', category: 'Ecommerce · Pet CBD', tags: ['Ecommerce', 'Conversion', 'DTC'] },
-  { slug: 'floracracy', number: '06', title: 'Floracracy', category: 'Floral Arrangement Builder', tags: ['Product Design', 'Interactive', 'Builder'] },
-  { slug: 'usana', number: '07', title: 'Usana', category: 'Dashboard Redesign', tags: ['Dashboard', 'Data Viz', 'B2B'] },
+const allProjects = [
+  { slug: 'futbol-island', number: '01', title: 'Futbol Island', category: 'Multiplayer Soccer World', tags: ['Game Design', 'Multiplayer', 'Built with AI'] },
+  { slug: 'fastwill', number: '02', title: 'FastWill', category: 'Online Estate Planning', tags: ['Fintech', 'Legal Tech', 'Product Design'] },
+  { slug: 'checkplay', number: '03', title: 'CheckPlay', category: 'SaaS Product · Built with AI', tags: ['SaaS', 'AI-Assisted Dev', 'Full-Stack', 'Product Design', 'Ongoing'] },
+  { slug: 'ethos', number: '04', title: 'Ethos', category: 'Learning Management Platform', tags: ['Platform Redesign', 'LMS', 'Design System', 'AI Workflow'] },
+  { slug: 'splash', number: '05', title: 'Splash', category: 'Event Management · VEP Preview', tags: ['Product Design', 'UX Research', 'Enterprise', 'SaaS'] },
+  { slug: 'thycotic', number: '06', title: 'Thycotic', category: 'Privileged Access Management', tags: ['UX Research', 'Enterprise', 'Mobile', 'Security'] },
+  { slug: 'honest-paws', number: '07', title: 'Honest Paws', category: 'Ecommerce · Pet CBD', tags: ['Ecommerce', 'Conversion', 'DTC'] },
+  { slug: 'floracracy', number: '06x', title: 'Floracracy', category: 'Floral Arrangement Builder', tags: ['Product Design', 'Interactive', 'Builder'] },
+  { slug: 'usana', number: '08', title: 'Usana', category: 'Dashboard Redesign', tags: ['Dashboard', 'Data Viz', 'B2B'] },
 ]
+const hiddenSlugs = ['floracracy']
+const projects = allProjects.filter(p => !hiddenSlugs.includes(p.slug))
 
 function Thycotic() {
   return (
@@ -41,7 +50,7 @@ function Thycotic() {
       {/* Hero */}
       <div style={{ marginBottom: '5rem' }}>
         <p style={{ fontSize: '0.8rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>
-          03 — Privileged Access Management
+          06 — Privileged Access Management
         </p>
         <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.1, color: 'var(--fg)', marginBottom: '1.5rem' }}>
           Redesigning enterprise<br />security for the mobile era.
@@ -243,7 +252,7 @@ function HonestPaws() {
       {/* Hero */}
       <div style={{ marginBottom: '5rem' }}>
         <p style={{ fontSize: '0.8rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>
-          04 — Ecommerce · Pet CBD
+          07 — Ecommerce · Pet CBD
         </p>
         <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.1, color: 'var(--fg)', marginBottom: '1.5rem' }}>
           Turning high-traffic pages<br />into high-converting ones.
@@ -436,7 +445,7 @@ function Floracracy() {
       {/* Hero */}
       <div style={{ marginBottom: '5rem' }}>
         <p style={{ fontSize: '0.8rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>
-          05 — Floral Arrangement Builder
+          06 — Floral Arrangement Builder
         </p>
         <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.1, color: 'var(--fg)', marginBottom: '1.5rem' }}>
           Redesigning a floral studio<br />for creativity, not confusion.
@@ -623,7 +632,7 @@ function Usana() {
       {/* Hero */}
       <div style={{ marginBottom: '5rem' }}>
         <p style={{ fontSize: '0.8rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>
-          06 — Dashboard Redesign
+          08 — Dashboard Redesign
         </p>
         <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.1, color: 'var(--fg)', marginBottom: '1.5rem' }}>
           One portal. Three types<br />of users. Zero confusion.
@@ -859,7 +868,7 @@ function Splash() {
       {/* Hero */}
       <div style={{ marginBottom: '5rem' }}>
         <p style={{ fontSize: '0.8rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>
-          02 — Event Management · VEP Preview
+          05 — Event Management · VEP Preview
         </p>
         <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.1, color: 'var(--fg)', marginBottom: '1.5rem' }}>
           Giving event hosts confidence<br />with a live preview experience.
@@ -1117,7 +1126,7 @@ function Ethos() {
       {/* Hero */}
       <div style={{ marginBottom: '5rem' }}>
         <p style={{ fontSize: '0.8rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>
-          02 — Learning Management Platform
+          04 — Learning Management Platform
         </p>
         <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.1, color: 'var(--fg)', marginBottom: '1.5rem' }}>
           Redesigning an LMS from<br />admin tool to learning ecosystem.
@@ -1490,7 +1499,7 @@ function CheckPlay() {
       {/* Hero */}
       <div style={{ marginBottom: '5rem' }}>
         <p style={{ fontSize: '0.8rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '1.5rem' }}>
-          01 — SaaS Product · Built with AI
+          03 — SaaS Product · Built with AI
         </p>
         <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.1, color: 'var(--fg)', marginBottom: '1.5rem' }}>
           One designer. Zero engineers. A full SaaS product.
@@ -1718,6 +1727,193 @@ function CheckPlay() {
   )
 }
 
+// Data-driven case study (used for the newer projects): hero, image, meta, use cases, decisions, facts.
+const STORIES = {
+  'futbol-island': {
+    number: '01', kicker: 'Multiplayer Soccer World', title: 'A whole island that teaches football.',
+    lead: 'Futbol Island is a 3D island world that runs in a phone browser. Kids walk a small town, play football mini-games, swim, fish and ride, and every feature is there to teach something about the game. I designed it end to end and built it with Claude as my engineering partner.',
+    link: { href: 'https://futbolisland.app', label: 'Visit Futbolisland.app' },
+    hero: { src: '/assets/futbol-island/intro-square.webp', alt: 'A player flies over the town square at the start of Futbol Island, with the arcade and the football court behind' },
+    meta: [['Role', 'Designer · Builder'], ['Platform', 'Phone browser, portrait'], ['Stack', 'Next.js · Three.js · Supabase'], ['Status', 'Live, in active development']],
+    problem: 'Kids learn football by playing it and by hearing the stories behind it, but most football games for kids only use the sport as decoration: the same simple game with a ball and a pitch painted on top, so nothing about football is actually learned. The rule for this project is simple: everything we add must have the intention of teaching the game of football, from skills and positions to tactics, rules, teamwork and club history. If a feature cannot say what it teaches, it does not ship.',
+    useCases: [
+      ['Learn tactics through short stories', 'A kid opens Paths and watches one of 18 animated stories drawn in a print-like riso style. There are lessons for futsal, 7v7, 9v9 and 11v11.'],
+      ['Practise in the Arcade', 'Five arcade games (Strikers, Pass Puzzles, Pinball, Tennis and Breakaway Run) share one score bar, one pause card and one coin wallet, so every game feels like part of the same place.'],
+      ['Collect while learning', 'Players unlock 23 animal club-mascot costumes. Each one comes with a short club story and a three-choice quiz that separates real club history from mascot fiction. A Bug squad job adds 20 bug species and 51 football stories.'],
+      ['Explore the water', 'Swimming, reef zones, whales and rays, and a reef ball hunt teach short lessons and pay out learning coins. Fishing uses a spin reel modelled on a familiar phone game.'],
+      ['Play with friends, safely', 'Parties of up to 20 use a join code that expires after 8 hours. Names are letters only, a grown-up approves each party, and there are no animals in multiplayer. Ten emotes, including “Pass it”, give kids a way to talk without chat.'],
+      ['Make it yours', 'The Kit Shop lets players draw on their ball, shuffle a random starter look, and ride bikes, scooters and mopeds that come with their own emotes.'],
+      ['Understand the players', 'An admin dashboard opens on Today and offers a day view, a single-player view, an island heat map, and fishing, emote and friends sections.'],
+    ],
+    gallery: [
+      ['01-town', 'The town square: shop, road, walking characters and the full HUD.'],
+      ['03-pass-puzzle', 'Pass Puzzles: pick the open teammate and the kind of pass.'],
+      ['04-swim', 'Swimming out to the buoy flag.'],
+      ['05-reef', 'Under the sea in Paul’s Grotto, with a breath meter.'],
+      ['06-fishing-reel', 'Fishing with the spin reel.'],
+      ['07-fishing-catch', 'The catch card pairs every fish with a real football fact.'],
+      ['08-kit-shop', 'Inside the Kit Shop.'],
+      ['09-paths', 'Island paths: pick a pitch size and meet your team.'],
+      ['10-path-story', 'A Paths story about regulating emotions, in the riso print style.'],
+      ['11-bug-catch', 'Bug squad: swing the net to catch a bug.'],
+      ['12-bug-book', 'The Bug book.'],
+    ].map(([f, c]) => ({ src: `/assets/futbol-island/play/desktop-${f}.webp`, m: `/assets/futbol-island/play/mobile-${f}.webp`, caption: c })),
+    image2: { src: '/assets/futbol-island/heatmap.webp', alt: 'Admin heat map of where players spend time on the main island', caption: 'The admin heat map shows where players spend time, per 20 m square, so design decisions can be checked against real behaviour.' },
+    decisions: [
+      ['A small, connected town', 'The first island was large and spread out. Walking took too long, so the town was rebuilt compact, with short routes between every place.'],
+      ['Portrait only', 'Landscape was built, then switched off. A sideways phone sees a “turn your phone” card instead of a half-working layout.'],
+      ['A clean pitch during play', 'Tips, hint lines and chips were removed from active play so the result is the only thing on screen.'],
+      ['Cut what did not teach', 'The fishing Derby, photo mode, record boards and weather were removed. The cave game was removed and the underground world is paused.'],
+      ['Child safety as design, not policy', 'Names are kept in memory only, invites have no QR code, and parties need a grown-up to approve them.'],
+      ['Phone heat is a feature requirement', 'Costumes are built in code with no downloaded assets, work is bounded, and sleeping content stays asleep. Heat caps are rechecked with each change.'],
+    ],
+    facts: [['656', 'commits in 5 weeks'], ['310 / 310', 'tests passing'], ['18', 'animated story lessons'], ['23', 'club mascot costumes']],
+    note: 'Counts are from the project repository as of late October 2026. I have no player numbers to share yet.',
+  },
+  fastwill: {
+    number: '02', kicker: 'Online Estate Planning', title: 'Estate planning, done from home.',
+    lead: 'FastWill lets people create a will or trust online, with attorney-built, state-specific documents, remote notarization and lifetime updates. I worked on the product inside a team codebase: the pricing and plan-picking flow, the redesigned marketing pages, and the advisor portal that lets financial professionals invite and manage clients.',
+    link: { href: 'https://fastwill.com', label: 'Visit FastWill.com' },
+    hero: { src: '/assets/fastwill/pricing-new.png', alt: 'FastWill homepage direction: a few simple questions, a legally valid estate plan' },
+    meta: [['Role', 'Product Designer · Front-end'], ['Team', 'Shared codebase, ~4,500 commits'], ['Stack', 'Laravel · Livewire · Tailwind'], ['Dates', 'June – October 2026']],
+    problem: 'Estate planning through an attorney is slow and expensive. It means office visits, printing and finding a notary, so most people put it off. Financial advisors have the opposite problem: they want to help clients get a plan done, but have no simple way to invite them, follow up and get credit.',
+    useCases: [
+      ['Choose a plan in four questions', 'A visitor who is not sure what they need answers a four-question plan finder. It points to a Will (from $199) or a Trust (from $499), written in plain English.'],
+      ['Pay last, claim an account after', 'A five-step funnel lets customers add the extras they want on a Plan Summary, pay, and create their account only after paying. Fixed bundles were replaced with build-your-own add-ons.'],
+      ['Compare against an attorney', 'Redesigned pricing pages with Will and Trust toggles help people see what they would pay an attorney versus FastWill.'],
+      ['Send a plan to a client', 'An advisor uses a redesigned dashboard to send a plan, with an onboarding widget and a preview of exactly what the client will see.'],
+      ['Land from an invitation', 'An invited client arrives on the advisor’s own page, a guided flow with no form and a single “Find my plan” button, and then gets their own dashboard.'],
+      ['Manage every client in one place', 'One “My Clients” list brings together bulk invite campaigns, a Welcome email series, contacts from CSV or HubSpot, and duplicate handling.'],
+      ['Reach advisors and agencies', 'A Professionals page for the B2B channel is available in English and Spanish.'],
+    ],
+    gallery: [
+      ['dash-01-advisor-dashboard', 'Advisor dashboard: send a plan, overview numbers and recently added clients.'],
+      ['dash-02-first-week-onboarding', 'The “Your First Week” onboarding panel.'],
+      ['clients-01-my-clients', 'My Clients: one list of clients and leads with a Today panel.'],
+      ['clients-03-add-contacts-crm', 'Add contacts from a CRM, a single lead or a CSV.'],
+      ['clients-05-contact-campaign-drawer', 'One lead’s invitation campaign timeline.'],
+      ['clients-07-welcome-series', 'The Welcome email series, all 14 emails.'],
+      ['mkt-01-marketing-start-here', 'Marketing: “Turn your clients into signed plans”.'],
+      ['pro-01-professionals', 'The Professionals page for advisors and agencies.'],
+      ['quiz-03-result', 'The plan finder result.'],
+      ['invite-01-landing', 'An advisor’s invitation landing page.'],
+      ['mobile-clients-01-my-clients', 'My Clients on a phone.'],
+      ['mobile-quiz-result', 'The plan finder result on a phone.'],
+    ].map(([f, c]) => ({ src: `/assets/fastwill/shots/${f}.png`, caption: c, mobile: f.startsWith('mobile') })),
+    image2: { src: '/assets/fastwill/pricing-before.png', alt: 'Previous FastWill homepage', caption: 'Before: the previous homepage. Every main button on the new pages sends people to choose a plan first.' },
+    decisions: [
+      ['Every button leads to choosing a plan', 'Package heroes, a single-panel product demo and matching split heroes with video keep every marketing page pointed at one next step.'],
+      ['Pay-last funnel', 'Creating the account after payment removes sign-up friction for the moment people are most ready to buy.'],
+      ['A form-free invitation page', 'The invitation landing dropped its form for a guided flow, so an invited client has nothing to fill in before seeing their plan.'],
+      ['One client list for advisors', 'Separate client lists were merged into one. The “Momentum” feature was hidden and CRM wording removed while the CRM is switched off.'],
+      ['Mobile-first and warm', 'Most traffic is mobile. The tone is warm rather than pushy, with no aggressive popups and one global footer on every page.'],
+      ['English and Spanish', 'Advisor pages and invitations work in both languages.'],
+    ],
+    facts: [['$199', 'Will, from'], ['$499', 'Trust, from'], ['4', 'questions in the plan finder'], ['5', 'steps in the pay-last funnel']],
+    note: 'FastWill is a team product with its own engineers; the work shown here is my contribution to it. I do not have conversion numbers to share.',
+  },
+}
+
+function StoryPage({ slug }) {
+  const s = STORIES[slug]
+  const label = { fontSize: '0.8rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)' }
+  const h2 = { fontSize: 'clamp(1.6rem, 3.5vw, 2.2rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.2, color: 'var(--fg)', marginBottom: '1.5rem' }
+  const body = { fontSize: '1.05rem', color: 'var(--muted)', lineHeight: 1.8, maxWidth: '640px' }
+  const frame = { borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--border)' }
+  const grid = (min) => ({ display: 'grid', gridTemplateColumns: `repeat(auto-fit, minmax(min(${min}px, 100%), 1fr))`, gap: '1px', backgroundColor: 'var(--border)', border: '1px solid var(--border)', borderRadius: '12px', overflow: 'hidden' })
+  return (
+    <>
+      <div style={{ marginBottom: '4rem' }}>
+        <p style={{ ...label, marginBottom: '1.5rem' }}>{s.number} — {s.kicker}</p>
+        <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontFamily: "'Playfair Display', serif", fontWeight: 400, lineHeight: 1.1, color: 'var(--fg)', marginBottom: '1.5rem' }}>{s.title}</h1>
+        <p style={{ ...body, fontSize: '1.1rem' }}>{s.lead}</p>
+        <a href={s.link.href} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem', marginTop: '2rem', fontSize: '1rem', fontWeight: 500, color: 'var(--bg)', backgroundColor: 'var(--fg)', padding: '0.9rem 1.8rem', borderRadius: '10px', textDecoration: 'none' }}>{s.link.label} <span style={{ opacity: 0.7 }}>&rarr;</span></a>
+      </div>
+      <div className="sf" style={{ ...frame, marginBottom: '3rem' }}><img src={s.hero.src} alt={s.hero.alt} style={{ width: '100%', display: 'block' }} /></div>
+      <div style={{ ...grid(160), marginBottom: '5rem' }}>
+        {s.meta.map(([k, v]) => (
+          <div key={k} style={{ backgroundColor: 'var(--bg)', padding: '1.25rem 1.5rem' }}>
+            <p style={{ ...label, fontSize: '0.7rem', marginBottom: '0.4rem' }}>{k}</p>
+            <p style={{ fontSize: '0.95rem', color: 'var(--fg)', margin: 0 }}>{v}</p>
+          </div>
+        ))}
+      </div>
+
+      <div style={{ marginBottom: '5rem' }}>
+        <p style={{ ...label, marginBottom: '1rem' }}>The problem</p>
+        <h2 style={h2}>Why it exists</h2>
+        <p style={body}>{s.problem}</p>
+      </div>
+
+      <div style={{ marginBottom: '5rem' }}>
+        <p style={{ ...label, marginBottom: '1rem' }}>Use cases</p>
+        <h2 style={h2}>Who does what</h2>
+        <div style={{ display: 'grid', gap: '1px', backgroundColor: 'var(--border)', border: '1px solid var(--border)', borderRadius: '12px', overflow: 'hidden' }}>
+          {s.useCases.map(([t, d], i) => (
+            <div key={t} style={{ backgroundColor: 'var(--bg)', padding: '1.5rem', display: 'grid', gridTemplateColumns: '2.2rem 1fr', gap: '1rem' }}>
+              <span style={{ ...label, paddingTop: '0.25rem' }}>{String(i + 1).padStart(2, '0')}</span>
+              <div>
+                <h3 style={{ fontSize: '1.15rem', fontWeight: 500, color: 'var(--fg)', margin: '0 0 0.4rem' }}>{t}</h3>
+                <p style={{ ...body, margin: 0, fontSize: '1rem' }}>{d}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <figure style={{ margin: '0 0 5rem' }}>
+        <div className="sf" style={frame}><img src={s.image2.src} alt={s.image2.alt} style={{ width: '100%', display: 'block' }} /></div>
+        <figcaption style={{ ...label, textTransform: 'none', letterSpacing: 0, fontSize: '0.85rem', marginTop: '0.75rem' }}>{s.image2.caption}</figcaption>
+      </figure>
+
+      {s.gallery && (
+        <div style={{ marginBottom: '5rem' }}>
+          <p style={{ ...label, marginBottom: '1.5rem' }}>Screens</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(320px, 100%), 1fr))', gap: '1.5rem' }}>
+            {s.gallery.map(g => (
+              <figure key={g.src} style={{ margin: 0, ...(g.m ? { gridColumn: '1 / -1' } : {}) }}>
+                {g.m ? (
+                  <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                    <div className="sf" style={{ ...frame, flex: '1 1 0', minWidth: 0 }}><img src={g.src} alt={g.caption} loading="lazy" style={{ width: '100%', display: 'block' }} /></div>
+                    <div className="sf" style={{ ...frame, flex: '0 0 min(22%, 200px)' }}><img src={g.m} alt={`${g.caption} (phone)`} loading="lazy" style={{ width: '100%', display: 'block' }} /></div>
+                  </div>
+                ) : <div className="sf" style={{ ...frame, ...(g.mobile ? { maxWidth: '220px' } : {}) }}><img src={g.src} alt={g.caption} loading="lazy" style={{ width: '100%', display: 'block' }} /></div>}
+                <figcaption style={{ ...label, textTransform: 'none', letterSpacing: 0, fontSize: '0.85rem', marginTop: '0.6rem' }}>{g.caption}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <div style={{ marginBottom: '5rem' }}>
+        <p style={{ ...label, marginBottom: '1rem' }}>Design decisions</p>
+        <h2 style={h2}>What I chose, and what I cut</h2>
+        <div style={grid(280)}>
+          {s.decisions.map(([t, d]) => (
+            <div key={t} style={{ backgroundColor: 'var(--bg)', padding: '1.5rem' }}>
+              <h3 style={{ fontSize: '1.05rem', fontWeight: 500, color: 'var(--fg)', margin: '0 0 0.5rem' }}>{t}</h3>
+              <p style={{ ...body, margin: 0, fontSize: '0.95rem' }}>{d}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div style={{ marginBottom: '5rem' }}>
+        <p style={{ ...label, marginBottom: '1rem' }}>By the numbers</p>
+        <div style={grid(150)}>
+          {s.facts.map(([n, l]) => (
+            <div key={l} style={{ backgroundColor: 'var(--bg)', padding: '1.5rem' }}>
+              <p style={{ fontSize: 'clamp(1.6rem, 4vw, 2.2rem)', fontFamily: "'Playfair Display', serif", color: 'var(--fg)', margin: 0 }}>{n}</p>
+              <p style={{ ...label, fontSize: '0.7rem', margin: '0.4rem 0 0' }}>{l}</p>
+            </div>
+          ))}
+        </div>
+        <p style={{ ...body, fontSize: '0.85rem', marginTop: '1rem' }}>{s.note}</p>
+      </div>
+    </>
+  )
+}
+
 function Placeholder({ project }) {
   return (
     <>
@@ -1762,6 +1958,7 @@ export default function CaseStudyPage() {
     setLogoStyleIndex(-1)
   }
 
+  useEffect(() => { play('ready') }, [])
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [slug])
@@ -1770,6 +1967,16 @@ export default function CaseStudyPage() {
   const currentIndex = projects.findIndex(p => p.slug === slug)
   const prev = projects[currentIndex - 1]
   const next = projects[currentIndex + 1]
+
+  // eject, in stages: 1 window folds into its title bar, 2 "Ejecting…" dialog with progress, 3 dialog closes and the screen fades out, then home (the disk slides out there)
+  const [stage, setStage] = useState(0)
+  const goBack = () => {
+    if (stage) return
+    setStage(1); play('zoom', true)
+    setTimeout(() => { setStage(2); play('ding'); play('progress', 7) }, 480)
+    setTimeout(() => { setStage(3); play('eject') }, 1480)
+    setTimeout(() => navigate('/', { state: { eject: slug } }), 1950)
+  }
 
   const goToWork = () => {
     navigate('/')
@@ -1789,67 +1996,45 @@ export default function CaseStudyPage() {
   }
 
   return (
-    <div style={{ minHeight: '100vh', backgroundColor: 'var(--bg)' }}>
-      {/* Nav */}
-      <nav className="cs-nav" style={{
-        position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
-        padding: '0 2rem', height: '64px',
-        display: 'grid', gridTemplateColumns: '1fr auto 1fr',
-        alignItems: 'center',
-        backgroundColor: 'var(--bg)',
-        borderBottom: '1px solid var(--border)',
-      }}>
-        <Link to="/" style={{ fontSize: '1rem', fontFamily: "'Playfair Display', serif", fontWeight: 400, fontStyle: 'normal', letterSpacing: '0', textTransform: 'none', color: 'var(--fg)', transition: 'none', userSelect: 'none', ...(logoStyleIndex >= 0 ? logoHoverStyles[logoStyleIndex] : {}) }}
-          onMouseEnter={startCycling}
-          onMouseLeave={stopCycling}
-        >
-          Khoa
-        </Link>
-        <AnimatePresence mode="wait">
-          <motion.div
-            className="cs-nav-links"
-            key={slug}
-            style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}
-            initial={{ opacity: 0, y: -6 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 6 }}
-            transition={{ duration: 0.25, ease: 'easeInOut' }}
-          >
-            {prev && (
-              <Link to={`/work/${prev.slug}`} style={{ fontSize: '0.8rem', color: 'var(--muted)', whiteSpace: 'nowrap' }}
-                onMouseEnter={e => e.currentTarget.style.color = 'var(--fg)'}
-                onMouseLeave={e => e.currentTarget.style.color = 'var(--muted)'}
-              >
-                ← {prev.title}
-              </Link>
-            )}
-            {next && (
-              <Link to={`/work/${next.slug}`} style={{ fontSize: '0.8rem', color: 'var(--muted)', whiteSpace: 'nowrap' }}
-                onMouseEnter={e => e.currentTarget.style.color = 'var(--fg)'}
-                onMouseLeave={e => e.currentTarget.style.color = 'var(--muted)'}
-              >
-                {next.title} →
-              </Link>
-            )}
-          </motion.div>
-        </AnimatePresence>
-        <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-          <span
-            onClick={goToWork}
-            style={{ fontSize: '0.8rem', color: 'var(--muted)', cursor: 'pointer' }}
-            onMouseEnter={e => e.currentTarget.style.color = 'var(--fg)'}
-            onMouseLeave={e => e.currentTarget.style.color = 'var(--muted)'}
-          >
-            All work
-          </span>
+    <div className="mcp">
+      {(
+        <div className={`mcp-icons${stage === 3 ? ' out' : ''}`} aria-hidden="true">
+          {APPS.map(a => (
+            <span key={a.id} className="mcp-icon"><svg viewBox="0 0 100 88"><AppIcon id={a.id} /></svg><b>{a.name}</b></span>
+          ))}
+          <button className={`mcp-icon mcp-disk${stage > 1 ? ' gone' : ''}`} onClick={goBack} title="Eject this disk" aria-label={`Eject ${project.title}`}><DiskIcon color={figures.find(f => f.slug === slug)?.bg} /><b>{project.title}</b></button>
+          <span className="mcp-trash">Trash</span>
         </div>
-      </nav>
+      )}
+      {stage > 1 && (
+        <div className={`mcp-dlg-wrap${stage === 3 ? ' out' : ''}`} role="status" aria-live="polite">
+          <div className="mcp-dlg">
+            <div className="mcp-dlg-row">
+              <span className="mcp-dlg-disk" aria-hidden="true"><i /></span>
+              <div><b>Ejecting “{project.title}”…</b><p>Putting the disk back in the box</p></div>
+            </div>
+            <div className="mcp-bar"><i /></div>
+          </div>
+        </div>
+      )}
+      {stage === 3 && <div className="mcp-fade" />}
+      <div className="mcp-screen">
+      {/* the same Mac menu bar as the desktop: rainbow, name, back, clock */}
+      <header className="mcp-menu">
+        <span className="mcp-rainbow" aria-hidden="true">{['#ef6a4c', '#e9b43c', '#8fd3b6', '#4a63b8', '#a05fb5', '#5aa27f'].map(c => <i key={c} style={{ background: c }} />)}</span>
+        <b>Khoa's Mac</b>
+        <button className="mcp-back-link" onClick={goBack}>← Back</button>
+        <span className="mcp-spacer" />
+        <span className="mcp-clock">{new Date().toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })}</span>
+      </header>
 
       {/* Content */}
+      <div className={`mcp-win${stage === 1 ? ' closing' : ''}${stage > 1 ? ' gone' : ''}`}>
+      <div className="mcp-title"><button className="mcp-close" onClick={goBack} aria-label="Close and go back to the desktop" /><span className="mcp-wt">{project.title}</span><span className="mcp-nav">{prev && <Link to={`/work/${prev.slug}`}>← {prev.title}</Link>}{next && <Link to={`/work/${next.slug}`}>{next.title} →</Link>}</span></div>
       <main className="cs-main" style={{ padding: '8rem 2rem', maxWidth: '900px', margin: '0 auto' }}>
         <AnimatePresence mode="wait">
         <motion.div key={slug} initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -16 }} transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}>
-          {slug === 'ethos' ? <Ethos /> : slug === 'splash' ? <Splash /> : slug === 'thycotic' ? <Thycotic /> : slug === 'honest-paws' ? <HonestPaws /> : slug === 'floracracy' ? <Floracracy /> : slug === 'usana' ? <Usana /> : slug === 'checkplay' ? <CheckPlay /> : <Placeholder project={project} />}
+          {slug === 'ethos' ? <Ethos /> : slug === 'splash' ? <Splash /> : slug === 'thycotic' ? <Thycotic /> : slug === 'honest-paws' ? <HonestPaws /> : slug === 'floracracy' ? <Floracracy /> : slug === 'usana' ? <Usana /> : slug === 'checkplay' ? <CheckPlay /> : STORIES[slug] ? <StoryPage slug={slug} /> : <Placeholder project={project} />}
 
           {/* Prev / Next */}
           <div style={{ borderTop: '1px solid var(--border)', paddingTop: '2rem', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
@@ -1869,6 +2054,8 @@ export default function CaseStudyPage() {
         </motion.div>
         </AnimatePresence>
       </main>
+      </div>
+      </div>
     </div>
   )
 }

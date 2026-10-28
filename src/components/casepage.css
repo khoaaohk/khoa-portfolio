@@ -1,0 +1,133 @@
+/* Case studies open as a window on the Mac's desktop (matches the home page) */
+.mcp { --bg: #f8f6f0; --fg: #231e16; --muted: #6f685c; --border: #231e16; --card: #fffdf8; --tag-bg: #efe9da; --ink: #231e16;
+  min-height: 100vh; color: var(--fg); background: #9fb8a6; background-image: conic-gradient(#cfe3d4 25%, transparent 0 50%, #cfe3d4 0 75%, transparent 0); background-size: 8px 8px;
+  font-family: ui-monospace, 'JetBrains Mono', Menlo, monospace; padding-top: 44px; }
+.mcp, .mcp * { font-family: ui-monospace, 'JetBrains Mono', Menlo, monospace !important; font-style: normal !important; }
+.mcp-menu { position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 34px; display: flex; align-items: center; gap: 18px; padding: 0 14px; background: #f8f6f0; border-bottom: 3px solid var(--ink); font-size: 13px; font-weight: 700; white-space: nowrap; overflow: hidden; }
+.mcp-menu a { color: var(--ink); text-decoration: none; font-weight: 500; font-size: 12px; }
+.mcp-menu a:hover { text-decoration: underline; }
+.mcp-rainbow { display: inline-flex; flex-direction: column; width: 14px; height: 16px; justify-content: space-between; }
+.mcp-rainbow i { display: block; height: 2.7px; }
+.mcp-disk { font-weight: 500; opacity: .7; }
+.mcp-spacer { flex: 1; }
+.mcp-eject { font: inherit; font-weight: 700; font-size: 12px; padding: 4px 12px; background: var(--ink); color: #f8f6f0; border: 0; border-radius: 999px; cursor: pointer; box-shadow: 2px 2px 0 #ef6a4c; }
+.mcp-win { width: min(1040px, calc(100% - 32px)); margin: 28px auto 56px; background: var(--bg); border: 2px solid var(--ink); border-radius: 6px; box-shadow: 6px 6px 0 var(--ink); overflow: clip; }
+.mcp-title { position: sticky; top: 34px; z-index: 50; display: flex; align-items: center; gap: 12px; height: 34px; padding: 0 12px; background: repeating-linear-gradient(0deg, #f8f6f0 0 2px, #231e16 2px 3px); border-bottom: 2px solid var(--ink); }
+.mcp-wt { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background: #f8f6f0; padding: 0 12px; font-weight: 700; font-size: 13px; white-space: nowrap; }
+.mcp-close { width: 15px; height: 15px; background: #f8f6f0; border: 2px solid var(--ink); cursor: pointer; padding: 0; }
+.mcp-back { font: inherit; font-weight: 700; font-size: 12px; padding: 3px 12px; background: #f8f6f0; color: var(--ink); border: 1.5px solid var(--ink); border-radius: 999px; cursor: pointer; }
+.mcp-back:hover { background: var(--ink); color: #f8f6f0; }
+.mcp .cs-main { padding: 3rem 2.2rem 3rem !important; }
+.mcp h1, .mcp h2, .mcp h3 { letter-spacing: -0.01em; font-weight: 700 !important; }
+.mcp .live-proto-btn, .mcp .cp-proto-btn { animation: none !important; box-shadow: 4px 4px 0 var(--ink) !important; border: 2px solid var(--ink) !important; border-radius: 999px !important; transform: none !important; }
+.mcp .live-proto-btn:hover, .mcp .cp-proto-btn:hover { box-shadow: 6px 6px 0 var(--ink) !important; transform: translate(-1px, -1px) !important; }
+.mcp .sparkle, .mcp .cp-sp { display: none !important; }
+.mcp img, .mcp video { border: 2px solid var(--ink); border-radius: 4px !important; }
+@media (max-width: 720px) { .mcp-menu a, .mcp-disk { display: none; } .mcp-win { width: calc(100% - 16px); margin-top: 14px; box-shadow: 4px 4px 0 var(--ink); } .mcp .cs-main { padding: 2rem 1.1rem !important; } }
+
+/* eject, in stages */
+.mcp-win { transform-origin: 50% 0; }
+.mcp-win.closing { pointer-events: none; animation: mcp-fold .48s cubic-bezier(.6, 0, .8, .3) forwards; }
+.mcp-win.gone { visibility: hidden; }
+@keyframes mcp-fold {
+  0% { clip-path: inset(0 0 0 0); transform: none; opacity: 1; }
+  55% { clip-path: inset(0 0 calc(100% - 38px) 0); transform: none; opacity: 1; }
+  100% { clip-path: inset(0 0 calc(100% - 38px) 0); transform: scaleX(.25) translateY(10px); opacity: 0; }
+}
+.mcp-dlg-wrap { position: fixed; inset: 0; z-index: 150; display: grid; place-items: center; animation: mcp-pop .3s ease-out both; }
+.mcp-dlg-wrap.out { animation: mcp-shrink .45s ease-in forwards; }
+.mcp-dlg { width: min(380px, calc(100% - 40px)); background: #f8f6f0; border: 2.5px solid var(--ink); box-shadow: 5px 5px 0 var(--ink); padding: 18px 20px 16px; }
+.mcp-dlg-row { display: flex; gap: 14px; align-items: center; margin-bottom: 14px; }
+.mcp-dlg-row b { font-size: 14px; }
+.mcp-dlg-row p { margin: 3px 0 0; font-size: 11px; color: var(--muted); }
+.mcp-dlg-disk { position: relative; flex: none; width: 38px; height: 40px; background: #2f2b26; border: 1.5px solid var(--ink); border-radius: 2px 2px 7px 2px; animation: mcp-eject-disk 1s ease-in-out both; }
+.mcp-dlg-disk i { position: absolute; left: 9px; top: 0; width: 18px; height: 13px; background: #cfcac0; border: 1.5px solid var(--ink); border-top: 0; }
+.mcp-bar { height: 16px; border: 2px solid var(--ink); padding: 2px; }
+.mcp-bar i { display: block; height: 100%; background: var(--ink); width: 0; animation: mcp-fill .95s steps(14, end) .05s forwards; }
+.mcp-fade { position: fixed; inset: 0; z-index: 160; background: #f2efe7; animation: mcp-fadein .45s ease-in forwards; }
+@keyframes mcp-pop { from { opacity: 0; transform: scale(.9); } to { opacity: 1; transform: none; } }
+@keyframes mcp-shrink { to { opacity: 0; transform: scale(.06); } }
+@keyframes mcp-fill { to { width: 100%; } }
+@keyframes mcp-fadein { from { opacity: 0; } to { opacity: 1; } }
+@keyframes mcp-eject-disk { 0% { transform: translateY(0); } 55% { transform: translateY(-7px); } 100% { transform: translateY(0); } }
+
+/* the Mac's desktop icons, revealed behind the ejecting dialog */
+.mcp-icons { position: fixed; inset: 34px 0 0 0; z-index: 80; pointer-events: none; animation: mcp-pop .35s ease-out .15s both; }
+.mcp-icons.out { opacity: 0; transition: opacity .4s ease-in; }
+.mcp-icon { position: absolute; top: 24px; width: 110px; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.mcp-icon:nth-child(1) { left: 28px; } .mcp-icon:nth-child(2) { left: 168px; }
+.mcp-icon svg { width: 92px; height: auto; }
+.mcp-icon b { background: #f8f6f0; padding: 0 8px; font-size: 13px; }
+.mcp-trash { position: absolute; right: 28px; bottom: 36px; padding: 14px 20px; background: #f8f6f0; border: 3px solid var(--ink); font-weight: 700; font-size: 13px; }
+@media (max-width: 720px) { .mcp-icon { width: 96px; top: 18px; } .mcp-icon:nth-child(1) { left: 16px; } .mcp-icon:nth-child(2) { left: 122px; } .mcp-icon svg { width: 76px; } }
+
+/* ---- match the desktop: paper margin, rounded screen, big dither, big menu bar ---- */
+.mcp { background: #f2efe7; padding: 22px; min-height: 100vh; }
+.mcp-screen { position: relative; border-radius: clamp(16px, 2.4vw, 42px); overflow: clip; min-height: calc(100vh - 44px);
+  background: #9fb8a6 conic-gradient(#cfe3d4 25%, transparent 0 50%, #cfe3d4 0 75%, transparent 0); background-size: 28px 28px; padding-bottom: 56px; }
+.mcp-menu { position: sticky; top: 0; left: auto; right: auto; z-index: 100; height: 62px; padding: 0 clamp(18px, 3.1vw, 54px); gap: 28px; background: #f8f6f0; border-bottom: 5px solid var(--ink); font-size: 22px; font-weight: 700; }
+.mcp-menu b { font-size: 22px; }
+.mcp-rainbow { width: 28px; height: 34px; }
+.mcp-rainbow i { height: 5.6px; }
+.mcp-back-link { font: inherit; font-size: 22px; font-weight: 700; background: none; border: 0; padding: 2px 6px; cursor: pointer; color: var(--ink); }
+.mcp-back-link:hover { background: var(--ink); color: #f8f6f0; }
+.mcp-clock { font-size: 22px; font-weight: 700; }
+.mcp-win { margin-top: 36px; }
+.mcp-title { top: 62px; }
+.mcp-nav { margin-left: auto; display: flex; gap: 18px; position: relative; z-index: 2; background: #f8f6f0; padding: 0 10px; }
+.mcp-nav a { color: var(--ink); text-decoration: none; font-weight: 500; font-size: 12px; white-space: nowrap; }
+.mcp-nav a:hover { text-decoration: underline; }
+.mcp-icons { inset: 90px 22px 22px 22px; }
+@media (max-width: 720px) {
+  .mcp { padding: 10px; } .mcp-screen { min-height: calc(100vh - 20px); border-radius: 18px; background-size: 20px 20px; }
+  .mcp-menu { height: 48px; gap: 16px; font-size: 16px; } .mcp-menu b, .mcp-back-link, .mcp-clock { font-size: 16px; } .mcp-rainbow { width: 20px; height: 24px; } .mcp-rainbow i { height: 4px; }
+  .mcp-title { top: 48px; } .mcp-nav a:first-child { display: none; } .mcp-icons { inset: 70px 10px 10px 10px; }
+}
+
+/* fill the whole browser: no paper margin, no rounded frame; desktop icons live behind the window */
+.mcp { padding: 0; background: #9fb8a6; }
+.mcp-screen { border-radius: 0; min-height: 100vh; }
+.mcp-icons { inset: 62px 0 0 0; z-index: 1; animation: none; }
+.mcp-win { position: relative; z-index: 3; }
+@media (max-width: 720px) { .mcp { padding: 0; } .mcp-screen { border-radius: 0; min-height: 100vh; } .mcp-icons { inset: 48px 0 0 0; } }
+/* icons stack in a column at the left edge, like a real desktop */
+.mcp-icon { width: 100px; }
+.mcp-icon:nth-child(1) { left: 12px; top: 22px; } .mcp-icon:nth-child(2) { left: 12px; top: 150px; }
+.mcp-icon svg { width: 80px; }
+@media (max-width: 720px) { .mcp-icon:nth-child(1) { left: 6px; top: 14px; } .mcp-icon:nth-child(2) { left: 6px; top: 110px; } .mcp-icon svg { width: 60px; } .mcp-icon { width: 76px; } }
+/* match the home desktop: About on the left, Résumé to its right, one row */
+.mcp-icon:nth-child(1) { left: 128px; top: 22px; } .mcp-icon:nth-child(2) { left: 12px; top: 22px; }
+@media (max-width: 720px) { .mcp-icon:nth-child(1) { left: 92px; top: 14px; } .mcp-icon:nth-child(2) { left: 6px; top: 14px; } }
+/* the icon row sits above the window */
+.mcp-win { margin-top: 150px; }
+@media (max-width: 720px) { .mcp-win { margin-top: 120px; } }
+
+
+/* About first, then Résumé */
+.mcp-icon:nth-child(1) { left: 12px; top: 22px; } .mcp-icon:nth-child(2) { left: 128px; top: 22px; }
+@media (max-width: 720px) { .mcp-icon:nth-child(1) { left: 6px; top: 14px; } .mcp-icon:nth-child(2) { left: 92px; top: 14px; } }
+
+/* the project's disk, mounted at the top right; clicking it ejects */
+.mcp-icon.mcp-disk { left: auto; right: 12px; top: 22px; pointer-events: auto; cursor: pointer; background: none; border: 0; font: inherit; color: inherit; transition: opacity .3s, transform .3s; }
+.mcp-icon.mcp-disk.gone { opacity: 0; transform: scale(.7) translateY(-14px); }
+.mcp-icon.mcp-disk b { max-width: 100px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+@media (max-width: 720px) { .mcp-icon.mcp-disk { right: 6px; top: 14px; } }
+@media (max-width: 720px) { .mcp-icon.mcp-disk { width: 76px; } .mcp-icon.mcp-disk b { max-width: 76px; } }
+.mcp-icon.mcp-disk { width: auto; min-width: 100px; max-width: 220px; }
+.mcp-icon.mcp-disk b { display: inline-block; white-space: nowrap; max-width: 100%; }
+@media (max-width: 720px) { .mcp-icon.mcp-disk { width: auto; min-width: 76px; max-width: 150px; } .mcp-icon.mcp-disk b { max-width: 150px; } }
+@media (min-width: 721px) {
+  .mcp-icon { width: 140px; }
+  .mcp-icon:nth-child(1) { left: 16px; top: 26px; } .mcp-icon:nth-child(2) { left: 176px; top: 26px; }
+  .mcp-icon svg { width: 116px; }
+  .mcp-icon b { font-size: 16px; }
+  .mcp-icon.mcp-disk { left: auto; right: 12px; }
+}
+/* story screenshots: one even rounded frame, the image itself has no second border/radius */
+.mcp .sf { border: 2px solid var(--ink) !important; border-radius: 12px !important; overflow: hidden; background: #fff; }
+.mcp .sf img { border: 0 !important; border-radius: 0 !important; }
+/* every screenshot frame on every case page shares the same even corner; stray bare images match it */
+.mcp div[style*="overflow: hidden"]:has(> img) { border: 2px solid var(--ink) !important; border-radius: 12px !important; }
+.mcp div[style*="overflow: hidden"] > img { border: 0 !important; border-radius: 0 !important; }
+.mcp img { border-radius: 12px !important; }
+.mcp .sf img { border-radius: 0 !important; }

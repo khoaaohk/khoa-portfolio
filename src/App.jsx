@@ -7,6 +7,7 @@ import Skills from './components/Skills'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import CaseStudyPage from './components/CaseStudyPage'
+import Portfolio from './figures/Portfolio'
 
 function Home({ theme, toggleTheme }) {
   return (
@@ -39,7 +40,8 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Home theme={theme} toggleTheme={toggleTheme} />} />
+      <Route path="/" element={<Portfolio />} />
+      <Route path="/classic" element={<Home theme={theme} toggleTheme={toggleTheme} />} />
       <Route path="/work/:slug" element={<CaseStudyPage />} />
     </Routes>
   )
